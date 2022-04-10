@@ -61,8 +61,9 @@ namespace EnglishCenterManagemenent
             this.kryptonPaletteGeneral.InputControlStyles.InputControlStandalone.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
             this.kryptonPaletteGeneral.InputControlStyles.InputControlStandalone.StateCommon.Border.Rounding = 10;
             this.kryptonPaletteGeneral.InputControlStyles.InputControlStandalone.StateCommon.Border.Width = 2;
-            this.kryptonPaletteGeneral.InputControlStyles.InputControlStandalone.StateCommon.Content.Padding = new System.Windows.Forms.Padding(20, 10, 0, 10);
-            this.kryptonPaletteGeneral.InputControlStyles.InputControlStandalone.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Signika Negative", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonPaletteGeneral.InputControlStyles.InputControlStandalone.StateCommon.Content.Padding = new System.Windows.Forms.Padding(20, 15, 0, 15);
+            this.kryptonPaletteGeneral.InputControlStyles.InputControlStandalone.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.kryptonPaletteGeneral.InputControlStyles.InputControlStandalone.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Inter Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonPaletteGeneral.InputControlStyles.InputControlStandalone.StateCommon.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
             this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.LongText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(175)))), ((int)(((byte)(25)))));
             this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.LongText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(39)))), ((int)(((byte)(17)))));
@@ -90,9 +91,9 @@ namespace EnglishCenterManagemenent
             this.kryptonTextBox1.Name = "kryptonTextBox1";
             this.kryptonTextBox1.Palette = this.kryptonPaletteGeneral;
             this.kryptonTextBox1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonTextBox1.Size = new System.Drawing.Size(396, 62);
+            this.kryptonTextBox1.Size = new System.Drawing.Size(396, 67);
             this.kryptonTextBox1.TabIndex = 1;
-            this.kryptonTextBox1.Text = "Nguyễn";
+            this.kryptonTextBox1.Text = "Nguyễn Ầ yyy";
             // 
             // kryptonTextBox2
             // 
@@ -101,7 +102,7 @@ namespace EnglishCenterManagemenent
             this.kryptonTextBox2.Name = "kryptonTextBox2";
             this.kryptonTextBox2.Palette = this.kryptonPaletteGeneral;
             this.kryptonTextBox2.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonTextBox2.Size = new System.Drawing.Size(396, 58);
+            this.kryptonTextBox2.Size = new System.Drawing.Size(396, 67);
             this.kryptonTextBox2.TabIndex = 1;
             // 
             // kryptonTextBox3

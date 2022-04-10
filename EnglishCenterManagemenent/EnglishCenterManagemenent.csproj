@@ -67,15 +67,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="formLogin.cs">
+    <Compile Include="GUI\formLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formLogin.Designer.cs">
+    <Compile Include="GUI\formLogin.Designer.cs">
       <DependentUpon>formLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="formLogin.resx">
+    <EmbeddedResource Include="GUI\formLogin.resx">
       <DependentUpon>formLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -106,7 +106,6 @@
     <Folder Include="BUS\" />
     <Folder Include="DAO\" />
     <Folder Include="DTO\" />
-    <Folder Include="GUI\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ic_user_32px_gray.png" />

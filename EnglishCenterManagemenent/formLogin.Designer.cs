@@ -34,10 +34,10 @@ namespace EnglishCenterManagemenent
             this.kryptonPaletteGeneral = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -109,6 +109,26 @@ namespace EnglishCenterManagemenent
             this.kryptonTextBox2.Size = new System.Drawing.Size(396, 67);
             this.kryptonTextBox2.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.label1.Location = new System.Drawing.Point(338, 236);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(133, 29);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Username";
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.label2.Location = new System.Drawing.Point(338, 397);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(125, 31);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Password";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_security_32px_gray;
@@ -128,25 +148,6 @@ namespace EnglishCenterManagemenent
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(338, 236);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 29);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Username";
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.label2.Location = new System.Drawing.Point(338, 397);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 31);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Password";
             // 
             // formLogin
             // 

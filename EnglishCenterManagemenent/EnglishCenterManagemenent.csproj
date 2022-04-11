@@ -155,5 +155,23 @@
   <ItemGroup>
     <None Include="Resources\ic_student_32px_gray.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_search_32px_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_plus_32px_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_plus_24px_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_plus_16px_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_trashcan_24px_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_update_24px_white.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

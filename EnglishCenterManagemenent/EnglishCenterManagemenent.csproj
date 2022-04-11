@@ -85,6 +85,12 @@
     <Compile Include="GUI\userControlCourses.Designer.cs">
       <DependentUpon>userControlCourses.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\userControlStudents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\userControlStudents.Designer.cs">
+      <DependentUpon>userControlStudents.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\formLogin.resx">

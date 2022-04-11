@@ -41,16 +41,17 @@ namespace EnglishCenterManagemenent
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.userControlCourses1 = new EnglishCenterManagemenent.GUI.userControlCourses();
             this.panel3 = new System.Windows.Forms.Panel();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.userControlCourses1 = new EnglishCenterManagemenent.GUI.userControlCourses();
+            this.userControlStudents1 = new EnglishCenterManagemenent.GUI.userControlStudents();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -383,15 +384,6 @@ namespace EnglishCenterManagemenent
             this.label1.TabIndex = 0;
             this.label1.Text = "Username";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.userControlCourses1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(318, 106);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1110, 788);
-            this.panel2.TabIndex = 1;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -403,6 +395,27 @@ namespace EnglishCenterManagemenent
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.userControlStudents1);
+            this.panel2.Controls.Add(this.userControlCourses1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(318, 106);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1110, 788);
+            this.panel2.TabIndex = 1;
+            // 
+            // userControlCourses1
+            // 
+            this.userControlCourses1.BackColor = System.Drawing.Color.White;
+            this.userControlCourses1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlCourses1.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlCourses1.Location = new System.Drawing.Point(0, 0);
+            this.userControlCourses1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.userControlCourses1.Name = "userControlCourses1";
+            this.userControlCourses1.Size = new System.Drawing.Size(1110, 788);
+            this.userControlCourses1.TabIndex = 0;
             // 
             // panel3
             // 
@@ -430,16 +443,16 @@ namespace EnglishCenterManagemenent
             this.kryptonLabel1.TabIndex = 0;
             this.kryptonLabel1.Values.Text = "Dashboard";
             // 
-            // userControlCourses1
+            // userControlStudents1
             // 
-            this.userControlCourses1.BackColor = System.Drawing.Color.White;
-            this.userControlCourses1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlCourses1.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userControlCourses1.Location = new System.Drawing.Point(0, 0);
-            this.userControlCourses1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.userControlCourses1.Name = "userControlCourses1";
-            this.userControlCourses1.Size = new System.Drawing.Size(1110, 788);
-            this.userControlCourses1.TabIndex = 0;
+            this.userControlStudents1.BackColor = System.Drawing.Color.White;
+            this.userControlStudents1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlStudents1.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlStudents1.Location = new System.Drawing.Point(0, 0);
+            this.userControlStudents1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.userControlStudents1.Name = "userControlStudents1";
+            this.userControlStudents1.Size = new System.Drawing.Size(1110, 788);
+            this.userControlStudents1.TabIndex = 1;
             // 
             // formMain
             // 
@@ -460,8 +473,8 @@ namespace EnglishCenterManagemenent
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.kryptonPanel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -485,5 +498,6 @@ namespace EnglishCenterManagemenent
         private GUI.userControlCourses userControlCourses1;
         private System.Windows.Forms.Panel panel3;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private GUI.userControlStudents userControlStudents1;
     }
 }

@@ -102,6 +102,9 @@
     <EmbeddedResource Include="GUI\userControlCourses.resx">
       <DependentUpon>userControlCourses.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\userControlStudents.resx">
+      <DependentUpon>userControlStudents.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

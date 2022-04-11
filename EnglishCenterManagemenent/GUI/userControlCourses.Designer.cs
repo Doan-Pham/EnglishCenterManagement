@@ -42,7 +42,7 @@ namespace EnglishCenterManagemenent.GUI
             // 
             // kryptonTextBox1
             // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(74, 88);
+            this.kryptonTextBox1.Location = new System.Drawing.Point(35, 37);
             this.kryptonTextBox1.Name = "kryptonTextBox1";
             this.kryptonTextBox1.Palette = this.kryptonPaletteGeneral;
             this.kryptonTextBox1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
@@ -319,7 +319,7 @@ namespace EnglishCenterManagemenent.GUI
             // 
             this.kryptonButton2.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom2;
             this.kryptonButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonButton2.Location = new System.Drawing.Point(603, 88);
+            this.kryptonButton2.Location = new System.Drawing.Point(583, 37);
             this.kryptonButton2.Name = "kryptonButton2";
             this.kryptonButton2.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(199)))), ((int)(((byte)(139)))));
             this.kryptonButton2.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(199)))), ((int)(((byte)(139)))));
@@ -335,7 +335,7 @@ namespace EnglishCenterManagemenent.GUI
             // 
             this.kryptonButton3.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom2;
             this.kryptonButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonButton3.Location = new System.Drawing.Point(938, 88);
+            this.kryptonButton3.Location = new System.Drawing.Point(918, 37);
             this.kryptonButton3.Name = "kryptonButton3";
             this.kryptonButton3.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(164)))), ((int)(((byte)(231)))));
             this.kryptonButton3.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(164)))), ((int)(((byte)(231)))));
@@ -365,7 +365,7 @@ namespace EnglishCenterManagemenent.GUI
             // 
             this.kryptonButton4.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom2;
             this.kryptonButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonButton4.Location = new System.Drawing.Point(770, 88);
+            this.kryptonButton4.Location = new System.Drawing.Point(750, 37);
             this.kryptonButton4.Name = "kryptonButton4";
             this.kryptonButton4.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
             this.kryptonButton4.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
@@ -385,7 +385,7 @@ namespace EnglishCenterManagemenent.GUI
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(89, 100);
+            this.kryptonButton1.Location = new System.Drawing.Point(50, 49);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.OverrideDefault.Back.Color1 = System.Drawing.Color.Transparent;
             this.kryptonButton1.OverrideDefault.Back.Color2 = System.Drawing.Color.Transparent;
@@ -413,7 +413,7 @@ namespace EnglishCenterManagemenent.GUI
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_search_32px_gray;
-            this.pictureBox1.Location = new System.Drawing.Point(95, 161);
+            this.pictureBox1.Location = new System.Drawing.Point(463, 56);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;

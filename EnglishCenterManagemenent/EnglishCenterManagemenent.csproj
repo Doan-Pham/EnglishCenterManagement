@@ -128,5 +128,23 @@
   <ItemGroup>
     <None Include="Resources\ic_user_128px_flareGradient.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_user_thin_32px_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_book_32px_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_group_32px_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_pencil_32px_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_education_32px_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_student_32px_gray.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

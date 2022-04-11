@@ -36,6 +36,11 @@ namespace EnglishCenterManagemenent
             this.kryptonPaletteGeneral = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton6 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
@@ -46,6 +51,11 @@ namespace EnglishCenterManagemenent
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.kryptonButton6);
+            this.panel1.Controls.Add(this.kryptonButton5);
+            this.panel1.Controls.Add(this.kryptonButton4);
+            this.panel1.Controls.Add(this.kryptonButton3);
+            this.panel1.Controls.Add(this.kryptonButton1);
             this.panel1.Controls.Add(this.kryptonButton2);
             this.panel1.Controls.Add(this.kryptonPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -243,6 +253,83 @@ namespace EnglishCenterManagemenent
             this.label1.TabIndex = 0;
             this.label1.Text = "Username";
             // 
+            // kryptonButton1
+            // 
+            this.kryptonButton1.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorStack;
+            this.kryptonButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kryptonButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.kryptonButton1.Location = new System.Drawing.Point(0, 324);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.Palette = this.kryptonPaletteGeneral;
+            this.kryptonButton1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kryptonButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.kryptonButton1.Size = new System.Drawing.Size(318, 82);
+            this.kryptonButton1.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton1.TabIndex = 12;
+            this.kryptonButton1.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_user_thin_32px_gray;
+            this.kryptonButton1.Values.Text = "User";
+            // 
+            // kryptonButton3
+            // 
+            this.kryptonButton3.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorStack;
+            this.kryptonButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kryptonButton3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.kryptonButton3.Location = new System.Drawing.Point(0, 406);
+            this.kryptonButton3.Name = "kryptonButton3";
+            this.kryptonButton3.Palette = this.kryptonPaletteGeneral;
+            this.kryptonButton3.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kryptonButton3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.kryptonButton3.Size = new System.Drawing.Size(318, 82);
+            this.kryptonButton3.TabIndex = 13;
+            this.kryptonButton3.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_book_32px_gray;
+            this.kryptonButton3.Values.Text = "Course";
+            // 
+            // kryptonButton4
+            // 
+            this.kryptonButton4.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorStack;
+            this.kryptonButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kryptonButton4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.kryptonButton4.Location = new System.Drawing.Point(0, 488);
+            this.kryptonButton4.Name = "kryptonButton4";
+            this.kryptonButton4.Palette = this.kryptonPaletteGeneral;
+            this.kryptonButton4.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kryptonButton4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.kryptonButton4.Size = new System.Drawing.Size(318, 82);
+            this.kryptonButton4.TabIndex = 14;
+            this.kryptonButton4.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_pencil_32px_gray;
+            this.kryptonButton4.Values.Text = "Class";
+            // 
+            // kryptonButton5
+            // 
+            this.kryptonButton5.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorStack;
+            this.kryptonButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kryptonButton5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.kryptonButton5.Location = new System.Drawing.Point(0, 570);
+            this.kryptonButton5.Name = "kryptonButton5";
+            this.kryptonButton5.Palette = this.kryptonPaletteGeneral;
+            this.kryptonButton5.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kryptonButton5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.kryptonButton5.Size = new System.Drawing.Size(318, 82);
+            this.kryptonButton5.TabIndex = 15;
+            this.kryptonButton5.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_education_32px_gray;
+            this.kryptonButton5.Values.Text = "Teacher";
+            // 
+            // kryptonButton6
+            // 
+            this.kryptonButton6.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorStack;
+            this.kryptonButton6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.kryptonButton6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.kryptonButton6.Location = new System.Drawing.Point(0, 652);
+            this.kryptonButton6.Name = "kryptonButton6";
+            this.kryptonButton6.Palette = this.kryptonPaletteGeneral;
+            this.kryptonButton6.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kryptonButton6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.kryptonButton6.Size = new System.Drawing.Size(318, 82);
+            this.kryptonButton6.TabIndex = 16;
+            this.kryptonButton6.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_student_32px_gray;
+            this.kryptonButton6.Values.Text = "Student";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -285,5 +372,10 @@ namespace EnglishCenterManagemenent
         private System.Windows.Forms.Label label1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPaletteGeneral;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton6;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton5;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton4;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton3;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
     }
 }

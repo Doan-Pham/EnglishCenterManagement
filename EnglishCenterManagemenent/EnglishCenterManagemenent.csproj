@@ -79,6 +79,12 @@
     <Compile Include="GUI\formMain.Designer.cs">
       <DependentUpon>formMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\userControlCourses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\userControlCourses.Designer.cs">
+      <DependentUpon>userControlCourses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\formLogin.resx">
@@ -86,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\formMain.resx">
       <DependentUpon>formMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\userControlCourses.resx">
+      <DependentUpon>userControlCourses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -79,6 +79,18 @@
     <Compile Include="GUI\formMain.Designer.cs">
       <DependentUpon>formMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\userControlCourses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\userControlCourses.Designer.cs">
+      <DependentUpon>userControlCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\userControlStudents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\userControlStudents.Designer.cs">
+      <DependentUpon>userControlStudents.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\formLogin.resx">
@@ -86,6 +98,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\formMain.resx">
       <DependentUpon>formMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\userControlCourses.resx">
+      <DependentUpon>userControlCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\userControlStudents.resx">
+      <DependentUpon>userControlStudents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -145,6 +163,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ic_student_32px_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_search_32px_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_plus_32px_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_plus_24px_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_plus_16px_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_trashcan_24px_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_update_24px_white.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

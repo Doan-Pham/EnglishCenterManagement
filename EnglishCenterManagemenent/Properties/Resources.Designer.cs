@@ -113,6 +113,56 @@ namespace EnglishCenterManagemenent.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_plus_16px_white {
+            get {
+                object obj = ResourceManager.GetObject("ic_plus_16px_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_plus_24px_white {
+            get {
+                object obj = ResourceManager.GetObject("ic_plus_24px_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_plus_32px_white {
+            get {
+                object obj = ResourceManager.GetObject("ic_plus_32px_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_search_32px_gray {
+            get {
+                object obj = ResourceManager.GetObject("ic_search_32px_gray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_search_32px_gray1 {
+            get {
+                object obj = ResourceManager.GetObject("ic_search_32px_gray1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_security_32px_gray {
             get {
                 object obj = ResourceManager.GetObject("ic_security_32px_gray", resourceCulture);
@@ -126,6 +176,26 @@ namespace EnglishCenterManagemenent.Properties {
         internal static System.Drawing.Bitmap ic_student_32px_gray {
             get {
                 object obj = ResourceManager.GetObject("ic_student_32px_gray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_trashcan_24px_white {
+            get {
+                object obj = ResourceManager.GetObject("ic_trashcan_24px_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_update_24px_white {
+            get {
+                object obj = ResourceManager.GetObject("ic_update_24px_white", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

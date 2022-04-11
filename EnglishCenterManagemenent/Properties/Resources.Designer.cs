@@ -63,9 +63,29 @@ namespace EnglishCenterManagemenent.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic_home_32px_gray {
+            get {
+                object obj = ResourceManager.GetObject("ic_home_32px_gray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_security_32px_gray {
             get {
                 object obj = ResourceManager.GetObject("ic_security_32px_gray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_user_128px_flareGradient {
+            get {
+                object obj = ResourceManager.GetObject("ic_user_128px_flareGradient", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

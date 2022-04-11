@@ -122,5 +122,11 @@
   <ItemGroup>
     <None Include="Resources\ic_security_32px_gray.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_home_32px_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_user_128px_flareGradient.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

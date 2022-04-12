@@ -43,10 +43,11 @@ namespace EnglishCenterManagemenent
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.userControlStudents1 = new EnglishCenterManagemenent.GUI.userControlStudents();
             this.userControlCourses1 = new EnglishCenterManagemenent.GUI.userControlCourses();
             this.panel3 = new System.Windows.Forms.Panel();
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.userControlStudents1 = new EnglishCenterManagemenent.GUI.userControlStudents();
+            this.userControlDashboard1 = new EnglishCenterManagemenent.GUI.userControlDashboard();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -88,200 +89,154 @@ namespace EnglishCenterManagemenent
             // 
             // kryptonPaletteGeneral
             // 
-            this.kryptonPaletteGeneral.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Blue;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(48)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.OverrideDefault.Back.ColorAngle = 45F;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.OverrideDefault.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.OverrideDefault.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.OverrideDefault.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.OverrideDefault.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.OverrideDefault.Border.Rounding = 10;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.OverrideDefault.Border.Width = 0;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.OverrideDefault.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.OverrideDefault.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(175)))), ((int)(((byte)(25)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(39)))), ((int)(((byte)(17)))));
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.OverrideFocus.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(48)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.StateCommon.Back.ColorAngle = 45F;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.StateCommon.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.StateCommon.Border.Rounding = 10;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.StateCommon.Border.Width = 0;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.StateCommon.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(175)))), ((int)(((byte)(25)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(39)))), ((int)(((byte)(17)))));
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonCustom1.StateTracking.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.OverrideDefault.Back.Color1 = System.Drawing.Color.Transparent;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.OverrideDefault.Back.Color2 = System.Drawing.Color.Transparent;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.OverrideDefault.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.OverrideDefault.Content.ShortText.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.OverrideDefault.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.OverrideDefault.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.OverrideFocus.Content.ShortText.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.OverrideFocus.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.OverrideFocus.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.OverrideFocus.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.OverrideFocus.Content.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.OverrideFocus.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateNormal.Back.Color1 = System.Drawing.Color.Transparent;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateNormal.Back.Color2 = System.Drawing.Color.Transparent;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateNormal.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateNormal.Content.AdjacentGap = 30;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateNormal.Content.Image.Effect = ComponentFactory.Krypton.Toolkit.PaletteImageEffect.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateNormal.Content.Image.ImageH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateNormal.Content.Padding = new System.Windows.Forms.Padding(40, 0, 50, 0);
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateNormal.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateNormal.Content.ShortText.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateNormal.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateNormal.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateNormal.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateNormal.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(175)))), ((int)(((byte)(25)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(39)))), ((int)(((byte)(17)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StatePressed.Back.ColorAngle = 45F;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StatePressed.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StatePressed.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StatePressed.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StatePressed.Content.AdjacentGap = 30;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StatePressed.Content.Padding = new System.Windows.Forms.Padding(40, 0, 50, 0);
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StatePressed.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StatePressed.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StatePressed.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(48)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateTracking.Back.ColorAngle = 45F;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateTracking.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateTracking.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateTracking.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateTracking.Content.AdjacentGap = 30;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateTracking.Content.Image.Effect = ComponentFactory.Krypton.Toolkit.PaletteImageEffect.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateTracking.Content.Image.ImageH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateTracking.Content.Padding = new System.Windows.Forms.Padding(40, 0, 50, 0);
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateTracking.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateTracking.Content.ShortText.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateTracking.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateTracking.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateTracking.Content.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonNavigatorStack.StateTracking.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(48)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.OverrideDefault.Back.ColorAngle = 45F;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.OverrideDefault.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.OverrideDefault.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.OverrideDefault.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCheckedNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(48)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCheckedNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCheckedNormal.Back.ColorAngle = 45F;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCheckedNormal.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCheckedNormal.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCheckedNormal.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCheckedPressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(48)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCheckedPressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCheckedPressed.Back.ColorAngle = 45F;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCheckedPressed.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCheckedPressed.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCheckedPressed.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(48)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Back.ColorAngle = 45F;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Border.Rounding = 10;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Border.Width = 0;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Be Vietnam ExtraBold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(48)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateNormal.Back.ColorAngle = 45F;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateNormal.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateNormal.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateNormal.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StatePressed.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(175)))), ((int)(((byte)(25)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StatePressed.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(39)))), ((int)(((byte)(17)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StatePressed.Back.ColorAngle = 45F;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StatePressed.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StatePressed.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StatePressed.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateTracking.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(175)))), ((int)(((byte)(25)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateTracking.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(39)))), ((int)(((byte)(17)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateTracking.Back.ColorAngle = 45F;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateTracking.Back.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateTracking.Back.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateTracking.Back.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateTracking.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateTracking.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateTracking.Border.Width = 0;
             this.kryptonPaletteGeneral.InputControlStyles.InputControlStandalone.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(168)))), ((int)(((byte)(47)))));
             this.kryptonPaletteGeneral.InputControlStyles.InputControlStandalone.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonPaletteGeneral.InputControlStyles.InputControlStandalone.StateActive.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPaletteGeneral.InputControlStyles.InputControlStandalone.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             this.kryptonPaletteGeneral.InputControlStyles.InputControlStandalone.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonPaletteGeneral.InputControlStyles.InputControlStandalone.StateCommon.Border.GraphicsHint = ComponentFactory.Krypton.Toolkit.PaletteGraphicsHint.AntiAlias;
-            this.kryptonPaletteGeneral.InputControlStyles.InputControlStandalone.StateCommon.Border.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPaletteGeneral.InputControlStyles.InputControlStandalone.StateCommon.Border.Rounding = 10;
             this.kryptonPaletteGeneral.InputControlStyles.InputControlStandalone.StateCommon.Border.Width = 2;
             this.kryptonPaletteGeneral.InputControlStyles.InputControlStandalone.StateCommon.Content.Padding = new System.Windows.Forms.Padding(60, 15, 0, 15);
             this.kryptonPaletteGeneral.InputControlStyles.InputControlStandalone.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.kryptonPaletteGeneral.InputControlStyles.InputControlStandalone.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Inter Medium", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonPaletteGeneral.InputControlStyles.InputControlStandalone.StateCommon.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
-            this.kryptonPaletteGeneral.InputControlStyles.InputControlStandalone.StateCommon.Content.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
-            this.kryptonPaletteGeneral.InputControlStyles.InputControlStandalone.StateCommon.Content.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.LongText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(175)))), ((int)(((byte)(25)))));
             this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.LongText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(39)))), ((int)(((byte)(17)))));
             this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.LongText.ColorAngle = 45F;
             this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.LongText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
             this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.LongText.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.LongText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
-            this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.LongText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.LongText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.LongText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.LongText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(175)))), ((int)(((byte)(25)))));
             this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.ShortText.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(39)))), ((int)(((byte)(17)))));
             this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.ShortText.ColorAngle = 45F;
             this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.ShortText.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
             this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.ShortText.Font = new System.Drawing.Font("Poppins", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
-            this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.ShortText.MultiLine = ComponentFactory.Krypton.Toolkit.InheritBool.True;
             this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.ShortText.MultiLineH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             // 
             // kryptonButton5
             // 
@@ -370,7 +325,6 @@ namespace EnglishCenterManagemenent
             this.kryptonPanel1.StateNormal.Color2 = System.Drawing.Color.White;
             this.kryptonPanel1.StateNormal.ColorAngle = 45F;
             this.kryptonPanel1.StateNormal.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
-            this.kryptonPanel1.StateNormal.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
             this.kryptonPanel1.TabIndex = 0;
             // 
             // label1
@@ -398,6 +352,7 @@ namespace EnglishCenterManagemenent
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.userControlDashboard1);
             this.panel2.Controls.Add(this.userControlStudents1);
             this.panel2.Controls.Add(this.userControlCourses1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -405,6 +360,17 @@ namespace EnglishCenterManagemenent
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1110, 788);
             this.panel2.TabIndex = 1;
+            // 
+            // userControlStudents1
+            // 
+            this.userControlStudents1.BackColor = System.Drawing.Color.White;
+            this.userControlStudents1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlStudents1.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlStudents1.Location = new System.Drawing.Point(0, 0);
+            this.userControlStudents1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.userControlStudents1.Name = "userControlStudents1";
+            this.userControlStudents1.Size = new System.Drawing.Size(1110, 788);
+            this.userControlStudents1.TabIndex = 1;
             // 
             // userControlCourses1
             // 
@@ -436,23 +402,22 @@ namespace EnglishCenterManagemenent
             this.kryptonLabel1.Palette = this.kryptonPaletteGeneral;
             this.kryptonLabel1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.kryptonLabel1.Size = new System.Drawing.Size(1110, 100);
-            this.kryptonLabel1.StateNormal.ShortText.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.Inherit;
+            this.kryptonLabel1.StateNormal.Padding = new System.Windows.Forms.Padding(30, -1, -1, -1);
             this.kryptonLabel1.StateNormal.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
             this.kryptonLabel1.StateNormal.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.kryptonLabel1.StateNormal.ShortText.Trim = ComponentFactory.Krypton.Toolkit.PaletteTextTrim.Inherit;
             this.kryptonLabel1.TabIndex = 0;
             this.kryptonLabel1.Values.Text = "Dashboard";
             // 
-            // userControlStudents1
+            // userControlDashboard1
             // 
-            this.userControlStudents1.BackColor = System.Drawing.Color.White;
-            this.userControlStudents1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlStudents1.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userControlStudents1.Location = new System.Drawing.Point(0, 0);
-            this.userControlStudents1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.userControlStudents1.Name = "userControlStudents1";
-            this.userControlStudents1.Size = new System.Drawing.Size(1110, 788);
-            this.userControlStudents1.TabIndex = 1;
+            this.userControlDashboard1.BackColor = System.Drawing.Color.White;
+            this.userControlDashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlDashboard1.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlDashboard1.Location = new System.Drawing.Point(0, 0);
+            this.userControlDashboard1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.userControlDashboard1.Name = "userControlDashboard1";
+            this.userControlDashboard1.Size = new System.Drawing.Size(1110, 788);
+            this.userControlDashboard1.TabIndex = 2;
             // 
             // formMain
             // 
@@ -499,5 +464,6 @@ namespace EnglishCenterManagemenent
         private System.Windows.Forms.Panel panel3;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private GUI.userControlStudents userControlStudents1;
+        private GUI.userControlDashboard userControlDashboard1;
     }
 }

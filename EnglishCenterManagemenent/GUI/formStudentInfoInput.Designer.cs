@@ -46,6 +46,8 @@ namespace EnglishCenterManagemenent.GUI
             this.kryptonTextBox5 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.kryptonTextBox6 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPaletteGeneral
@@ -400,6 +402,7 @@ namespace EnglishCenterManagemenent.GUI
             this.kryptonDateTimePicker1.CalendarHeaderStyle = ComponentFactory.Krypton.Toolkit.HeaderStyle.Custom1;
             this.kryptonDateTimePicker1.CustomFormat = "dd/MM/yyyy";
             this.kryptonDateTimePicker1.CustomNullText = "dd/MM/yyyy";
+            this.kryptonDateTimePicker1.DropButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Form;
             this.kryptonDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.kryptonDateTimePicker1.Location = new System.Drawing.Point(100, 433);
             this.kryptonDateTimePicker1.Name = "kryptonDateTimePicker1";
@@ -412,9 +415,8 @@ namespace EnglishCenterManagemenent.GUI
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.kryptonDateTimePicker1.StateCommon.Border.Rounding = 5;
             this.kryptonDateTimePicker1.StateCommon.Border.Width = 1;
-            this.kryptonDateTimePicker1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-1, 10, -1, -1);
             this.kryptonDateTimePicker1.TabIndex = 5;
-            this.kryptonDateTimePicker1.UpDownButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Standalone;
+            this.kryptonDateTimePicker1.UpDownButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Form;
             // 
             // label5
             // 
@@ -512,12 +514,34 @@ namespace EnglishCenterManagemenent.GUI
             this.kryptonTextBox6.StateCommon.Content.Padding = new System.Windows.Forms.Padding(15, 12, 0, 12);
             this.kryptonTextBox6.TabIndex = 4;
             // 
+            // kryptonComboBox1
+            // 
+            this.kryptonComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystemDirectories;
+            this.kryptonComboBox1.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.FormMain;
+            this.kryptonComboBox1.DropButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Form;
+            this.kryptonComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.kryptonComboBox1.DropDownWidth = 113;
+            this.kryptonComboBox1.ItemStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom1;
+            this.kryptonComboBox1.Location = new System.Drawing.Point(432, 568);
+            this.kryptonComboBox1.Name = "kryptonComboBox1";
+            this.kryptonComboBox1.Palette = this.kryptonPaletteGeneral;
+            this.kryptonComboBox1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kryptonComboBox1.Size = new System.Drawing.Size(235, 36);
+            this.kryptonComboBox1.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Transparent;
+            this.kryptonComboBox1.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonComboBox1.StateCommon.ComboBox.Border.Rounding = 5;
+            this.kryptonComboBox1.StateCommon.ComboBox.Border.Width = 1;
+            this.kryptonComboBox1.TabIndex = 7;
+            // 
             // formStudentInfoInput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 35F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(740, 759);
+            this.Controls.Add(this.kryptonComboBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.kryptonDateTimePicker1);
@@ -538,6 +562,7 @@ namespace EnglishCenterManagemenent.GUI
             this.Name = "formStudentInfoInput";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Student Information";
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -561,5 +586,6 @@ namespace EnglishCenterManagemenent.GUI
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox5;
         private System.Windows.Forms.Label label7;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox6;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox1;
     }
 }

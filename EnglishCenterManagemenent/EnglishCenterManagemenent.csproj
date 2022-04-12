@@ -91,6 +91,12 @@
     <Compile Include="GUI\userControlCourses.Designer.cs">
       <DependentUpon>userControlCourses.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\userControlDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\userControlDashboard.Designer.cs">
+      <DependentUpon>userControlDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\userControlStudents.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\userControlCourses.resx">
       <DependentUpon>userControlCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\userControlDashboard.resx">
+      <DependentUpon>userControlDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\userControlStudents.resx">
       <DependentUpon>userControlStudents.cs</DependentUpon>

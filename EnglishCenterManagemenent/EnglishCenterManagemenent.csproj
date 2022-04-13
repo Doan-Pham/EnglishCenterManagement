@@ -97,6 +97,12 @@
     <Compile Include="GUI\userControlDashboard.Designer.cs">
       <DependentUpon>userControlDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\userControlStudentGrades.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\userControlStudentGrades.Designer.cs">
+      <DependentUpon>userControlStudentGrades.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\userControlStudents.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\userControlDashboard.resx">
       <DependentUpon>userControlDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\userControlStudentGrades.resx">
+      <DependentUpon>userControlStudentGrades.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\userControlStudents.resx">
       <DependentUpon>userControlStudents.cs</DependentUpon>
@@ -199,6 +208,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ic_update_24px_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_save_24px_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_cancel_24px_white.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

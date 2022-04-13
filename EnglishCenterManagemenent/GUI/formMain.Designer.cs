@@ -354,8 +354,8 @@ namespace EnglishCenterManagemenent
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.userControlStudentAttendance1);
             this.panel2.Controls.Add(this.userControlStudentGrades1);
+            this.panel2.Controls.Add(this.userControlStudentAttendance1);
             this.panel2.Controls.Add(this.userControlStudents1);
             this.panel2.Controls.Add(this.userControlDashboard1);
             this.panel2.Controls.Add(this.userControlCourses1);

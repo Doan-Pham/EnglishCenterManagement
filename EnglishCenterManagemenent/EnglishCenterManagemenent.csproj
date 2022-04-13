@@ -97,6 +97,12 @@
     <Compile Include="GUI\userControlDashboard.Designer.cs">
       <DependentUpon>userControlDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\userControlStudentAttendance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\userControlStudentAttendance.Designer.cs">
+      <DependentUpon>userControlStudentAttendance.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\userControlStudentGrades.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\userControlDashboard.resx">
       <DependentUpon>userControlDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\userControlStudentAttendance.resx">
+      <DependentUpon>userControlStudentAttendance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\userControlStudentGrades.resx">
       <DependentUpon>userControlStudentGrades.cs</DependentUpon>

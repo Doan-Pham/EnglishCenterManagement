@@ -49,6 +49,7 @@ namespace EnglishCenterManagemenent.GUI
             this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -586,12 +587,23 @@ namespace EnglishCenterManagemenent.GUI
             this.kryptonButton2.TabIndex = 8;
             this.kryptonButton2.Values.Text = "Cancel";
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.AsciiOnly = true;
+            this.maskedTextBox1.Culture = new System.Globalization.CultureInfo("vi-VN");
+            this.maskedTextBox1.Location = new System.Drawing.Point(372, 650);
+            this.maskedTextBox1.Mask = "000000000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(206, 35);
+            this.maskedTextBox1.TabIndex = 9;
+            // 
             // formStudentInfoInput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 35F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(690, 800);
+            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.kryptonButton2);
             this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.kryptonComboBox1);
@@ -610,6 +622,7 @@ namespace EnglishCenterManagemenent.GUI
             this.Controls.Add(this.kryptonTextBox3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.kryptonLabel1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Lexend", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "formStudentInfoInput";
@@ -642,5 +655,6 @@ namespace EnglishCenterManagemenent.GUI
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }

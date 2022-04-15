@@ -34,7 +34,6 @@ namespace EnglishCenterManagemenent.GUI
             this.kryptonPaletteGeneral = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonDataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,7 +43,9 @@ namespace EnglishCenterManagemenent.GUI
             this.Column10 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonTextBox1
@@ -325,27 +326,6 @@ namespace EnglishCenterManagemenent.GUI
             this.kryptonButton4.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_cancel_24px_white;
             this.kryptonButton4.Values.Text = "Cancel";
             // 
-            // kryptonButton1
-            // 
-            this.kryptonButton1.Location = new System.Drawing.Point(50, 49);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.OverrideDefault.Back.Color1 = System.Drawing.Color.Transparent;
-            this.kryptonButton1.OverrideDefault.Back.Color2 = System.Drawing.Color.Transparent;
-            this.kryptonButton1.OverrideFocus.Back.Color1 = System.Drawing.Color.Transparent;
-            this.kryptonButton1.OverrideFocus.Back.Color2 = System.Drawing.Color.Transparent;
-            this.kryptonButton1.Size = new System.Drawing.Size(38, 39);
-            this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.Transparent;
-            this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.Transparent;
-            this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton1.StateCommon.Border.Width = 0;
-            this.kryptonButton1.StateNormal.Back.Color1 = System.Drawing.Color.Transparent;
-            this.kryptonButton1.StateNormal.Back.Color2 = System.Drawing.Color.Transparent;
-            this.kryptonButton1.TabIndex = 4;
-            this.kryptonButton1.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_search_32px_gray1;
-            this.kryptonButton1.Values.Text = "";
-            // 
             // kryptonDataGridView1
             // 
             this.kryptonDataGridView1.AllowUserToAddRows = false;
@@ -452,13 +432,24 @@ namespace EnglishCenterManagemenent.GUI
             this.Column3.Name = "Column3";
             this.Column3.Width = 150;
             // 
+            // kryptonPanel1
+            // 
+            this.kryptonPanel1.Location = new System.Drawing.Point(48, 46);
+            this.kryptonPanel1.Name = "kryptonPanel1";
+            this.kryptonPanel1.Size = new System.Drawing.Size(48, 48);
+            this.kryptonPanel1.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.kryptonPanel1.StateNormal.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.kryptonPanel1.StateNormal.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_search_32px_gray;
+            this.kryptonPanel1.StateNormal.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            this.kryptonPanel1.TabIndex = 7;
+            // 
             // userControlStudentAttendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 39F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.kryptonPanel1);
             this.Controls.Add(this.kryptonDataGridView1);
-            this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.kryptonButton4);
             this.Controls.Add(this.kryptonButton2);
             this.Controls.Add(this.kryptonTextBox1);
@@ -467,6 +458,7 @@ namespace EnglishCenterManagemenent.GUI
             this.Name = "userControlStudentAttendance";
             this.Size = new System.Drawing.Size(1110, 788);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -478,7 +470,6 @@ namespace EnglishCenterManagemenent.GUI
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPaletteGeneral;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton4;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView kryptonDataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
@@ -488,5 +479,6 @@ namespace EnglishCenterManagemenent.GUI
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column10;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column2;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column3;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
     }
 }

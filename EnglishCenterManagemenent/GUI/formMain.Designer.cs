@@ -43,13 +43,13 @@ namespace EnglishCenterManagemenent
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.userControlStudentAttendance1 = new EnglishCenterManagemenent.GUI.userControlStudentAttendance();
-            this.userControlStudentGrades1 = new EnglishCenterManagemenent.GUI.userControlStudentGrades();
             this.userControlStudents1 = new EnglishCenterManagemenent.GUI.userControlStudents();
             this.userControlDashboard1 = new EnglishCenterManagemenent.GUI.userControlDashboard();
+            this.userControlStudentAttendance1 = new EnglishCenterManagemenent.GUI.userControlStudentAttendance();
+            this.userControlStudentGrades1 = new EnglishCenterManagemenent.GUI.userControlStudentGrades();
             this.userControlCourses1 = new EnglishCenterManagemenent.GUI.userControlCourses();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
@@ -253,7 +253,7 @@ namespace EnglishCenterManagemenent
             this.kryptonButton5.Size = new System.Drawing.Size(318, 82);
             this.kryptonButton5.TabIndex = 15;
             this.kryptonButton5.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_education_32px_gray;
-            this.kryptonButton5.Values.Text = "Teacher";
+            this.kryptonButton5.Values.Text = "Employee";
             // 
             // kryptonButton4
             // 
@@ -354,16 +354,72 @@ namespace EnglishCenterManagemenent
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.userControlStudentGrades1);
-            this.panel2.Controls.Add(this.userControlStudentAttendance1);
             this.panel2.Controls.Add(this.userControlStudents1);
             this.panel2.Controls.Add(this.userControlDashboard1);
+            this.panel2.Controls.Add(this.userControlStudentAttendance1);
+            this.panel2.Controls.Add(this.userControlStudentGrades1);
             this.panel2.Controls.Add(this.userControlCourses1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(318, 106);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1110, 788);
             this.panel2.TabIndex = 1;
+            // 
+            // userControlStudents1
+            // 
+            this.userControlStudents1.BackColor = System.Drawing.Color.White;
+            this.userControlStudents1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlStudents1.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlStudents1.Location = new System.Drawing.Point(0, 0);
+            this.userControlStudents1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.userControlStudents1.Name = "userControlStudents1";
+            this.userControlStudents1.Size = new System.Drawing.Size(1110, 788);
+            this.userControlStudents1.TabIndex = 1;
+            // 
+            // userControlDashboard1
+            // 
+            this.userControlDashboard1.BackColor = System.Drawing.Color.White;
+            this.userControlDashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlDashboard1.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlDashboard1.Location = new System.Drawing.Point(0, 0);
+            this.userControlDashboard1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.userControlDashboard1.Name = "userControlDashboard1";
+            this.userControlDashboard1.Padding = new System.Windows.Forms.Padding(10);
+            this.userControlDashboard1.Size = new System.Drawing.Size(1110, 788);
+            this.userControlDashboard1.TabIndex = 2;
+            // 
+            // userControlStudentAttendance1
+            // 
+            this.userControlStudentAttendance1.BackColor = System.Drawing.Color.White;
+            this.userControlStudentAttendance1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlStudentAttendance1.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlStudentAttendance1.Location = new System.Drawing.Point(0, 0);
+            this.userControlStudentAttendance1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.userControlStudentAttendance1.Name = "userControlStudentAttendance1";
+            this.userControlStudentAttendance1.Size = new System.Drawing.Size(1110, 788);
+            this.userControlStudentAttendance1.TabIndex = 4;
+            // 
+            // userControlStudentGrades1
+            // 
+            this.userControlStudentGrades1.BackColor = System.Drawing.Color.White;
+            this.userControlStudentGrades1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlStudentGrades1.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlStudentGrades1.Location = new System.Drawing.Point(0, 0);
+            this.userControlStudentGrades1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.userControlStudentGrades1.Name = "userControlStudentGrades1";
+            this.userControlStudentGrades1.Size = new System.Drawing.Size(1110, 788);
+            this.userControlStudentGrades1.TabIndex = 3;
+            // 
+            // userControlCourses1
+            // 
+            this.userControlCourses1.BackColor = System.Drawing.Color.White;
+            this.userControlCourses1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlCourses1.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlCourses1.Location = new System.Drawing.Point(0, 0);
+            this.userControlCourses1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.userControlCourses1.Name = "userControlCourses1";
+            this.userControlCourses1.Size = new System.Drawing.Size(1110, 788);
+            this.userControlCourses1.TabIndex = 0;
             // 
             // panel3
             // 
@@ -389,62 +445,6 @@ namespace EnglishCenterManagemenent
             this.kryptonLabel1.StateNormal.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.kryptonLabel1.TabIndex = 0;
             this.kryptonLabel1.Values.Text = "Dashboard";
-            // 
-            // userControlStudentAttendance1
-            // 
-            this.userControlStudentAttendance1.BackColor = System.Drawing.Color.White;
-            this.userControlStudentAttendance1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlStudentAttendance1.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userControlStudentAttendance1.Location = new System.Drawing.Point(0, 0);
-            this.userControlStudentAttendance1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.userControlStudentAttendance1.Name = "userControlStudentAttendance1";
-            this.userControlStudentAttendance1.Size = new System.Drawing.Size(1110, 788);
-            this.userControlStudentAttendance1.TabIndex = 4;
-            // 
-            // userControlStudentGrades1
-            // 
-            this.userControlStudentGrades1.BackColor = System.Drawing.Color.White;
-            this.userControlStudentGrades1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlStudentGrades1.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userControlStudentGrades1.Location = new System.Drawing.Point(0, 0);
-            this.userControlStudentGrades1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.userControlStudentGrades1.Name = "userControlStudentGrades1";
-            this.userControlStudentGrades1.Size = new System.Drawing.Size(1110, 788);
-            this.userControlStudentGrades1.TabIndex = 3;
-            // 
-            // userControlStudents1
-            // 
-            this.userControlStudents1.BackColor = System.Drawing.Color.White;
-            this.userControlStudents1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlStudents1.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userControlStudents1.Location = new System.Drawing.Point(0, 0);
-            this.userControlStudents1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.userControlStudents1.Name = "userControlStudents1";
-            this.userControlStudents1.Size = new System.Drawing.Size(1110, 788);
-            this.userControlStudents1.TabIndex = 1;
-            // 
-            // userControlDashboard1
-            // 
-            this.userControlDashboard1.BackColor = System.Drawing.Color.White;
-            this.userControlDashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlDashboard1.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userControlDashboard1.Location = new System.Drawing.Point(0, 0);
-            this.userControlDashboard1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.userControlDashboard1.Name = "userControlDashboard1";
-            this.userControlDashboard1.Padding = new System.Windows.Forms.Padding(10);
-            this.userControlDashboard1.Size = new System.Drawing.Size(1110, 788);
-            this.userControlDashboard1.TabIndex = 2;
-            // 
-            // userControlCourses1
-            // 
-            this.userControlCourses1.BackColor = System.Drawing.Color.White;
-            this.userControlCourses1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlCourses1.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userControlCourses1.Location = new System.Drawing.Point(0, 0);
-            this.userControlCourses1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.userControlCourses1.Name = "userControlCourses1";
-            this.userControlCourses1.Size = new System.Drawing.Size(1110, 788);
-            this.userControlCourses1.TabIndex = 0;
             // 
             // formMain
             // 

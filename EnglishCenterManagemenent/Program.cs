@@ -16,9 +16,9 @@ namespace EnglishCenterManagemenent
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new formStudentInfoInput());
+            Application.Run(new formStudentInfoInput());
             //Application.Run(new formLogin());
-            Application.Run(new formMain());
+            //Application.Run(new formMain());
         }
     }
 }

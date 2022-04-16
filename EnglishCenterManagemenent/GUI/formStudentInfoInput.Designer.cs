@@ -49,7 +49,7 @@ namespace EnglishCenterManagemenent.GUI
             this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.kryptonMaskedTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonMaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -587,15 +587,25 @@ namespace EnglishCenterManagemenent.GUI
             this.kryptonButton2.TabIndex = 8;
             this.kryptonButton2.Values.Text = "Cancel";
             // 
-            // maskedTextBox1
+            // kryptonMaskedTextBox1
             // 
-            this.maskedTextBox1.AsciiOnly = true;
-            this.maskedTextBox1.Culture = new System.Globalization.CultureInfo("vi-VN");
-            this.maskedTextBox1.Location = new System.Drawing.Point(372, 650);
-            this.maskedTextBox1.Mask = "000000000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(206, 35);
-            this.maskedTextBox1.TabIndex = 9;
+            this.kryptonMaskedTextBox1.Location = new System.Drawing.Point(389, 550);
+            this.kryptonMaskedTextBox1.Mask = "0999999999";
+            this.kryptonMaskedTextBox1.Name = "kryptonMaskedTextBox1";
+            this.kryptonMaskedTextBox1.Palette = this.kryptonPaletteGeneral;
+            this.kryptonMaskedTextBox1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kryptonMaskedTextBox1.Size = new System.Drawing.Size(235, 35);
+            this.kryptonMaskedTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonMaskedTextBox1.StateCommon.Border.Width = 0;
+            this.kryptonMaskedTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.kryptonMaskedTextBox1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(0);
+            this.kryptonMaskedTextBox1.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonMaskedTextBox1.StateNormal.Border.Width = 0;
+            this.kryptonMaskedTextBox1.TabIndex = 10;
             // 
             // formStudentInfoInput
             // 
@@ -603,7 +613,7 @@ namespace EnglishCenterManagemenent.GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(690, 800);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.kryptonMaskedTextBox1);
             this.Controls.Add(this.kryptonButton2);
             this.Controls.Add(this.kryptonButton1);
             this.Controls.Add(this.kryptonComboBox1);
@@ -655,6 +665,6 @@ namespace EnglishCenterManagemenent.GUI
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonMaskedTextBox kryptonMaskedTextBox1;
     }
 }

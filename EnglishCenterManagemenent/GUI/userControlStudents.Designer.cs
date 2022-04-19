@@ -1,7 +1,7 @@
 ﻿
 namespace EnglishCenterManagemenent.GUI
 {
-    partial class userControlStudents
+    partial class UserControlStudents
     {
         /// <summary> 
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EnglishCenterManagemenent.GUI
 {
-    public partial class userControlStudentGrades : UserControl
+    public partial class UserControlStudentGrades : UserControl
     {
-        public userControlStudentGrades()
+        public UserControlStudentGrades()
         {
             InitializeComponent();
             float a = 9.957f;

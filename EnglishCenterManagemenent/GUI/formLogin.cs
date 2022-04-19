@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EnglishCenterManagemenent
 {
-    public partial class formLogin : Form
+    public partial class FormLogin : Form
     {
-        public formLogin()
+        public FormLogin()
         {
             InitializeComponent();
         }

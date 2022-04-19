@@ -1,7 +1,7 @@
 ﻿
 namespace EnglishCenterManagemenent.GUI
 {
-    partial class formStudentInfoInput
+    partial class FormStudentInfoInput
     {
         /// <summary>
         /// Required designer variable.

@@ -67,80 +67,80 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GUI\formLogin.cs">
+    <Compile Include="GUI\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\formLogin.Designer.cs">
-      <DependentUpon>formLogin.cs</DependentUpon>
+    <Compile Include="GUI\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\formMain.cs">
+    <Compile Include="GUI\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\formMain.Designer.cs">
-      <DependentUpon>formMain.cs</DependentUpon>
+    <Compile Include="GUI\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\formStudentInfoInput.cs">
+    <Compile Include="GUI\FormStudentInfoInput.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\formStudentInfoInput.Designer.cs">
-      <DependentUpon>formStudentInfoInput.cs</DependentUpon>
+    <Compile Include="GUI\FormStudentInfoInput.Designer.cs">
+      <DependentUpon>FormStudentInfoInput.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\userControlCourses.cs">
+    <Compile Include="GUI\UserControlCourses.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\userControlCourses.Designer.cs">
-      <DependentUpon>userControlCourses.cs</DependentUpon>
+    <Compile Include="GUI\UserControlCourses.Designer.cs">
+      <DependentUpon>UserControlCourses.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\userControlDashboard.cs">
+    <Compile Include="GUI\UserControlDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\userControlDashboard.Designer.cs">
-      <DependentUpon>userControlDashboard.cs</DependentUpon>
+    <Compile Include="GUI\UserControlDashboard.Designer.cs">
+      <DependentUpon>UserControlDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\userControlStudentAttendance.cs">
+    <Compile Include="GUI\UserControlStudentAttendance.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\userControlStudentAttendance.Designer.cs">
-      <DependentUpon>userControlStudentAttendance.cs</DependentUpon>
+    <Compile Include="GUI\UserControlStudentAttendance.Designer.cs">
+      <DependentUpon>UserControlStudentAttendance.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\userControlStudentGrades.cs">
+    <Compile Include="GUI\UserControlStudentGrades.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\userControlStudentGrades.Designer.cs">
-      <DependentUpon>userControlStudentGrades.cs</DependentUpon>
+    <Compile Include="GUI\UserControlStudentGrades.Designer.cs">
+      <DependentUpon>UserControlStudentGrades.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\userControlStudents.cs">
+    <Compile Include="GUI\UserControlStudents.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\userControlStudents.Designer.cs">
-      <DependentUpon>userControlStudents.cs</DependentUpon>
+    <Compile Include="GUI\UserControlStudents.Designer.cs">
+      <DependentUpon>UserControlStudents.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUI\formLogin.resx">
-      <DependentUpon>formLogin.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\formMain.resx">
-      <DependentUpon>formMain.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\formStudentInfoInput.resx">
-      <DependentUpon>formStudentInfoInput.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\FormStudentInfoInput.resx">
+      <DependentUpon>FormStudentInfoInput.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\userControlCourses.resx">
-      <DependentUpon>userControlCourses.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\UserControlCourses.resx">
+      <DependentUpon>UserControlCourses.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\userControlDashboard.resx">
-      <DependentUpon>userControlDashboard.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\UserControlDashboard.resx">
+      <DependentUpon>UserControlDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\userControlStudentAttendance.resx">
-      <DependentUpon>userControlStudentAttendance.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\UserControlStudentAttendance.resx">
+      <DependentUpon>UserControlStudentAttendance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\userControlStudentGrades.resx">
-      <DependentUpon>userControlStudentGrades.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\UserControlStudentGrades.resx">
+      <DependentUpon>UserControlStudentGrades.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\userControlStudents.resx">
-      <DependentUpon>userControlStudents.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\UserControlStudents.resx">
+      <DependentUpon>UserControlStudents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

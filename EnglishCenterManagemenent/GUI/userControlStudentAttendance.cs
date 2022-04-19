@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EnglishCenterManagemenent.GUI
 {
-    public partial class userControlStudentAttendance : UserControl
+    public partial class UserControlStudentAttendance : UserControl
     {
-        public userControlStudentAttendance()
+        public UserControlStudentAttendance()
         {
             InitializeComponent();
             kryptonDataGridView1.Rows.Add(new object[] { "name1", "addr1", "dob1", true, true, true });

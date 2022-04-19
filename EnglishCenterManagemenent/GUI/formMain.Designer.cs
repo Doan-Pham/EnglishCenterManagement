@@ -1,7 +1,7 @@
 ﻿
 namespace EnglishCenterManagemenent
 {
-    partial class formMain
+    partial class FormMain
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace EnglishCenterManagemenent
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.buttonStudent = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPaletteGeneral = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
@@ -43,11 +43,11 @@ namespace EnglishCenterManagemenent
             this.labelCurrentUser = new System.Windows.Forms.Label();
             this.pictureBoxCurrentUser = new System.Windows.Forms.PictureBox();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.userControlStudents = new EnglishCenterManagemenent.GUI.userControlStudents();
-            this.userControlDashboard = new EnglishCenterManagemenent.GUI.userControlDashboard();
-            this.userControlStudentAttendance = new EnglishCenterManagemenent.GUI.userControlStudentAttendance();
-            this.userControlStudentGrades = new EnglishCenterManagemenent.GUI.userControlStudentGrades();
-            this.userControlCourses = new EnglishCenterManagemenent.GUI.userControlCourses();
+            this.userControlStudents = new EnglishCenterManagemenent.GUI.UserControlStudents();
+            this.userControlDashboard = new EnglishCenterManagemenent.GUI.UserControlDashboard();
+            this.userControlStudentAttendance = new EnglishCenterManagemenent.GUI.UserControlStudentAttendance();
+            this.userControlStudentGrades = new EnglishCenterManagemenent.GUI.UserControlStudentGrades();
+            this.userControlCourses = new EnglishCenterManagemenent.GUI.UserControlCourses();
             this.panelCurrentUserControl = new System.Windows.Forms.Panel();
             this.labelCurrentUserControl = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.panelMenu.SuspendLayout();
@@ -487,12 +487,12 @@ namespace EnglishCenterManagemenent
         private ComponentFactory.Krypton.Toolkit.KryptonButton buttonCourse;
         private ComponentFactory.Krypton.Toolkit.KryptonButton buttonUser;
         private System.Windows.Forms.Panel panelMain;
-        private GUI.userControlCourses userControlCourses;
+        private GUI.UserControlCourses userControlCourses;
         private System.Windows.Forms.Panel panelCurrentUserControl;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel labelCurrentUserControl;
-        private GUI.userControlStudents userControlStudents;
-        private GUI.userControlDashboard userControlDashboard;
-        private GUI.userControlStudentGrades userControlStudentGrades;
-        private GUI.userControlStudentAttendance userControlStudentAttendance;
+        private GUI.UserControlStudents userControlStudents;
+        private GUI.UserControlDashboard userControlDashboard;
+        private GUI.UserControlStudentGrades userControlStudentGrades;
+        private GUI.UserControlStudentAttendance userControlStudentAttendance;
     }
 }

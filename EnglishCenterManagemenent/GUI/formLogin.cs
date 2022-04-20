@@ -16,5 +16,5 @@ namespace EnglishCenterManagemenent
         {
             InitializeComponent();
         }
-    }
+    }//add
 }

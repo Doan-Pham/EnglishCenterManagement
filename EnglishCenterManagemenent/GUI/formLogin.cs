@@ -16,6 +16,7 @@ namespace EnglishCenterManagemenent
         {
             InitializeComponent();
             //Doan-commit
+            //Thien-conflict
         }
     }
 }

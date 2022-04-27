@@ -41,7 +41,6 @@ namespace EnglishCenterManagemenent
             this.buttonDashboard = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panelCurrentUser = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.labelCurrentUser = new System.Windows.Forms.Label();
-            this.pictureBoxCurrentUser = new System.Windows.Forms.PictureBox();
             this.panelMain = new System.Windows.Forms.Panel();
             this.panelCurrentUserControl = new System.Windows.Forms.Panel();
             this.labelCurrentUserControl = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -50,12 +49,16 @@ namespace EnglishCenterManagemenent
             this.userControlStudentAttendance = new EnglishCenterManagemenent.GUI.UserControlStudentAttendance();
             this.userControlStudentGrades = new EnglishCenterManagemenent.GUI.UserControlStudentGrades();
             this.userControlCourses = new EnglishCenterManagemenent.GUI.UserControlCourses();
+            this.pictureBoxCurrentUser = new System.Windows.Forms.PictureBox();
+            this.userControlUsers = new EnglishCenterManagemenent.GUI.UserControlUsers();
+            this.userControlClasses = new EnglishCenterManagemenent.GUI.UserControlClasses();
+            this.userControlEmployees = new EnglishCenterManagemenent.GUI.UserControlEmployees();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelCurrentUser)).BeginInit();
             this.panelCurrentUser.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCurrentUser)).BeginInit();
             this.panelMain.SuspendLayout();
             this.panelCurrentUserControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCurrentUser)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -344,25 +347,16 @@ namespace EnglishCenterManagemenent
             this.labelCurrentUser.TabIndex = 0;
             this.labelCurrentUser.Text = "Username";
             // 
-            // pictureBoxCurrentUser
-            // 
-            this.pictureBoxCurrentUser.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxCurrentUser.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBoxCurrentUser.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCurrentUser.Image")));
-            this.pictureBoxCurrentUser.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxCurrentUser.Name = "pictureBoxCurrentUser";
-            this.pictureBoxCurrentUser.Size = new System.Drawing.Size(318, 225);
-            this.pictureBoxCurrentUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBoxCurrentUser.TabIndex = 1;
-            this.pictureBoxCurrentUser.TabStop = false;
-            // 
             // panelMain
             // 
             this.panelMain.Controls.Add(this.userControlDashboard);
+            this.panelMain.Controls.Add(this.userControlUsers);
+            this.panelMain.Controls.Add(this.userControlCourses);
+            this.panelMain.Controls.Add(this.userControlClasses);
+            this.panelMain.Controls.Add(this.userControlEmployees);
             this.panelMain.Controls.Add(this.userControlStudents);
             this.panelMain.Controls.Add(this.userControlStudentAttendance);
             this.panelMain.Controls.Add(this.userControlStudentGrades);
-            this.panelMain.Controls.Add(this.userControlCourses);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelMain.Location = new System.Drawing.Point(318, 106);
             this.panelMain.Name = "panelMain";
@@ -450,6 +444,51 @@ namespace EnglishCenterManagemenent
             this.userControlCourses.Size = new System.Drawing.Size(1110, 788);
             this.userControlCourses.TabIndex = 0;
             // 
+            // pictureBoxCurrentUser
+            // 
+            this.pictureBoxCurrentUser.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxCurrentUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBoxCurrentUser.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCurrentUser.Image")));
+            this.pictureBoxCurrentUser.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxCurrentUser.Name = "pictureBoxCurrentUser";
+            this.pictureBoxCurrentUser.Size = new System.Drawing.Size(318, 225);
+            this.pictureBoxCurrentUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxCurrentUser.TabIndex = 1;
+            this.pictureBoxCurrentUser.TabStop = false;
+            // 
+            // userControlUsers
+            // 
+            this.userControlUsers.BackColor = System.Drawing.Color.White;
+            this.userControlUsers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlUsers.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlUsers.Location = new System.Drawing.Point(0, 0);
+            this.userControlUsers.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.userControlUsers.Name = "userControlUsers";
+            this.userControlUsers.Size = new System.Drawing.Size(1110, 788);
+            this.userControlUsers.TabIndex = 5;
+            // 
+            // userControlClasses
+            // 
+            this.userControlClasses.BackColor = System.Drawing.Color.White;
+            this.userControlClasses.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlClasses.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlClasses.Location = new System.Drawing.Point(0, 0);
+            this.userControlClasses.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.userControlClasses.Name = "userControlClasses";
+            this.userControlClasses.Size = new System.Drawing.Size(1110, 788);
+            this.userControlClasses.TabIndex = 6;
+            // 
+            // userControlEmployees
+            // 
+            this.userControlEmployees.BackColor = System.Drawing.Color.White;
+            this.userControlEmployees.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlEmployees.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlEmployees.Location = new System.Drawing.Point(0, 0);
+            this.userControlEmployees.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.userControlEmployees.Name = "userControlEmployees";
+            this.userControlEmployees.Size = new System.Drawing.Size(1110, 788);
+            this.userControlEmployees.TabIndex = 7;
+            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 39F);
@@ -469,10 +508,10 @@ namespace EnglishCenterManagemenent
             ((System.ComponentModel.ISupportInitialize)(this.panelCurrentUser)).EndInit();
             this.panelCurrentUser.ResumeLayout(false);
             this.panelCurrentUser.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCurrentUser)).EndInit();
             this.panelMain.ResumeLayout(false);
             this.panelCurrentUserControl.ResumeLayout(false);
             this.panelCurrentUserControl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCurrentUser)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -498,5 +537,8 @@ namespace EnglishCenterManagemenent
         private GUI.UserControlDashboard userControlDashboard;
         private GUI.UserControlStudentGrades userControlStudentGrades;
         private GUI.UserControlStudentAttendance userControlStudentAttendance;
+        private GUI.UserControlUsers userControlUsers;
+        private GUI.UserControlClasses userControlClasses;
+        private GUI.UserControlEmployees userControlEmployees;
     }
 }

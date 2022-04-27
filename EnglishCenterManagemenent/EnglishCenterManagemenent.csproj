@@ -85,6 +85,12 @@
     <Compile Include="GUI\FormStudentInfoInput.Designer.cs">
       <DependentUpon>FormStudentInfoInput.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\UserControlClasses.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControlClasses.Designer.cs">
+      <DependentUpon>UserControlClasses.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\UserControlCourses.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -96,6 +102,12 @@
     </Compile>
     <Compile Include="GUI\UserControlDashboard.Designer.cs">
       <DependentUpon>UserControlDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControlEmployees.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControlEmployees.Designer.cs">
+      <DependentUpon>UserControlEmployees.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\UserControlStudentAttendance.cs">
       <SubType>UserControl</SubType>
@@ -114,6 +126,12 @@
     </Compile>
     <Compile Include="GUI\UserControlStudents.Designer.cs">
       <DependentUpon>UserControlStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UserControlUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UserControlUsers.Designer.cs">
+      <DependentUpon>UserControlUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

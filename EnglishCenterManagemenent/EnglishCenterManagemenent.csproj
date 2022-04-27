@@ -145,11 +145,17 @@
     <EmbeddedResource Include="GUI\FormStudentInfoInput.resx">
       <DependentUpon>FormStudentInfoInput.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControlClasses.resx">
+      <DependentUpon>UserControlClasses.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\UserControlCourses.resx">
       <DependentUpon>UserControlCourses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UserControlDashboard.resx">
       <DependentUpon>UserControlDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControlEmployees.resx">
+      <DependentUpon>UserControlEmployees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UserControlStudentAttendance.resx">
       <DependentUpon>UserControlStudentAttendance.cs</DependentUpon>
@@ -159,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\UserControlStudents.resx">
       <DependentUpon>UserControlStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UserControlUsers.resx">
+      <DependentUpon>UserControlUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -329,7 +329,6 @@ namespace EnglishCenterManagemenent.GUI
             // 
             this.kryptonDataGridView1.AllowUserToAddRows = false;
             this.kryptonDataGridView1.AllowUserToDeleteRows = false;
-            this.kryptonDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.kryptonDataGridView1.ColumnHeadersHeight = 60;
             this.kryptonDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column7,
@@ -372,6 +371,7 @@ namespace EnglishCenterManagemenent.GUI
             this.Column7.MinimumWidth = 8;
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
+            this.Column7.Width = 147;
             // 
             // Column6
             // 
@@ -379,6 +379,7 @@ namespace EnglishCenterManagemenent.GUI
             this.Column6.MinimumWidth = 8;
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+            this.Column6.Width = 148;
             // 
             // Column1
             // 
@@ -386,24 +387,28 @@ namespace EnglishCenterManagemenent.GUI
             this.Column1.MinimumWidth = 8;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.Width = 147;
             // 
             // Column8
             // 
             this.Column8.HeaderText = "1st Test";
             this.Column8.MinimumWidth = 8;
             this.Column8.Name = "Column8";
+            this.Column8.Width = 147;
             // 
             // Column9
             // 
             this.Column9.HeaderText = "2nd Test";
             this.Column9.MinimumWidth = 8;
             this.Column9.Name = "Column9";
+            this.Column9.Width = 147;
             // 
             // Column10
             // 
             this.Column10.HeaderText = "3rd Test";
             this.Column10.MinimumWidth = 8;
             this.Column10.Name = "Column10";
+            this.Column10.Width = 148;
             // 
             // Column5
             // 
@@ -411,6 +416,7 @@ namespace EnglishCenterManagemenent.GUI
             this.Column5.MinimumWidth = 8;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
+            this.Column5.Width = 147;
             // 
             // kryptonPanel1
             // 
@@ -423,7 +429,7 @@ namespace EnglishCenterManagemenent.GUI
             this.kryptonPanel1.StateNormal.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
             this.kryptonPanel1.TabIndex = 7;
             // 
-            // userControlStudentGrades
+            // UserControlStudentGrades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 39F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -435,7 +441,7 @@ namespace EnglishCenterManagemenent.GUI
             this.Controls.Add(this.kryptonTextBox1);
             this.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.Name = "userControlStudentGrades";
+            this.Name = "UserControlStudentGrades";
             this.Size = new System.Drawing.Size(1110, 788);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();

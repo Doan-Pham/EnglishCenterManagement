@@ -356,7 +356,6 @@ namespace EnglishCenterManagemenent.GUI
             this.kryptonDataGridView1.AllowUserToDeleteRows = false;
             this.kryptonDataGridView1.AllowUserToResizeColumns = false;
             this.kryptonDataGridView1.AllowUserToResizeRows = false;
-            this.kryptonDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.kryptonDataGridView1.ColumnHeadersHeight = 60;
             this.kryptonDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -399,6 +398,7 @@ namespace EnglishCenterManagemenent.GUI
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column1.Width = 206;
             // 
             // Column2
             // 
@@ -407,6 +407,7 @@ namespace EnglishCenterManagemenent.GUI
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column2.Width = 206;
             // 
             // Column3
             // 
@@ -415,6 +416,7 @@ namespace EnglishCenterManagemenent.GUI
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column3.Width = 207;
             // 
             // Column4
             // 
@@ -423,6 +425,7 @@ namespace EnglishCenterManagemenent.GUI
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column4.Width = 206;
             // 
             // Column5
             // 
@@ -431,6 +434,7 @@ namespace EnglishCenterManagemenent.GUI
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column5.Width = 206;
             // 
             // kryptonPanel1
             // 
@@ -443,7 +447,7 @@ namespace EnglishCenterManagemenent.GUI
             this.kryptonPanel1.StateNormal.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
             this.kryptonPanel1.TabIndex = 6;
             // 
-            // userControlStudents
+            // UserControlStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 39F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -456,7 +460,7 @@ namespace EnglishCenterManagemenent.GUI
             this.Controls.Add(this.kryptonTextBox1);
             this.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.Name = "userControlStudents";
+            this.Name = "UserControlStudents";
             this.Size = new System.Drawing.Size(1110, 788);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();

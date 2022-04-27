@@ -27,20 +27,32 @@ namespace EnglishCenterManagemenent
 
         private void buttonUser_Click(object sender, EventArgs e)
         {
-            userControlStudentGrades.BringToFront();
-            labelCurrentUserControl.Text = "Student Grades";
+            userControlUsers.BringToFront();
+            labelCurrentUserControl.Text = "Users";
         }
 
         private void buttonCourse_Click(object sender, EventArgs e)
         {
-            userControlStudentAttendance.BringToFront();
-            labelCurrentUserControl.Text = "Student Attendance";
+            userControlCourses.BringToFront();
+            labelCurrentUserControl.Text = "Courses";
+        }
+
+        private void buttonClass_Click(object sender, EventArgs e)
+        {
+            userControlClasses.BringToFront();
+            labelCurrentUserControl.Text = "Classes";
+        }
+
+        private void buttonEmployee_Click(object sender, EventArgs e)
+        {
+            userControlEmployees.BringToFront();
+            labelCurrentUserControl.Text = "Employees";
         }
 
         private void buttonStudent_Click(object sender, EventArgs e)
         {
             userControlStudents.BringToFront();
-            labelCurrentUserControl.Text = "Student";
+            labelCurrentUserControl.Text = "Students";
         }
 
         #endregion

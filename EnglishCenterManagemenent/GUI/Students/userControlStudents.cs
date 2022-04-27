@@ -12,12 +12,26 @@ namespace EnglishCenterManagemenent.GUI
 {
     public partial class UserControlStudents : UserControl
     {
+        public FormMain formMainInstance { get; set; }
+
         public UserControlStudents()
         {
             InitializeComponent();
-            kryptonDataGridView1.Rows.Add(new object[] { "name1", "addr1","dob1","email1", "averagegrade1" });
-            kryptonDataGridView1.Rows.Add(new object[] { "name2", "addr2", "dob2", "email2", "averagegrade2" });
-            kryptonDataGridView1.Rows.Add(new object[] { "name3", "addr3", "dob3", "email3", "averagegrade" });
+            dataGridView.Rows.Add(new object[] { "name1", "addr1","dob1","email1", "averagegrade1" });
+            dataGridView.Rows.Add(new object[] { "name2", "addr2", "dob2", "email2", "averagegrade2" });
+            dataGridView.Rows.Add(new object[] { "name3", "addr3", "dob3", "email3", "averagegrade" });
+        }
+
+        private void buttonAttendance_Click(object sender, EventArgs e)
+        {
+            formMainInstance.userControlStudentAttendance.BringToFront();
+            formMainInstance.labelCurrentUserControl.Text = "Students Attendance";
+        }
+
+        private void buttonGrading_Click(object sender, EventArgs e)
+        {
+            formMainInstance.userControlStudentGrades.BringToFront();
+            formMainInstance.labelCurrentUserControl.Text = "Students Grades";
         }
     }
-    }
+}

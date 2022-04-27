@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EnglishCenterManagemenent
 {
-    public partial class formMain : Form
+    public partial class FormMain : Form
     {
-        public formMain()
+        public FormMain()
         {
             InitializeComponent();
         }
@@ -53,6 +53,7 @@ namespace EnglishCenterManagemenent
         {
             userControlStudents.BringToFront();
             labelCurrentUserControl.Text = "Students";
+            userControlStudents.formMainInstance = this;
         }
 
         #endregion

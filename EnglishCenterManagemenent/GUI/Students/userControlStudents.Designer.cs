@@ -453,7 +453,7 @@ namespace EnglishCenterManagemenent.GUI
             // 
             this.buttonGrading.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom2;
             this.buttonGrading.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonGrading.Location = new System.Drawing.Point(918, 123);
+            this.buttonGrading.Location = new System.Drawing.Point(918, 37);
             this.buttonGrading.Name = "buttonGrading";
             this.buttonGrading.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(164)))), ((int)(((byte)(231)))));
             this.buttonGrading.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(164)))), ((int)(((byte)(231)))));
@@ -474,13 +474,14 @@ namespace EnglishCenterManagemenent.GUI
             this.buttonGrading.TabIndex = 3;
             this.buttonGrading.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_update_24px_white;
             this.buttonGrading.Values.Text = "Grading";
+            this.buttonGrading.Visible = false;
             this.buttonGrading.Click += new System.EventHandler(this.buttonGrading_Click);
             // 
             // buttonAttendance
             // 
             this.buttonAttendance.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom2;
             this.buttonAttendance.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonAttendance.Location = new System.Drawing.Point(583, 123);
+            this.buttonAttendance.Location = new System.Drawing.Point(583, 37);
             this.buttonAttendance.Name = "buttonAttendance";
             this.buttonAttendance.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(164)))), ((int)(((byte)(231)))));
             this.buttonAttendance.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(164)))), ((int)(((byte)(231)))));
@@ -499,8 +500,9 @@ namespace EnglishCenterManagemenent.GUI
             this.buttonAttendance.StateTracking.Border.Rounding = 10;
             this.buttonAttendance.StateTracking.Border.Width = 1;
             this.buttonAttendance.TabIndex = 3;
-            this.buttonAttendance.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_update_24px_white;
+            this.buttonAttendance.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_plus_24px_white;
             this.buttonAttendance.Values.Text = "Attendance";
+            this.buttonAttendance.Visible = false;
             this.buttonAttendance.Click += new System.EventHandler(this.buttonAttendance_Click);
             // 
             // UserControlStudents

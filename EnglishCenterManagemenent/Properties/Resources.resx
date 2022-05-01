@@ -121,9 +121,6 @@
   <data name="ic_update_24px_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_update_24px_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_save_24px_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_save_24px_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ic_student_32px_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_student_32px_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,17 +148,23 @@
   <data name="ic_plus_16px_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_plus_16px_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ic_cancel_24px_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_cancel_24px_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ic_group_32px_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_group_32px_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ic_trashcan_24px_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_trashcan_24px_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ic_search_32px_gray1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_search_32px_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ic_user_thin_32px_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_user_thin_32px_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_search_32px_gray1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_search_32px_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ic_save_24px_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_save_24px_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ic_home_32px_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_home_32px_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,7 +175,7 @@
   <data name="ic_education_32px_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_education_32px_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ic_cancel_24px_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_cancel_24px_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ic_student_24px_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ic_student_24px_white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

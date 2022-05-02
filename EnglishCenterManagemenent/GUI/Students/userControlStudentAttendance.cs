@@ -15,9 +15,9 @@ namespace EnglishCenterManagemenent.GUI
         public UserControlStudentAttendance()
         {
             InitializeComponent();
-            kryptonDataGridView1.Rows.Add(new object[] { "name1", "addr1", "dob1", true, true, true });
-            kryptonDataGridView1.Rows.Add(new object[] { "name2", "addr2", "dob2", true, true, true });
-            kryptonDataGridView1.Rows.Add(new object[] { "name3", "addr3", "dob3", true, true, true });
+            dataGridView.Rows.Add(new object[] { "name1", "addr1", "dob1", true, true, true });
+            dataGridView.Rows.Add(new object[] { "name2", "addr2", "dob2", true, true, true });
+            dataGridView.Rows.Add(new object[] { "name3", "addr3", "dob3", true, true, true });
         }
     }
 }

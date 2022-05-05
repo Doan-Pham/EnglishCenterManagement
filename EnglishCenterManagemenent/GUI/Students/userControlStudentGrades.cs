@@ -16,9 +16,9 @@ namespace EnglishCenterManagemenent.GUI
         {
             InitializeComponent();
             float a = 9.957f;
-            kryptonDataGridView1.Rows.Add(new object[] { "Pre1", "2051", "Huỳnh", a.ToString("#.##"), 4.5, 4.5 });
-            kryptonDataGridView1.Rows.Add(new object[] { "Pre1", "2051", "Huỳnh", "9.0", 9.0, 9.0 });
-            kryptonDataGridView1.Rows.Add(new object[] { "Pre1", "2051", "Huỳnh", 9.0, 9.0, 9.0 });
+            dataGridView.Rows.Add(new object[] { "Pre1", "2051", "Huỳnh", a.ToString("#.##"), 4.5, 4.5 });
+            dataGridView.Rows.Add(new object[] { "Pre1", "2051", "Huỳnh", "9.0", 9.0, 9.0 });
+            dataGridView.Rows.Add(new object[] { "Pre1", "2051", "Huỳnh", 9.0, 9.0, 9.0 });
         }
 
     }

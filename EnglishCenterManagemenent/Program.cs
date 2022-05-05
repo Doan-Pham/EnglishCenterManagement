@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EnglishCenterManagemenent.GUI;
+using EnglishCenterManagemenent.GUI.Classes;
+
 namespace EnglishCenterManagemenent
 {
     static class Program
@@ -18,7 +20,7 @@ namespace EnglishCenterManagemenent
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new FormLogin());
             Application.Run(new FormMain());
-            //Application.Run(new FormStudentInfoInput());
+            Application.Run(new FormClassInfoInput());
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EnglishCenterManagemenent.GUI
 {
-    public partial class formStudentInfoInput : Form
+    public partial class FormStudentInfoInput : Form
     {
-        public formStudentInfoInput()
+        public FormStudentInfoInput()
         {
             InitializeComponent();
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EnglishCenterManagemenent.GUI
 {
-    public partial class userControlDashboard : UserControl
+    public partial class UserControlCourses : UserControl
     {
-        public userControlDashboard()
+        public UserControlCourses()
         {
             InitializeComponent();
         }

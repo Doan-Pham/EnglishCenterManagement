@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EnglishCenterManagemenent
+namespace EnglishCenterManagemenent.GUI.Classes
 {
-    public partial class formMain : Form
+    public partial class FormClassInfoInput : Form
     {
-        public formMain()
+        public FormClassInfoInput()
         {
             InitializeComponent();
         }

@@ -121,10 +121,10 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pictureBoxCurrentUser.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EwAACxMBAJqcGAAALoVJREFUeF7tfQuUVdWVLf3eS/pl5KN1z++WGttkpDVJx4zXSYYjbZ6i8pfiI1AI
+        DAAACwwBP0AiyAAALoVJREFUeF7tfQuUVdWVLf3eS/pl5KN1z++WGttkpDVJx4zXSYYjbZ6i8pfiI1AI
         BUWB/MFC+RdFgSVQUMVXEPCfdGLbkk4bE9sYwWheNOgTHK9tTTpiOhqjGWoQqHv2PgXG4t4319prn3uq
         gABS99YFWWOsce5nn1OfNfdca+3P2j3ORFGL0l44x79cz/Zq1GyvSd3sbdM3e9vVTf5z6ibvZX2T97qa
         5e9TN/rvs8709+kZ+GyG97Ka7j2npnk79DT3QTXNaQqnODXhZP9yNSHtyePPSinJ/oVl54Tz3Ypwgb9O
@@ -326,4 +326,7 @@
         QmCC
 </value>
   </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>56</value>
+  </metadata>
 </root>

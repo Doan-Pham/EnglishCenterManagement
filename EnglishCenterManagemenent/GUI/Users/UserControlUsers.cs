@@ -8,15 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EnglishCenterManagemenent
+namespace EnglishCenterManagemenent.GUI
 {
-    public partial class formLogin : Form
+    public partial class UserControlUsers : UserControl
     {
-        public formLogin()
+        public UserControlUsers()
         {
             InitializeComponent();
-            //Doan-commit
-            //Thien-conflict
         }
     }
 }

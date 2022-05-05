@@ -1,7 +1,7 @@
 ﻿
 namespace EnglishCenterManagemenent
 {
-    partial class formMain
+    partial class FormMain
     {
         /// <summary>
         /// Required designer variable.
@@ -30,64 +30,68 @@ namespace EnglishCenterManagemenent
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.kryptonButton6 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.buttonStudent = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonPaletteGeneral = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
-            this.kryptonButton5 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton4 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.userControlStudentAttendance1 = new EnglishCenterManagemenent.GUI.userControlStudentAttendance();
-            this.userControlStudentGrades1 = new EnglishCenterManagemenent.GUI.userControlStudentGrades();
-            this.userControlStudents1 = new EnglishCenterManagemenent.GUI.userControlStudents();
-            this.userControlDashboard1 = new EnglishCenterManagemenent.GUI.userControlDashboard();
-            this.userControlCourses1 = new EnglishCenterManagemenent.GUI.userControlCourses();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
-            this.kryptonPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.buttonEmployee = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.buttonClass = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.buttonCourse = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.buttonUser = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.buttonDashboard = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.panelCurrentUser = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.labelCurrentUser = new System.Windows.Forms.Label();
+            this.pictureBoxCurrentUser = new System.Windows.Forms.PictureBox();
+            this.panelMain = new System.Windows.Forms.Panel();
+            this.panelCurrentUserControl = new System.Windows.Forms.Panel();
+            this.labelCurrentUserControl = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.userControlDashboard = new EnglishCenterManagemenent.GUI.UserControlDashboard();
+            this.userControlUsers = new EnglishCenterManagemenent.GUI.UserControlUsers();
+            this.userControlCourses = new EnglishCenterManagemenent.GUI.UserControlCourses();
+            this.userControlClasses = new EnglishCenterManagemenent.GUI.UserControlClasses();
+            this.userControlEmployees = new EnglishCenterManagemenent.GUI.UserControlEmployees();
+            this.userControlStudents = new EnglishCenterManagemenent.GUI.UserControlStudents();
+            this.userControlStudentAttendance = new EnglishCenterManagemenent.GUI.UserControlStudentAttendance();
+            this.userControlStudentGrades = new EnglishCenterManagemenent.GUI.UserControlStudentGrades();
+            this.panelMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelCurrentUser)).BeginInit();
+            this.panelCurrentUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCurrentUser)).BeginInit();
+            this.panelMain.SuspendLayout();
+            this.panelCurrentUserControl.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelMenu
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.kryptonButton6);
-            this.panel1.Controls.Add(this.kryptonButton5);
-            this.panel1.Controls.Add(this.kryptonButton4);
-            this.panel1.Controls.Add(this.kryptonButton3);
-            this.panel1.Controls.Add(this.kryptonButton1);
-            this.panel1.Controls.Add(this.kryptonButton2);
-            this.panel1.Controls.Add(this.kryptonPanel1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(318, 894);
-            this.panel1.TabIndex = 0;
+            this.panelMenu.BackColor = System.Drawing.Color.White;
+            this.panelMenu.Controls.Add(this.buttonStudent);
+            this.panelMenu.Controls.Add(this.buttonEmployee);
+            this.panelMenu.Controls.Add(this.buttonClass);
+            this.panelMenu.Controls.Add(this.buttonCourse);
+            this.panelMenu.Controls.Add(this.buttonUser);
+            this.panelMenu.Controls.Add(this.buttonDashboard);
+            this.panelMenu.Controls.Add(this.panelCurrentUser);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(318, 894);
+            this.panelMenu.TabIndex = 0;
             // 
-            // kryptonButton6
+            // buttonStudent
             // 
-            this.kryptonButton6.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorStack;
-            this.kryptonButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonButton6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonButton6.Location = new System.Drawing.Point(0, 652);
-            this.kryptonButton6.Name = "kryptonButton6";
-            this.kryptonButton6.Palette = this.kryptonPaletteGeneral;
-            this.kryptonButton6.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonButton6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kryptonButton6.Size = new System.Drawing.Size(318, 82);
-            this.kryptonButton6.TabIndex = 16;
-            this.kryptonButton6.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_student_32px_gray;
-            this.kryptonButton6.Values.Text = "Student";
+            this.buttonStudent.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorStack;
+            this.buttonStudent.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStudent.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonStudent.Location = new System.Drawing.Point(0, 652);
+            this.buttonStudent.Name = "buttonStudent";
+            this.buttonStudent.Palette = this.kryptonPaletteGeneral;
+            this.buttonStudent.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.buttonStudent.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.buttonStudent.Size = new System.Drawing.Size(318, 82);
+            this.buttonStudent.TabIndex = 16;
+            this.buttonStudent.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_student_32px_gray;
+            this.buttonStudent.Values.Text = "Student";
+            this.buttonStudent.Click += new System.EventHandler(this.buttonStudent_Click);
             // 
             // kryptonPaletteGeneral
             // 
@@ -240,259 +244,304 @@ namespace EnglishCenterManagemenent
             this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             // 
-            // kryptonButton5
+            // buttonEmployee
             // 
-            this.kryptonButton5.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorStack;
-            this.kryptonButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonButton5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonButton5.Location = new System.Drawing.Point(0, 570);
-            this.kryptonButton5.Name = "kryptonButton5";
-            this.kryptonButton5.Palette = this.kryptonPaletteGeneral;
-            this.kryptonButton5.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonButton5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kryptonButton5.Size = new System.Drawing.Size(318, 82);
-            this.kryptonButton5.TabIndex = 15;
-            this.kryptonButton5.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_education_32px_gray;
-            this.kryptonButton5.Values.Text = "Teacher";
+            this.buttonEmployee.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorStack;
+            this.buttonEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEmployee.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonEmployee.Location = new System.Drawing.Point(0, 570);
+            this.buttonEmployee.Name = "buttonEmployee";
+            this.buttonEmployee.Palette = this.kryptonPaletteGeneral;
+            this.buttonEmployee.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.buttonEmployee.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.buttonEmployee.Size = new System.Drawing.Size(318, 82);
+            this.buttonEmployee.TabIndex = 15;
+            this.buttonEmployee.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_education_32px_gray;
+            this.buttonEmployee.Values.Text = "Employee";
+            this.buttonEmployee.Click += new System.EventHandler(this.buttonEmployee_Click);
             // 
-            // kryptonButton4
+            // buttonClass
             // 
-            this.kryptonButton4.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorStack;
-            this.kryptonButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonButton4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonButton4.Location = new System.Drawing.Point(0, 488);
-            this.kryptonButton4.Name = "kryptonButton4";
-            this.kryptonButton4.Palette = this.kryptonPaletteGeneral;
-            this.kryptonButton4.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonButton4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kryptonButton4.Size = new System.Drawing.Size(318, 82);
-            this.kryptonButton4.TabIndex = 14;
-            this.kryptonButton4.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_pencil_32px_gray;
-            this.kryptonButton4.Values.Text = "Class";
+            this.buttonClass.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorStack;
+            this.buttonClass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonClass.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonClass.Location = new System.Drawing.Point(0, 488);
+            this.buttonClass.Name = "buttonClass";
+            this.buttonClass.Palette = this.kryptonPaletteGeneral;
+            this.buttonClass.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.buttonClass.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.buttonClass.Size = new System.Drawing.Size(318, 82);
+            this.buttonClass.TabIndex = 14;
+            this.buttonClass.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_pencil_32px_gray;
+            this.buttonClass.Values.Text = "Class";
+            this.buttonClass.Click += new System.EventHandler(this.buttonClass_Click);
             // 
-            // kryptonButton3
+            // buttonCourse
             // 
-            this.kryptonButton3.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorStack;
-            this.kryptonButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonButton3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonButton3.Location = new System.Drawing.Point(0, 406);
-            this.kryptonButton3.Name = "kryptonButton3";
-            this.kryptonButton3.Palette = this.kryptonPaletteGeneral;
-            this.kryptonButton3.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonButton3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kryptonButton3.Size = new System.Drawing.Size(318, 82);
-            this.kryptonButton3.TabIndex = 13;
-            this.kryptonButton3.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_book_32px_gray;
-            this.kryptonButton3.Values.Text = "Course";
+            this.buttonCourse.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorStack;
+            this.buttonCourse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCourse.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonCourse.Location = new System.Drawing.Point(0, 406);
+            this.buttonCourse.Name = "buttonCourse";
+            this.buttonCourse.Palette = this.kryptonPaletteGeneral;
+            this.buttonCourse.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.buttonCourse.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.buttonCourse.Size = new System.Drawing.Size(318, 82);
+            this.buttonCourse.TabIndex = 13;
+            this.buttonCourse.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_book_32px_gray;
+            this.buttonCourse.Values.Text = "Course";
+            this.buttonCourse.Click += new System.EventHandler(this.buttonCourse_Click);
             // 
-            // kryptonButton1
+            // buttonUser
             // 
-            this.kryptonButton1.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorStack;
-            this.kryptonButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonButton1.Location = new System.Drawing.Point(0, 324);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Palette = this.kryptonPaletteGeneral;
-            this.kryptonButton1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kryptonButton1.Size = new System.Drawing.Size(318, 82);
-            this.kryptonButton1.TabIndex = 12;
-            this.kryptonButton1.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_user_thin_32px_gray;
-            this.kryptonButton1.Values.Text = "User";
+            this.buttonUser.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorStack;
+            this.buttonUser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonUser.Location = new System.Drawing.Point(0, 324);
+            this.buttonUser.Name = "buttonUser";
+            this.buttonUser.Palette = this.kryptonPaletteGeneral;
+            this.buttonUser.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.buttonUser.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.buttonUser.Size = new System.Drawing.Size(318, 82);
+            this.buttonUser.TabIndex = 12;
+            this.buttonUser.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_user_thin_32px_gray;
+            this.buttonUser.Values.Text = "User";
+            this.buttonUser.Click += new System.EventHandler(this.buttonUser_Click);
             // 
-            // kryptonButton2
+            // buttonDashboard
             // 
-            this.kryptonButton2.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorStack;
-            this.kryptonButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonButton2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonButton2.Location = new System.Drawing.Point(0, 242);
-            this.kryptonButton2.Name = "kryptonButton2";
-            this.kryptonButton2.Palette = this.kryptonPaletteGeneral;
-            this.kryptonButton2.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonButton2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.kryptonButton2.Size = new System.Drawing.Size(318, 82);
-            this.kryptonButton2.TabIndex = 11;
-            this.kryptonButton2.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_home_32px_gray;
-            this.kryptonButton2.Values.Text = "Dashboard";
+            this.buttonDashboard.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorStack;
+            this.buttonDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonDashboard.Location = new System.Drawing.Point(0, 242);
+            this.buttonDashboard.Name = "buttonDashboard";
+            this.buttonDashboard.Palette = this.kryptonPaletteGeneral;
+            this.buttonDashboard.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.buttonDashboard.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.buttonDashboard.Size = new System.Drawing.Size(318, 82);
+            this.buttonDashboard.TabIndex = 11;
+            this.buttonDashboard.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_home_32px_gray;
+            this.buttonDashboard.Values.Text = "Dashboard";
+            this.buttonDashboard.Click += new System.EventHandler(this.buttonDashboard_Click);
             // 
-            // kryptonPanel1
+            // panelCurrentUser
             // 
-            this.kryptonPanel1.Controls.Add(this.label1);
-            this.kryptonPanel1.Controls.Add(this.pictureBox1);
-            this.kryptonPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kryptonPanel1.Location = new System.Drawing.Point(0, 0);
-            this.kryptonPanel1.Name = "kryptonPanel1";
-            this.kryptonPanel1.Size = new System.Drawing.Size(318, 242);
-            this.kryptonPanel1.StateNormal.Color1 = System.Drawing.Color.White;
-            this.kryptonPanel1.StateNormal.Color2 = System.Drawing.Color.White;
-            this.kryptonPanel1.StateNormal.ColorAngle = 45F;
-            this.kryptonPanel1.StateNormal.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
-            this.kryptonPanel1.TabIndex = 0;
+            this.panelCurrentUser.Controls.Add(this.labelCurrentUser);
+            this.panelCurrentUser.Controls.Add(this.pictureBoxCurrentUser);
+            this.panelCurrentUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelCurrentUser.Location = new System.Drawing.Point(0, 0);
+            this.panelCurrentUser.Name = "panelCurrentUser";
+            this.panelCurrentUser.Size = new System.Drawing.Size(318, 242);
+            this.panelCurrentUser.StateNormal.Color1 = System.Drawing.Color.White;
+            this.panelCurrentUser.StateNormal.Color2 = System.Drawing.Color.White;
+            this.panelCurrentUser.StateNormal.ColorAngle = 45F;
+            this.panelCurrentUser.StateNormal.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
+            this.panelCurrentUser.TabIndex = 0;
             // 
-            // label1
+            // labelCurrentUser
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(93, 186);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Username";
+            this.labelCurrentUser.AutoSize = true;
+            this.labelCurrentUser.BackColor = System.Drawing.Color.Transparent;
+            this.labelCurrentUser.ForeColor = System.Drawing.Color.Black;
+            this.labelCurrentUser.Location = new System.Drawing.Point(93, 186);
+            this.labelCurrentUser.Name = "labelCurrentUser";
+            this.labelCurrentUser.Size = new System.Drawing.Size(131, 39);
+            this.labelCurrentUser.TabIndex = 0;
+            this.labelCurrentUser.Text = "Username";
             // 
-            // pictureBox1
+            // pictureBoxCurrentUser
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(318, 225);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxCurrentUser.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxCurrentUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBoxCurrentUser.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCurrentUser.Image")));
+            this.pictureBoxCurrentUser.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxCurrentUser.Name = "pictureBoxCurrentUser";
+            this.pictureBoxCurrentUser.Size = new System.Drawing.Size(318, 225);
+            this.pictureBoxCurrentUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxCurrentUser.TabIndex = 1;
+            this.pictureBoxCurrentUser.TabStop = false;
             // 
-            // panel2
+            // panelMain
             // 
-            this.panel2.Controls.Add(this.userControlStudentGrades1);
-            this.panel2.Controls.Add(this.userControlStudentAttendance1);
-            this.panel2.Controls.Add(this.userControlStudents1);
-            this.panel2.Controls.Add(this.userControlDashboard1);
-            this.panel2.Controls.Add(this.userControlCourses1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(318, 106);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1110, 788);
-            this.panel2.TabIndex = 1;
+            this.panelMain.Controls.Add(this.userControlDashboard);
+            this.panelMain.Controls.Add(this.userControlUsers);
+            this.panelMain.Controls.Add(this.userControlCourses);
+            this.panelMain.Controls.Add(this.userControlClasses);
+            this.panelMain.Controls.Add(this.userControlEmployees);
+            this.panelMain.Controls.Add(this.userControlStudents);
+            this.panelMain.Controls.Add(this.userControlStudentAttendance);
+            this.panelMain.Controls.Add(this.userControlStudentGrades);
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelMain.Location = new System.Drawing.Point(318, 106);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(1110, 788);
+            this.panelMain.TabIndex = 1;
             // 
-            // panel3
+            // panelCurrentUserControl
             // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.kryptonLabel1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(318, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1110, 100);
-            this.panel3.TabIndex = 2;
+            this.panelCurrentUserControl.BackColor = System.Drawing.Color.Transparent;
+            this.panelCurrentUserControl.Controls.Add(this.labelCurrentUserControl);
+            this.panelCurrentUserControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelCurrentUserControl.Location = new System.Drawing.Point(318, 0);
+            this.panelCurrentUserControl.Name = "panelCurrentUserControl";
+            this.panelCurrentUserControl.Size = new System.Drawing.Size(1110, 100);
+            this.panelCurrentUserControl.TabIndex = 2;
             // 
-            // kryptonLabel1
+            // labelCurrentUserControl
             // 
-            this.kryptonLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kryptonLabel1.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
-            this.kryptonLabel1.Location = new System.Drawing.Point(0, 0);
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Palette = this.kryptonPaletteGeneral;
-            this.kryptonLabel1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonLabel1.Size = new System.Drawing.Size(1110, 100);
-            this.kryptonLabel1.StateNormal.Padding = new System.Windows.Forms.Padding(30, -1, -1, -1);
-            this.kryptonLabel1.StateNormal.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.kryptonLabel1.StateNormal.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.kryptonLabel1.TabIndex = 0;
-            this.kryptonLabel1.Values.Text = "Dashboard";
+            this.labelCurrentUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelCurrentUserControl.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
+            this.labelCurrentUserControl.Location = new System.Drawing.Point(0, 0);
+            this.labelCurrentUserControl.Name = "labelCurrentUserControl";
+            this.labelCurrentUserControl.Palette = this.kryptonPaletteGeneral;
+            this.labelCurrentUserControl.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.labelCurrentUserControl.Size = new System.Drawing.Size(1110, 100);
+            this.labelCurrentUserControl.StateNormal.Padding = new System.Windows.Forms.Padding(30, -1, -1, -1);
+            this.labelCurrentUserControl.StateNormal.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.labelCurrentUserControl.StateNormal.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.labelCurrentUserControl.TabIndex = 0;
+            this.labelCurrentUserControl.Values.Text = "Dashboard";
             // 
-            // userControlStudentAttendance1
+            // userControlDashboard
             // 
-            this.userControlStudentAttendance1.BackColor = System.Drawing.Color.White;
-            this.userControlStudentAttendance1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlStudentAttendance1.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userControlStudentAttendance1.Location = new System.Drawing.Point(0, 0);
-            this.userControlStudentAttendance1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.userControlStudentAttendance1.Name = "userControlStudentAttendance1";
-            this.userControlStudentAttendance1.Size = new System.Drawing.Size(1110, 788);
-            this.userControlStudentAttendance1.TabIndex = 4;
+            this.userControlDashboard.BackColor = System.Drawing.Color.White;
+            this.userControlDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlDashboard.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlDashboard.Location = new System.Drawing.Point(0, 0);
+            this.userControlDashboard.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.userControlDashboard.Name = "userControlDashboard";
+            this.userControlDashboard.Padding = new System.Windows.Forms.Padding(10);
+            this.userControlDashboard.Size = new System.Drawing.Size(1110, 788);
+            this.userControlDashboard.TabIndex = 2;
             // 
-            // userControlStudentGrades1
+            // userControlUsers
             // 
-            this.userControlStudentGrades1.BackColor = System.Drawing.Color.White;
-            this.userControlStudentGrades1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlStudentGrades1.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userControlStudentGrades1.Location = new System.Drawing.Point(0, 0);
-            this.userControlStudentGrades1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.userControlStudentGrades1.Name = "userControlStudentGrades1";
-            this.userControlStudentGrades1.Size = new System.Drawing.Size(1110, 788);
-            this.userControlStudentGrades1.TabIndex = 3;
+            this.userControlUsers.BackColor = System.Drawing.Color.White;
+            this.userControlUsers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlUsers.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlUsers.Location = new System.Drawing.Point(0, 0);
+            this.userControlUsers.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.userControlUsers.Name = "userControlUsers";
+            this.userControlUsers.Size = new System.Drawing.Size(1110, 788);
+            this.userControlUsers.TabIndex = 5;
             // 
-            // userControlStudents1
+            // userControlCourses
             // 
-            this.userControlStudents1.BackColor = System.Drawing.Color.White;
-            this.userControlStudents1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlStudents1.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userControlStudents1.Location = new System.Drawing.Point(0, 0);
-            this.userControlStudents1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.userControlStudents1.Name = "userControlStudents1";
-            this.userControlStudents1.Size = new System.Drawing.Size(1110, 788);
-            this.userControlStudents1.TabIndex = 1;
+            this.userControlCourses.BackColor = System.Drawing.Color.White;
+            this.userControlCourses.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlCourses.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlCourses.Location = new System.Drawing.Point(0, 0);
+            this.userControlCourses.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.userControlCourses.Name = "userControlCourses";
+            this.userControlCourses.Size = new System.Drawing.Size(1110, 788);
+            this.userControlCourses.TabIndex = 0;
             // 
-            // userControlDashboard1
+            // userControlClasses
             // 
-            this.userControlDashboard1.BackColor = System.Drawing.Color.White;
-            this.userControlDashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlDashboard1.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userControlDashboard1.Location = new System.Drawing.Point(0, 0);
-            this.userControlDashboard1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.userControlDashboard1.Name = "userControlDashboard1";
-            this.userControlDashboard1.Padding = new System.Windows.Forms.Padding(10);
-            this.userControlDashboard1.Size = new System.Drawing.Size(1110, 788);
-            this.userControlDashboard1.TabIndex = 2;
+            this.userControlClasses.BackColor = System.Drawing.Color.White;
+            this.userControlClasses.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlClasses.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlClasses.Location = new System.Drawing.Point(0, 0);
+            this.userControlClasses.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.userControlClasses.Name = "userControlClasses";
+            this.userControlClasses.Size = new System.Drawing.Size(1110, 788);
+            this.userControlClasses.TabIndex = 6;
             // 
-            // userControlCourses1
+            // userControlEmployees
             // 
-            this.userControlCourses1.BackColor = System.Drawing.Color.White;
-            this.userControlCourses1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlCourses1.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userControlCourses1.Location = new System.Drawing.Point(0, 0);
-            this.userControlCourses1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.userControlCourses1.Name = "userControlCourses1";
-            this.userControlCourses1.Size = new System.Drawing.Size(1110, 788);
-            this.userControlCourses1.TabIndex = 0;
+            this.userControlEmployees.BackColor = System.Drawing.Color.White;
+            this.userControlEmployees.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlEmployees.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlEmployees.Location = new System.Drawing.Point(0, 0);
+            this.userControlEmployees.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.userControlEmployees.Name = "userControlEmployees";
+            this.userControlEmployees.Size = new System.Drawing.Size(1110, 788);
+            this.userControlEmployees.TabIndex = 7;
             // 
-            // formMain
+            // userControlStudents
+            // 
+            this.userControlStudents.BackColor = System.Drawing.Color.White;
+            this.userControlStudents.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlStudents.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlStudents.formMainInstance = null;
+            this.userControlStudents.Location = new System.Drawing.Point(0, 0);
+            this.userControlStudents.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.userControlStudents.Name = "userControlStudents";
+            this.userControlStudents.Size = new System.Drawing.Size(1110, 788);
+            this.userControlStudents.TabIndex = 1;
+            // 
+            // userControlStudentAttendance
+            // 
+            this.userControlStudentAttendance.BackColor = System.Drawing.Color.White;
+            this.userControlStudentAttendance.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlStudentAttendance.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlStudentAttendance.Location = new System.Drawing.Point(0, 0);
+            this.userControlStudentAttendance.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.userControlStudentAttendance.Name = "userControlStudentAttendance";
+            this.userControlStudentAttendance.Size = new System.Drawing.Size(1110, 788);
+            this.userControlStudentAttendance.TabIndex = 4;
+            // 
+            // userControlStudentGrades
+            // 
+            this.userControlStudentGrades.BackColor = System.Drawing.Color.White;
+            this.userControlStudentGrades.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlStudentGrades.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlStudentGrades.Location = new System.Drawing.Point(0, 0);
+            this.userControlStudentGrades.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.userControlStudentGrades.Name = "userControlStudentGrades";
+            this.userControlStudentGrades.Size = new System.Drawing.Size(1110, 788);
+            this.userControlStudentGrades.TabIndex = 3;
+            // 
+            // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 39F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1428, 894);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelCurrentUserControl);
+            this.Controls.Add(this.panelMain);
+            this.Controls.Add(this.panelMenu);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.Name = "formMain";
+            this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "English Center Management Application";
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
-            this.kryptonPanel1.ResumeLayout(false);
-            this.kryptonPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panelMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelCurrentUser)).EndInit();
+            this.panelCurrentUser.ResumeLayout(false);
+            this.panelCurrentUser.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCurrentUser)).EndInit();
+            this.panelMain.ResumeLayout(false);
+            this.panelCurrentUserControl.ResumeLayout(false);
+            this.panelCurrentUserControl.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private ComponentFactory.Krypton.Toolkit.KryptonPanel kryptonPanel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
+        private System.Windows.Forms.Panel panelMenu;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel panelCurrentUser;
+        private System.Windows.Forms.PictureBox pictureBoxCurrentUser;
+        private System.Windows.Forms.Label labelCurrentUser;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton buttonDashboard;
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPaletteGeneral;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton6;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton5;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton4;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton3;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
-        private System.Windows.Forms.Panel panel2;
-        private GUI.userControlCourses userControlCourses1;
-        private System.Windows.Forms.Panel panel3;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
-        private GUI.userControlStudents userControlStudents1;
-        private GUI.userControlDashboard userControlDashboard1;
-        private GUI.userControlStudentGrades userControlStudentGrades1;
-        private GUI.userControlStudentAttendance userControlStudentAttendance1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton buttonStudent;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton buttonEmployee;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton buttonClass;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton buttonCourse;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton buttonUser;
+        private System.Windows.Forms.Panel panelMain;
+        private GUI.UserControlCourses userControlCourses;
+        private System.Windows.Forms.Panel panelCurrentUserControl;
+        private GUI.UserControlStudents userControlStudents;
+        private GUI.UserControlDashboard userControlDashboard;
+        private GUI.UserControlUsers userControlUsers;
+        private GUI.UserControlClasses userControlClasses;
+        private GUI.UserControlEmployees userControlEmployees;
+        public GUI.UserControlStudentGrades userControlStudentGrades;
+        public GUI.UserControlStudentAttendance userControlStudentAttendance;
+        public ComponentFactory.Krypton.Toolkit.KryptonLabel labelCurrentUserControl;
     }
 }

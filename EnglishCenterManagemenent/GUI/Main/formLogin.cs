@@ -15,6 +15,8 @@ namespace EnglishCenterManagemenent
         public FormLogin()
         {
             InitializeComponent();
+            //Doan-commit
+            //Thien-conflict
         }
     }//add
 }

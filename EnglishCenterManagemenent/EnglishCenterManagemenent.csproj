@@ -67,6 +67,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO\Class.cs" />
+    <Compile Include="DTO\ClassTeacherSchedule.cs" />
+    <Compile Include="DTO\Course.cs" />
+    <Compile Include="DTO\Employee.cs" />
+    <Compile Include="DTO\GradeScheme.cs" />
+    <Compile Include="DTO\Role.cs" />
+    <Compile Include="DTO\Schedule.cs" />
+    <Compile Include="DTO\Student.cs" />
+    <Compile Include="DTO\StudentAttendance.cs" />
+    <Compile Include="DTO\StudentGrade.cs" />
+    <Compile Include="DTO\Users.cs" />
     <Compile Include="GUI\Classes\FormClassInfoInput.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,7 +217,6 @@
   <ItemGroup>
     <Folder Include="BUS\" />
     <Folder Include="DAO\" />
-    <Folder Include="DTO\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ic_user_32px_gray.png" />

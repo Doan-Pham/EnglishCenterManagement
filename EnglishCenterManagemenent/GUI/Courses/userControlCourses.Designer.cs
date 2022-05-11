@@ -42,7 +42,7 @@ namespace EnglishCenterManagemenent.GUI
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelSearchIcon = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.buttonStudentsList = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.buttonGradeSchemes = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelSearchIcon)).BeginInit();
             this.SuspendLayout();
@@ -448,31 +448,32 @@ namespace EnglishCenterManagemenent.GUI
             this.panelSearchIcon.StateNormal.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
             this.panelSearchIcon.TabIndex = 6;
             // 
-            // buttonStudentsList
+            // buttonGradeSchemes
             // 
-            this.buttonStudentsList.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom2;
-            this.buttonStudentsList.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStudentsList.Location = new System.Drawing.Point(666, 132);
-            this.buttonStudentsList.Name = "buttonStudentsList";
-            this.buttonStudentsList.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
-            this.buttonStudentsList.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
-            this.buttonStudentsList.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(67)))), ((int)(((byte)(62)))));
-            this.buttonStudentsList.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(67)))), ((int)(((byte)(62)))));
-            this.buttonStudentsList.Palette = this.kryptonPaletteGeneral;
-            this.buttonStudentsList.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.buttonStudentsList.Size = new System.Drawing.Size(304, 67);
-            this.buttonStudentsList.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(86)))), ((int)(((byte)(160)))));
-            this.buttonStudentsList.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
-            this.buttonStudentsList.TabIndex = 7;
-            this.buttonStudentsList.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_student_24px_white;
-            this.buttonStudentsList.Values.Text = "View grade scheme";
+            this.buttonGradeSchemes.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom2;
+            this.buttonGradeSchemes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonGradeSchemes.Location = new System.Drawing.Point(666, 132);
+            this.buttonGradeSchemes.Name = "buttonGradeSchemes";
+            this.buttonGradeSchemes.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
+            this.buttonGradeSchemes.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
+            this.buttonGradeSchemes.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(67)))), ((int)(((byte)(62)))));
+            this.buttonGradeSchemes.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(67)))), ((int)(((byte)(62)))));
+            this.buttonGradeSchemes.Palette = this.kryptonPaletteGeneral;
+            this.buttonGradeSchemes.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.buttonGradeSchemes.Size = new System.Drawing.Size(304, 67);
+            this.buttonGradeSchemes.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(86)))), ((int)(((byte)(160)))));
+            this.buttonGradeSchemes.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
+            this.buttonGradeSchemes.TabIndex = 7;
+            this.buttonGradeSchemes.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_student_24px_white;
+            this.buttonGradeSchemes.Values.Text = "View grade scheme";
+            this.buttonGradeSchemes.Click += new System.EventHandler(this.buttonGradeSchemes_Click);
             // 
             // UserControlCourses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 39F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.buttonStudentsList);
+            this.Controls.Add(this.buttonGradeSchemes);
             this.Controls.Add(this.panelSearchIcon);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.buttonAdd);
@@ -504,6 +505,6 @@ namespace EnglishCenterManagemenent.GUI
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel panelSearchIcon;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton buttonStudentsList;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton buttonGradeSchemes;
     }
 }

@@ -78,6 +78,12 @@
     <Compile Include="DTO\StudentAttendance.cs" />
     <Compile Include="DTO\StudentGrade.cs" />
     <Compile Include="DTO\Users.cs" />
+    <Compile Include="GUI\Courses\FormCourseGradeScheme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Courses\FormCourseGradeScheme.Designer.cs">
+      <DependentUpon>FormCourseGradeScheme.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Classes\FormClassInfoInput.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,8 +158,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Courses\FormCourseGradeScheme.resx">
+      <DependentUpon>FormCourseGradeScheme.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Classes\FormClassInfoInput.resx">
       <DependentUpon>FormClassInfoInput.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Main\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

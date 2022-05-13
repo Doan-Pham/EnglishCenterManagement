@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using EnglishCenterManagemenent.DAO;
 
 namespace EnglishCenterManagemenent
 {
@@ -15,8 +17,29 @@ namespace EnglishCenterManagemenent
         public FormLogin()
         {
             InitializeComponent();
-            //Doan-commit
-            //Thien-conflict
         }
-    }//add
+   
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            string username = txtboxUsername.Text;
+            string password = txtboxPassword.Text;
+            if (Login(username, password))
+            {
+                //MessageBox.Show("OK");
+                FormMain formMain = new FormMain();
+                this.Hide();
+                formMain.Show();
+            }
+            else
+            {
+                MessageBox.Show("Username or password is incorrect");
+            }
+        }
+
+        bool Login(string username, string password)
+        {
+            return UsersDAO.Instance.Login(username, password);
+        }
+
+    }
 }

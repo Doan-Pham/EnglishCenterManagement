@@ -23,5 +23,11 @@ namespace EnglishCenterManagemenent.GUI
             FormCourseGradeScheme formCourseGradeScheme = new FormCourseGradeScheme();
             formCourseGradeScheme.ShowDialog();
         }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            FormCourseInfoInput formCourseInfoInput = new FormCourseInfoInput();
+            formCourseInfoInput.ShowDialog();
+        }
     }
 }

@@ -305,6 +305,7 @@ namespace EnglishCenterManagemenent.GUI
             this.buttonAdd.TabIndex = 3;
             this.buttonAdd.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_plus_24px_white;
             this.buttonAdd.Values.Text = "Add";
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonUpdate
             // 

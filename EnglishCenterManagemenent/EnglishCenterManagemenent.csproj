@@ -93,6 +93,12 @@
     <Compile Include="GUI\Classes\FormClassInfoInput.Designer.cs">
       <DependentUpon>FormClassInfoInput.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Courses\FormCourseInfoInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Courses\FormCourseInfoInput.Designer.cs">
+      <DependentUpon>FormCourseInfoInput.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Main\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     <EmbeddedResource Include="GUI\Classes\FormClassInfoInput.resx">
       <DependentUpon>FormClassInfoInput.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Courses\FormCourseInfoInput.resx">
+      <DependentUpon>FormCourseInfoInput.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Main\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>

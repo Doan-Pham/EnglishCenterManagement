@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EnglishCenterManagemenent.GUI.Courses;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace EnglishCenterManagemenent.GUI
         public UserControlCourses()
         {
             InitializeComponent();
+        }
+
+        private void buttonGradeSchemes_Click(object sender, EventArgs e)
+        {
+            FormCourseGradeScheme formCourseGradeScheme = new FormCourseGradeScheme();
+            formCourseGradeScheme.ShowDialog();
         }
     }
 }

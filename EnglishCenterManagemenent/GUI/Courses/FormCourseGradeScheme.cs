@@ -1,4 +1,5 @@
 ﻿using EnglishCenterManagemenent.DAO;
+using EnglishCenterManagemenent.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,7 +27,17 @@ namespace EnglishCenterManagemenent.GUI.Courses
         public FormCourseGradeScheme()
         {
             InitializeComponent();
-            dataGridViewGradeScheme.DataSource = GradeSchemeDAO.GetAllGradeScheme();
+
+            foreach (GradeScheme gradeScheme in GradeSchemeDAO.GetAllGradeScheme())
+            {
+                dataGridViewGradeScheme.Rows.Add(new object[] 
+                { 
+                    gradeScheme.Name, 
+                    gradeScheme.LowestGrade, 
+                    gradeScheme.HighestGrade, 
+                    gradeScheme.Rounding 
+                });
+            }
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
@@ -70,11 +81,13 @@ namespace EnglishCenterManagemenent.GUI.Courses
             {
                 foreach (DataGridViewRow row in dataGridViewGradeScheme.Rows)
                 {
-                    object[] rowData = new object[dataGridViewGradeScheme.ColumnCount];
-                    foreach (DataGridViewCell cell in row.Cells)
-                        rowData[cell.ColumnIndex] = cell.Value;
-                        
-                    GradeSchemeDAO.AddGradeScheme(rowData);
+                    GradeScheme gradeScheme = new GradeScheme(
+                        -1,
+                        row.Cells["ColumnName"].Value.ToString(),
+                        (float)Convert.ToDouble(row.Cells["ColumnLowestGrade"].Value),
+                        (float)Convert.ToDouble(row.Cells["ColumnHighestGrade"].Value),
+                        (float)Convert.ToDouble(row.Cells["ColumnRounding"].Value));
+                    GradeSchemeDAO.AddGradeScheme(gradeScheme);
                 }
 
                 ShowInfoMessageBox("Grade schemes saved !");
@@ -99,8 +112,8 @@ namespace EnglishCenterManagemenent.GUI.Courses
 
         private DialogResult ShowAskingMessageBox(string message)
         {
-            return MessageBox.Show(message, "INFO", 
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            return MessageBox.Show(message, "INFO",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
         }
     }
 }

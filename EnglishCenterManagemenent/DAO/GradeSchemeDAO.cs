@@ -10,21 +10,27 @@ namespace EnglishCenterManagemenent.DAO
 {
     public class GradeSchemeDAO
     {
-        public static void AddGradeScheme(object[] newGradeSchemeData)
+        public static void AddGradeScheme(GradeScheme newGradeScheme)
         {
-
+            DataProvider.Instance.ExecuteNonQuery(
+                "INSERT INTO dbo.GRADESCHEME (Name , LowestGrade , HighestGrade , Rounding)" +
+                "VALUES ( @Name , @LowestGrade , @HighestGrade , @Rounding )",
+                new object[] {
+                    newGradeScheme.Name,
+                    newGradeScheme.LowestGrade,
+                    newGradeScheme.HighestGrade,
+                    newGradeScheme.Rounding });
         }
 
         public static List<GradeScheme> GetAllGradeScheme()
         {
             List<GradeScheme> gradeSchemes = new List<GradeScheme>();
 
-            DataTable data = DataProvider.ExecuteQuery("SELECT * FROM dbo.GradeScheme");
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM dbo.GradeScheme");
             foreach (DataRow row in data.Rows)
                 gradeSchemes.Add(new GradeScheme(row));
 
             return gradeSchemes;
-
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EnglishCenterManagemenent.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,17 +13,28 @@ namespace EnglishCenterManagemenent.GUI.Courses
 {
     public partial class FormCourseGradeScheme : Form
     {
+        private string gradeSchemeNameText;
+        private string gradeSchemeLowestGradeText;
+        private string gradeSchemeHighestGradeText;
+        private string gradeSchemeRoundingText;
+
+
+        private float gradeSchemeLowestGrade;
+        private float gradeSchemeHighestGrade;
+        private float gradeSchemeRounding;
+
         public FormCourseGradeScheme()
         {
             InitializeComponent();
+            dataGridViewGradeScheme.DataSource = GradeSchemeDAO.GetAllGradeScheme();
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            string gradeSchemeNameText = textBoxGradeSchemeName.Text.Trim();
-            string gradeSchemeLowestGradeText = textBoxLowestGrade.Text.Trim();
-            string gradeSchemeHighestGradeText = textBoxHighestGrade.Text.Trim();
-            string gradeSchemeRoundingText = textBoxRounding.Text.Trim();
+            gradeSchemeNameText = textBoxGradeSchemeName.Text.Trim();
+            gradeSchemeLowestGradeText = textBoxLowestGrade.Text.Trim();
+            gradeSchemeHighestGradeText = textBoxHighestGrade.Text.Trim();
+            gradeSchemeRoundingText = textBoxRounding.Text.Trim();
 
             if (gradeSchemeNameText == "" || gradeSchemeLowestGradeText == "" ||
                 gradeSchemeHighestGradeText == "" || gradeSchemeRoundingText == "")
@@ -31,10 +43,6 @@ namespace EnglishCenterManagemenent.GUI.Courses
             }
             else
             {
-                float gradeSchemeLowestGrade;
-                float gradeSchemeHighestGrade;
-                float gradeSchemeRounding;
-
                 if (!float.TryParse(gradeSchemeLowestGradeText, out gradeSchemeLowestGrade) ||
                     !float.TryParse(gradeSchemeHighestGradeText, out gradeSchemeHighestGrade) ||
                     !float.TryParse(gradeSchemeRoundingText, out gradeSchemeRounding))
@@ -48,18 +56,51 @@ namespace EnglishCenterManagemenent.GUI.Courses
                 dataGridViewGradeScheme.Rows.Add(
                     gradeSchemeNameText,
                     gradeSchemeLowestGradeText,
-                    gradeSchemeHighestGradeText, 
+                    gradeSchemeHighestGradeText,
                     gradeSchemeRoundingText);
             }
         }
 
-        /// <summary>
-        /// Show a message box indicating that an error has occured
-        /// </summary>
-        /// <param name="message">The message box's error message</param>
+
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = ShowAskingMessageBox("Are you sure you want to save ?");
+            if (dialog == DialogResult.OK)
+            {
+                foreach (DataGridViewRow row in dataGridViewGradeScheme.Rows)
+                {
+                    object[] rowData = new object[dataGridViewGradeScheme.ColumnCount];
+                    foreach (DataGridViewCell cell in row.Cells)
+                        rowData[cell.ColumnIndex] = cell.Value;
+                        
+                    GradeSchemeDAO.AddGradeScheme(rowData);
+                }
+
+                ShowInfoMessageBox("Grade schemes saved !");
+            }
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void ShowErrorMessageBox(string message)
         {
             MessageBox.Show(message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+
+        private void ShowInfoMessageBox(string message)
+        {
+            MessageBox.Show(message, "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private DialogResult ShowAskingMessageBox(string message)
+        {
+            return MessageBox.Show(message, "INFO", 
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
         }
     }
 }

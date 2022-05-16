@@ -607,7 +607,7 @@ namespace EnglishCenterManagemenent.GUI
             this.kryptonMaskedTextBox1.StateNormal.Border.Width = 0;
             this.kryptonMaskedTextBox1.TabIndex = 10;
             // 
-            // formStudentInfoInput
+            // FormStudentInfoInput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 35F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -635,7 +635,7 @@ namespace EnglishCenterManagemenent.GUI
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Lexend", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5);
-            this.Name = "formStudentInfoInput";
+            this.Name = "FormStudentInfoInput";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Student Information";
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).EndInit();

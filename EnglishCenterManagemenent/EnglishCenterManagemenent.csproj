@@ -67,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\GradeSchemeDAO.cs" />
     <Compile Include="DTO\Class.cs" />
     <Compile Include="DTO\ClassTeacherSchedule.cs" />
     <Compile Include="DTO\Course.cs" />
@@ -226,7 +227,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BUS\" />
-    <Folder Include="DAO\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ic_user_32px_gray.png" />

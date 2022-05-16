@@ -38,6 +38,11 @@
             this.kryptonPaletteGrid = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.buttonAdd = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.dataGridViewGradeScheme = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnLowestGrade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnHighestGrade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.columnRounding = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxHighestGrade = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -50,11 +55,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGradeScheme)).BeginInit();
             this.SuspendLayout();
             // 
@@ -349,6 +349,7 @@
             this.buttonSave.Size = new System.Drawing.Size(120, 61);
             this.buttonSave.TabIndex = 7;
             this.buttonSave.Values.Text = "Save";
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonCancel
             // 
@@ -386,6 +387,7 @@
             this.buttonCancel.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
             this.buttonCancel.TabIndex = 8;
             this.buttonCancel.Values.Text = "Cancel";
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // kryptonPaletteGrid
             // 
@@ -634,13 +636,16 @@
             // dataGridViewGradeScheme
             // 
             this.dataGridViewGradeScheme.AllowUserToAddRows = false;
+            this.dataGridViewGradeScheme.AllowUserToResizeColumns = false;
+            this.dataGridViewGradeScheme.AllowUserToResizeRows = false;
             this.dataGridViewGradeScheme.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewGradeScheme.ColumnHeadersHeight = 60;
+            this.dataGridViewGradeScheme.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridViewGradeScheme.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.dataGridViewTextBoxColumn1,
-            this.StartTime,
-            this.EndTime,
+            this.ColumnName,
+            this.columnLowestGrade,
+            this.columnHighestGrade,
+            this.columnRounding,
             this.dataGridViewImageColumn1});
             this.dataGridViewGradeScheme.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridViewGradeScheme.GridStyles.Style = ComponentFactory.Krypton.Toolkit.DataGridViewStyle.Custom1;
@@ -657,8 +662,9 @@
             this.dataGridViewGradeScheme.ReadOnly = true;
             this.dataGridViewGradeScheme.RowHeadersVisible = false;
             this.dataGridViewGradeScheme.RowHeadersWidth = 100;
+            this.dataGridViewGradeScheme.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridViewGradeScheme.RowTemplate.Height = 60;
-            this.dataGridViewGradeScheme.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridViewGradeScheme.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewGradeScheme.Size = new System.Drawing.Size(785, 260);
             this.dataGridViewGradeScheme.StateNormal.HeaderColumn.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(254)))));
             this.dataGridViewGradeScheme.StateNormal.HeaderColumn.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(249)))), ((int)(((byte)(254)))));
@@ -669,6 +675,46 @@
             this.dataGridViewGradeScheme.StateNormal.HeaderColumn.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(176)))), ((int)(((byte)(181)))));
             this.dataGridViewGradeScheme.StateNormal.HeaderColumn.Content.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(176)))), ((int)(((byte)(181)))));
             this.dataGridViewGradeScheme.TabIndex = 6;
+            // 
+            // ColumnName
+            // 
+            this.ColumnName.HeaderText = "Name";
+            this.ColumnName.MinimumWidth = 8;
+            this.ColumnName.Name = "ColumnName";
+            this.ColumnName.ReadOnly = true;
+            // 
+            // columnLowestGrade
+            // 
+            this.columnLowestGrade.HeaderText = "Lowest Grade";
+            this.columnLowestGrade.MinimumWidth = 8;
+            this.columnLowestGrade.Name = "columnLowestGrade";
+            this.columnLowestGrade.ReadOnly = true;
+            this.columnLowestGrade.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // columnHighestGrade
+            // 
+            this.columnHighestGrade.HeaderText = "Highest Grade";
+            this.columnHighestGrade.MinimumWidth = 8;
+            this.columnHighestGrade.Name = "columnHighestGrade";
+            this.columnHighestGrade.ReadOnly = true;
+            // 
+            // columnRounding
+            // 
+            this.columnRounding.HeaderText = "Rounding";
+            this.columnRounding.MinimumWidth = 8;
+            this.columnRounding.Name = "columnRounding";
+            this.columnRounding.ReadOnly = true;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.FillWeight = 9.090912F;
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_education_32px_gray;
+            this.dataGridViewImageColumn1.MinimumWidth = 8;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // label6
             // 
@@ -844,46 +890,6 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "*";
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Name";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Lowest Grade";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 8;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // StartTime
-            // 
-            this.StartTime.HeaderText = "Highest Grade";
-            this.StartTime.MinimumWidth = 8;
-            this.StartTime.Name = "StartTime";
-            this.StartTime.ReadOnly = true;
-            // 
-            // EndTime
-            // 
-            this.EndTime.HeaderText = "Rounding";
-            this.EndTime.MinimumWidth = 8;
-            this.EndTime.Name = "EndTime";
-            this.EndTime.ReadOnly = true;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.FillWeight = 9.090912F;
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_education_32px_gray;
-            this.dataGridViewImageColumn1.MinimumWidth = 8;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // FormCourseGradeScheme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 35F);
@@ -944,10 +950,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StartTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EndTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnLowestGrade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnHighestGrade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn columnRounding;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
     }
 }

@@ -36,13 +36,13 @@ namespace EnglishCenterManagemenent.GUI
             this.buttonUpdate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.buttonDelete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.dataGridView = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.panelSearchIcon = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.buttonGradeSchemes = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelSearchIcon = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.buttonGradeSchemes = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelSearchIcon)).BeginInit();
             this.SuspendLayout();
@@ -358,7 +358,7 @@ namespace EnglishCenterManagemenent.GUI
             this.dataGridView.AllowUserToDeleteRows = false;
             this.dataGridView.AllowUserToResizeColumns = false;
             this.dataGridView.AllowUserToResizeRows = false;
-            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView.ColumnHeadersHeight = 60;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -393,37 +393,6 @@ namespace EnglishCenterManagemenent.GUI
             this.dataGridView.StateNormal.HeaderColumn.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(176)))), ((int)(((byte)(181)))));
             this.dataGridView.StateNormal.HeaderColumn.Content.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(176)))), ((int)(((byte)(181)))));
             this.dataGridView.TabIndex = 5;
-            // 
-            // panelSearchIcon
-            // 
-            this.panelSearchIcon.Location = new System.Drawing.Point(48, 47);
-            this.panelSearchIcon.Name = "panelSearchIcon";
-            this.panelSearchIcon.Size = new System.Drawing.Size(48, 48);
-            this.panelSearchIcon.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panelSearchIcon.StateNormal.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panelSearchIcon.StateNormal.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_search_32px_gray;
-            this.panelSearchIcon.StateNormal.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
-            this.panelSearchIcon.TabIndex = 6;
-            // 
-            // buttonGradeSchemes
-            // 
-            this.buttonGradeSchemes.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom2;
-            this.buttonGradeSchemes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonGradeSchemes.Location = new System.Drawing.Point(666, 132);
-            this.buttonGradeSchemes.Name = "buttonGradeSchemes";
-            this.buttonGradeSchemes.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
-            this.buttonGradeSchemes.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
-            this.buttonGradeSchemes.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(67)))), ((int)(((byte)(62)))));
-            this.buttonGradeSchemes.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(67)))), ((int)(((byte)(62)))));
-            this.buttonGradeSchemes.Palette = this.kryptonPaletteGeneral;
-            this.buttonGradeSchemes.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.buttonGradeSchemes.Size = new System.Drawing.Size(304, 67);
-            this.buttonGradeSchemes.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(86)))), ((int)(((byte)(160)))));
-            this.buttonGradeSchemes.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
-            this.buttonGradeSchemes.TabIndex = 7;
-            this.buttonGradeSchemes.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_student_24px_white;
-            this.buttonGradeSchemes.Values.Text = "View grade scheme";
-            this.buttonGradeSchemes.Click += new System.EventHandler(this.buttonGradeSchemes_Click);
             // 
             // Column1
             // 
@@ -469,6 +438,37 @@ namespace EnglishCenterManagemenent.GUI
             this.Column5.ReadOnly = true;
             this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Column5.Width = 234;
+            // 
+            // panelSearchIcon
+            // 
+            this.panelSearchIcon.Location = new System.Drawing.Point(48, 47);
+            this.panelSearchIcon.Name = "panelSearchIcon";
+            this.panelSearchIcon.Size = new System.Drawing.Size(48, 48);
+            this.panelSearchIcon.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.panelSearchIcon.StateNormal.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.panelSearchIcon.StateNormal.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_search_32px_gray;
+            this.panelSearchIcon.StateNormal.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            this.panelSearchIcon.TabIndex = 6;
+            // 
+            // buttonGradeSchemes
+            // 
+            this.buttonGradeSchemes.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom2;
+            this.buttonGradeSchemes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonGradeSchemes.Location = new System.Drawing.Point(666, 132);
+            this.buttonGradeSchemes.Name = "buttonGradeSchemes";
+            this.buttonGradeSchemes.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
+            this.buttonGradeSchemes.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
+            this.buttonGradeSchemes.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(67)))), ((int)(((byte)(62)))));
+            this.buttonGradeSchemes.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(67)))), ((int)(((byte)(62)))));
+            this.buttonGradeSchemes.Palette = this.kryptonPaletteGeneral;
+            this.buttonGradeSchemes.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.buttonGradeSchemes.Size = new System.Drawing.Size(304, 67);
+            this.buttonGradeSchemes.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(86)))), ((int)(((byte)(160)))));
+            this.buttonGradeSchemes.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
+            this.buttonGradeSchemes.TabIndex = 7;
+            this.buttonGradeSchemes.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_student_24px_white;
+            this.buttonGradeSchemes.Values.Text = "View grade scheme";
+            this.buttonGradeSchemes.Click += new System.EventHandler(this.buttonGradeSchemes_Click);
             // 
             // UserControlCourses
             // 

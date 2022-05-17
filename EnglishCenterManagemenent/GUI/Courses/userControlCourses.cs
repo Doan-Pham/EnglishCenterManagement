@@ -19,6 +19,32 @@ namespace EnglishCenterManagemenent.GUI
         public UserControlCourses()
         {
             InitializeComponent();
+            FillDataGridView();
+        }
+
+        private void UserControlCourses_Load(object sender, EventArgs e)
+        {
+            FillDataGridView();
+        }
+        private void buttonGradeSchemes_Click(object sender, EventArgs e)
+        {
+            FormCourseGradeScheme formCourseGradeScheme = new FormCourseGradeScheme();
+            formCourseGradeScheme.ShowDialog();
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            FormCourseInfoInput formCourseInfoInput = new FormCourseInfoInput();
+            formCourseInfoInput.ShowDialog();
+            FillDataGridView();
+        }
+
+        /// <summary>
+        /// Fill this user control's datagridview with data from database
+        /// </summary>
+        private void FillDataGridView()
+        {
+            dataGridView.Rows.Clear();
             foreach (Course course in CourseDAO.GetAllCourses())
             {
                 courseList.Add(course);
@@ -31,18 +57,6 @@ namespace EnglishCenterManagemenent.GUI
                     course.StandardGrade,
                 });
             }
-        }
-
-        private void buttonGradeSchemes_Click(object sender, EventArgs e)
-        {
-            FormCourseGradeScheme formCourseGradeScheme = new FormCourseGradeScheme();
-            formCourseGradeScheme.ShowDialog();
-        }
-
-        private void buttonAdd_Click(object sender, EventArgs e)
-        {
-            FormCourseInfoInput formCourseInfoInput = new FormCourseInfoInput();
-            formCourseInfoInput.ShowDialog();
         }
     }
 }

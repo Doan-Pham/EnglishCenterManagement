@@ -56,6 +56,10 @@
             this.kryptonTextBox7 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.textBoxCourseTuition = new ComponentFactory.Krypton.Toolkit.KryptonMaskedTextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBoxStandardGrade = new ComponentFactory.Krypton.Toolkit.KryptonMaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxGradeScheme)).BeginInit();
             this.SuspendLayout();
             // 
@@ -356,6 +360,7 @@
             this.kryptonTextBox4.Name = "kryptonTextBox4";
             this.kryptonTextBox4.Palette = this.kryptonPaletteGeneral;
             this.kryptonTextBox4.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kryptonTextBox4.ReadOnly = true;
             this.kryptonTextBox4.Size = new System.Drawing.Size(262, 59);
             this.kryptonTextBox4.StateActive.Back.Color1 = System.Drawing.Color.White;
             this.kryptonTextBox4.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(168)))), ((int)(((byte)(47)))));
@@ -503,6 +508,7 @@
             this.buttonSave.Size = new System.Drawing.Size(120, 61);
             this.buttonSave.TabIndex = 8;
             this.buttonSave.Values.Text = "Save";
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonCancel
             // 
@@ -540,10 +546,11 @@
             this.buttonCancel.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
             this.buttonCancel.TabIndex = 8;
             this.buttonCancel.Values.Text = "Cancel";
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // textBoxCourseWeekNum
             // 
-            this.textBoxCourseWeekNum.Location = new System.Drawing.Point(0, 0);
+            this.textBoxCourseWeekNum.Location = new System.Drawing.Point(389, 550);
             this.textBoxCourseWeekNum.Mask = "99";
             this.textBoxCourseWeekNum.Name = "textBoxCourseWeekNum";
             this.textBoxCourseWeekNum.Palette = this.kryptonPaletteGeneral;
@@ -575,6 +582,7 @@
             this.kryptonTextBox2.AlwaysActive = false;
             this.kryptonTextBox2.Location = new System.Drawing.Point(51, 539);
             this.kryptonTextBox2.Name = "kryptonTextBox2";
+            this.kryptonTextBox2.ReadOnly = true;
             this.kryptonTextBox2.Size = new System.Drawing.Size(262, 56);
             this.kryptonTextBox2.StateActive.Back.Color1 = System.Drawing.Color.White;
             this.kryptonTextBox2.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(168)))), ((int)(((byte)(47)))));
@@ -594,7 +602,7 @@
             // 
             // textBoxCourseLessonNum
             // 
-            this.textBoxCourseLessonNum.Location = new System.Drawing.Point(0, 0);
+            this.textBoxCourseLessonNum.Location = new System.Drawing.Point(68, 550);
             this.textBoxCourseLessonNum.Mask = "99";
             this.textBoxCourseLessonNum.Name = "textBoxCourseLessonNum";
             this.textBoxCourseLessonNum.Palette = this.kryptonPaletteGeneral;
@@ -688,11 +696,11 @@
             this.textBoxCourseTuition.Culture = new System.Globalization.CultureInfo("vi-VN");
             this.textBoxCourseTuition.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Overwrite;
             this.textBoxCourseTuition.Location = new System.Drawing.Point(68, 660);
-            this.textBoxCourseTuition.Mask = "000000,\\0\\0\\0 VND";
+            this.textBoxCourseTuition.Mask = "000000000 VND";
             this.textBoxCourseTuition.Name = "textBoxCourseTuition";
             this.textBoxCourseTuition.Palette = this.kryptonPaletteGeneral;
             this.textBoxCourseTuition.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.textBoxCourseTuition.PromptChar = '0';
+            this.textBoxCourseTuition.PromptChar = '#';
             this.textBoxCourseTuition.Size = new System.Drawing.Size(235, 35);
             this.textBoxCourseTuition.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
@@ -705,7 +713,72 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.textBoxCourseTuition.StateNormal.Border.Width = 0;
             this.textBoxCourseTuition.TabIndex = 10;
-            this.textBoxCourseTuition.Text = "      .000 VND";
+            this.textBoxCourseTuition.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(366, 611);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(188, 35);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "Standard Grade";
+            // 
+            // kryptonTextBox1
+            // 
+            this.kryptonTextBox1.AlwaysActive = false;
+            this.kryptonTextBox1.Location = new System.Drawing.Point(372, 649);
+            this.kryptonTextBox1.Name = "kryptonTextBox1";
+            this.kryptonTextBox1.Size = new System.Drawing.Size(262, 56);
+            this.kryptonTextBox1.StateActive.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonTextBox1.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(168)))), ((int)(((byte)(47)))));
+            this.kryptonTextBox1.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonTextBox1.StateActive.Border.Rounding = 5;
+            this.kryptonTextBox1.StateActive.Border.Width = 2;
+            this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonTextBox1.StateCommon.Border.Rounding = 5;
+            this.kryptonTextBox1.StateCommon.Border.Width = 2;
+            this.kryptonTextBox1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(15, 12, 0, 12);
+            this.kryptonTextBox1.TabIndex = 4;
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
+            this.label14.Location = new System.Drawing.Point(550, 601);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(19, 26);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "*";
+            // 
+            // textBoxStandardGrade
+            // 
+            this.textBoxStandardGrade.Culture = new System.Globalization.CultureInfo("vi-VN");
+            this.textBoxStandardGrade.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Overwrite;
+            this.textBoxStandardGrade.Location = new System.Drawing.Point(389, 660);
+            this.textBoxStandardGrade.Mask = "###,##";
+            this.textBoxStandardGrade.Name = "textBoxStandardGrade";
+            this.textBoxStandardGrade.Palette = this.kryptonPaletteGeneral;
+            this.textBoxStandardGrade.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.textBoxStandardGrade.PromptChar = '#';
+            this.textBoxStandardGrade.Size = new System.Drawing.Size(235, 35);
+            this.textBoxStandardGrade.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.textBoxStandardGrade.StateCommon.Border.Width = 0;
+            this.textBoxStandardGrade.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.textBoxStandardGrade.StateCommon.Content.Padding = new System.Windows.Forms.Padding(0);
+            this.textBoxStandardGrade.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.textBoxStandardGrade.StateNormal.Border.Width = 0;
+            this.textBoxStandardGrade.TabIndex = 10;
+            this.textBoxStandardGrade.Text = "   .";
             // 
             // FormCourseInfoInput
             // 
@@ -718,10 +791,12 @@
             this.Controls.Add(this.textBoxCourseDescription);
             this.Controls.Add(this.textBoxCourseLessonNum);
             this.Controls.Add(this.textBoxCourseWeekNum);
+            this.Controls.Add(this.textBoxStandardGrade);
             this.Controls.Add(this.textBoxCourseTuition);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -730,8 +805,10 @@
             this.Controls.Add(this.kryptonTextBox6);
             this.Controls.Add(this.kryptonTextBox5);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.kryptonTextBox1);
             this.Controls.Add(this.kryptonTextBox7);
             this.Controls.Add(this.kryptonTextBox2);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.kryptonTextBox4);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label6);
@@ -780,5 +857,9 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox7;
         private System.Windows.Forms.Label label12;
         private ComponentFactory.Krypton.Toolkit.KryptonMaskedTextBox textBoxCourseTuition;
+        private System.Windows.Forms.Label label13;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private System.Windows.Forms.Label label14;
+        private ComponentFactory.Krypton.Toolkit.KryptonMaskedTextBox textBoxStandardGrade;
     }
 }

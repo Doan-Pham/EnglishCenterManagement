@@ -351,6 +351,7 @@ namespace EnglishCenterManagemenent.GUI
             this.buttonDelete.TabIndex = 3;
             this.buttonDelete.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_trashcan_24px_white;
             this.buttonDelete.Values.Text = "Delete";
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // dataGridView
             // 

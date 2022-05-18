@@ -39,6 +39,23 @@ namespace EnglishCenterManagemenent.GUI
             FillDataGridView();
         }
 
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView.SelectedRows.Count == 0) return;
+
+            DialogResult dialog = ShowAskingMessageBox
+                ("Are you sure you want to delete this course: " + 
+                courseList.ElementAt(dataGridView.CurrentCell.RowIndex).Name + "?");
+
+            if (dialog == DialogResult.OK)
+            {
+                CourseDAO.DeleteCourse(courseList.ElementAt(dataGridView.CurrentCell.RowIndex));
+                ShowInfoMessageBox("Course deleted !");
+                FillDataGridView();
+            }
+
+        }
         /// <summary>
         /// Fill this user control's datagridview with data from database
         /// </summary>
@@ -57,6 +74,23 @@ namespace EnglishCenterManagemenent.GUI
                     course.StandardGrade,
                 });
             }
+        }
+
+        private void ShowErrorMessageBox(string message)
+        {
+            MessageBox.Show(message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+
+        private void ShowInfoMessageBox(string message)
+        {
+            MessageBox.Show(message, "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private DialogResult ShowAskingMessageBox(string message)
+        {
+            return MessageBox.Show(message, "INFO",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
         }
     }
 }

@@ -29,9 +29,11 @@ namespace EnglishCenterManagemenent.DAO
                     newCourse.StandardGrade});
         }
 
-        public static void DeleteCourse()
+        public static void DeleteCourse(Course deletedCourse)
         {
-            DataProvider.Instance.ExecuteNonQuery("DELETE FROM dbo.COURSE");
+            DataProvider.Instance.ExecuteNonQuery(
+                "DELETE FROM dbo.COURSE WHERE CourseID = @CourseID", 
+                new object[] { deletedCourse .CourseID});
         }
         public static List<Course> GetAllCourses()
         {

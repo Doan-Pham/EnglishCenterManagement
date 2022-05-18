@@ -64,21 +64,20 @@ namespace EnglishCenterManagemenent.GUI.Courses
                 {
                     ShowErrorMessageBox("Invalid input, highest grade must be higher than lowest!");
                 }
-                dataGridViewGradeScheme.Rows.Add(
-                    gradeSchemeNameText,
-                    gradeSchemeLowestGradeText,
-                    gradeSchemeHighestGradeText,
-                    gradeSchemeRoundingText);
+                else dataGridViewGradeScheme.Rows.Add(
+                        gradeSchemeNameText,
+                        gradeSchemeLowestGradeText,
+                        gradeSchemeHighestGradeText,
+                        gradeSchemeRoundingText);
             }
         }
-
-
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
             DialogResult dialog = ShowAskingMessageBox("Are you sure you want to save ?");
             if (dialog == DialogResult.OK)
             {
+                GradeSchemeDAO.DeleteAllGradeSchemes();
                 foreach (DataGridViewRow row in dataGridViewGradeScheme.Rows)
                 {
                     GradeScheme gradeScheme = new GradeScheme(
@@ -99,11 +98,11 @@ namespace EnglishCenterManagemenent.GUI.Courses
             this.Close();
         }
 
+
         private void ShowErrorMessageBox(string message)
         {
             MessageBox.Show(message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
 
         private void ShowInfoMessageBox(string message)
         {

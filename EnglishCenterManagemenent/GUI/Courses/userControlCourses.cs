@@ -15,6 +15,8 @@ namespace EnglishCenterManagemenent.GUI
 {
     public partial class UserControlCourses : UserControl
     {
+        private const string TEXTBOX_SEARCH_PLACEHOLDER = "What are you looking for ?";
+
         private List<Course> courseList = new List<Course>();
         public UserControlCourses()
         {
@@ -106,17 +108,33 @@ namespace EnglishCenterManagemenent.GUI
 
         private void textBoxSearch_Enter(object sender, EventArgs e)
         {
-            if (textBoxSearch.Text == "Search")
-            {
+            if (textBoxSearch.Text == TEXTBOX_SEARCH_PLACEHOLDER)
                 textBoxSearch.Text = "";
-            }
         }
 
         private void textBoxSearch_Leave(object sender, EventArgs e)
         {
             if (textBoxSearch.Text == "")
+                textBoxSearch.Text = TEXTBOX_SEARCH_PLACEHOLDER;
+        }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxSearch.Text == TEXTBOX_SEARCH_PLACEHOLDER) return;
+            
+            dataGridView.Rows.Clear();
+            courseList.Clear();
+            foreach (Course course in CourseDAO.GetFilteredCourse(textBoxSearch.Text))
             {
-                textBoxSearch.Text = "Search";
+                courseList.Add(course);
+                dataGridView.Rows.Add(new object[]
+                {
+                    course.Name,
+                    course.NumberOfLessons,
+                    course.NumberOfWeeks,
+                    course.Tuition,
+                    course.StandardGrade,
+                });
             }
         }
     }

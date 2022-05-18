@@ -32,8 +32,8 @@ namespace EnglishCenterManagemenent.DAO
         public static void DeleteCourse(Course deletedCourse)
         {
             DataProvider.Instance.ExecuteNonQuery(
-                "DELETE FROM dbo.COURSE WHERE CourseID = @CourseID", 
-                new object[] { deletedCourse .CourseID});
+                "DELETE FROM dbo.COURSE WHERE CourseID = @CourseID",
+                new object[] { deletedCourse.CourseID });
         }
 
         public static string GetCourseGradeSchemeName(int courseId)
@@ -54,6 +54,32 @@ namespace EnglishCenterManagemenent.DAO
             return gradeSchemeName;
         }
 
+        public static GradeScheme GetCourseGradeSchemeDetails(int courseId)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery(
+                "SELECT GradeScheme.GradeSchemeID, GradeScheme.Name, GradeScheme.LowestGrade, " +
+                        "GradeScheme.HighestGrade, GradeScheme.Rounding, " +
+                "FROM GRADESCHEME, COURSE " +
+                "WHERE COURSE.GradeSchemeID = GRADESCHEME.GradeSchemeID " +
+                "      AND COURSE.CourseID = @CourseID",
+                new object[] { courseId });
+
+            return new GradeScheme(data.Rows[0]);
+        }
+
+        public static List<Course> GetFilteredCourse(string info){
+            List<Course> courses = new List<Course>();
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(
+                "SELECT * FROM dbo.COURSE " +
+                "WHERE Name LIKE '%" + info + "%' OR NumberOfLessons LIKE '%" + info + "%' " +
+                "OR NumberOfWeeks LIKE '%" + info + "%' OR Tuition LIKE '%" + info + "%' " +
+                "OR StandardGrade LIKE '%" + info + "%' ");
+            foreach (DataRow row in data.Rows)
+                courses.Add(new Course(row));
+
+            return courses;
+        }
         public static void UpdateCourse(Course updatedCourse)
         {
             DataProvider.Instance.ExecuteNonQuery(

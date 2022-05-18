@@ -104,6 +104,20 @@ namespace EnglishCenterManagemenent.GUI
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
         }
 
+        private void textBoxSearch_Enter(object sender, EventArgs e)
+        {
+            if (textBoxSearch.Text == "Search")
+            {
+                textBoxSearch.Text = "";
+            }
+        }
 
+        private void textBoxSearch_Leave(object sender, EventArgs e)
+        {
+            if (textBoxSearch.Text == "")
+            {
+                textBoxSearch.Text = "Search";
+            }
+        }
     }
 }

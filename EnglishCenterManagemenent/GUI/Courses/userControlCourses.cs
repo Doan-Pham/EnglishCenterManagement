@@ -42,7 +42,7 @@ namespace EnglishCenterManagemenent.GUI
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             if (dataGridView.SelectedRows.Count == 0) return;
-
+            FillDataGridView();
             DialogResult dialog = ShowAskingMessageBox
                 ("Are you sure you want to delete this course: " + 
                 courseList.ElementAt(dataGridView.CurrentCell.RowIndex).Name + "?");
@@ -59,7 +59,6 @@ namespace EnglishCenterManagemenent.GUI
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
             if (dataGridView.SelectedRows.Count == 0) return;
-
             FormCourseInfoInput formCourseInfoInput = new FormCourseInfoInput(
                 courseList.ElementAt(dataGridView.CurrentCell.RowIndex));
 
@@ -74,6 +73,7 @@ namespace EnglishCenterManagemenent.GUI
         private void FillDataGridView()
         {
             dataGridView.Rows.Clear();
+            courseList.Clear();
             foreach (Course course in CourseDAO.GetAllCourses())
             {
                 courseList.Add(course);

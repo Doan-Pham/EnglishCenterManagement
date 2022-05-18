@@ -71,6 +71,8 @@ namespace EnglishCenterManagemenent.GUI.Courses
             {
                 if (CheckEmptyFields()) 
                     ShowErrorMessageBox("Empty input, please fill out all the required fields !");
+                else if (!CheckValidStandardGrade()) 
+                    ShowErrorMessageBox("Invalid standard grade, please check again !");
                 else
                 {
                     gradeSchemeId = gradeSchemeList
@@ -91,9 +93,8 @@ namespace EnglishCenterManagemenent.GUI.Courses
                     else CourseDAO.UpdateCourse(newCourse);
 
                     ShowInfoMessageBox("Course saved !");
+                    this.Close();
                 }
-                
-                this.Close();
             }
         }
 
@@ -118,6 +119,17 @@ namespace EnglishCenterManagemenent.GUI.Courses
                 courseTuitionText == "" || courseStandardGradeText == "";
         }
 
+        private bool CheckValidStandardGrade()
+        {
+            standardGrade = float.Parse(courseStandardGradeText);
+            GradeScheme courseGradeScheme = gradeSchemeList
+                .ElementAt(comboBoxGradeScheme.SelectedIndex);
+            return 
+                standardGrade >= courseGradeScheme.LowestGrade &&
+                standardGrade <= courseGradeScheme.HighestGrade &&
+                standardGrade % courseGradeScheme.Rounding == 0;
+
+        }
         private void ShowErrorMessageBox(string message)
         {
             MessageBox.Show(message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);

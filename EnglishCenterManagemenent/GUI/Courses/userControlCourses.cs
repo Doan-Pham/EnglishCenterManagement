@@ -34,11 +34,10 @@ namespace EnglishCenterManagemenent.GUI
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            FormCourseInfoInput formCourseInfoInput = new FormCourseInfoInput();
+            FormCourseInfoInput formCourseInfoInput = new FormCourseInfoInput(null);
             formCourseInfoInput.ShowDialog();
             FillDataGridView();
         }
-
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
@@ -56,6 +55,19 @@ namespace EnglishCenterManagemenent.GUI
             }
 
         }
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            if (dataGridView.SelectedRows.Count == 0) return;
+
+            FormCourseInfoInput formCourseInfoInput = new FormCourseInfoInput(
+                courseList.ElementAt(dataGridView.CurrentCell.RowIndex));
+
+            formCourseInfoInput.ShowDialog();
+            FillDataGridView();
+        }
+
+
         /// <summary>
         /// Fill this user control's datagridview with data from database
         /// </summary>
@@ -81,7 +93,6 @@ namespace EnglishCenterManagemenent.GUI
             MessageBox.Show(message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-
         private void ShowInfoMessageBox(string message)
         {
             MessageBox.Show(message, "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -92,5 +103,7 @@ namespace EnglishCenterManagemenent.GUI
             return MessageBox.Show(message, "INFO",
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
         }
+
+
     }
 }

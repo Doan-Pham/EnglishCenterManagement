@@ -35,6 +35,45 @@ namespace EnglishCenterManagemenent.DAO
                 "DELETE FROM dbo.COURSE WHERE CourseID = @CourseID", 
                 new object[] { deletedCourse .CourseID});
         }
+
+        public static string GetCourseGradeSchemeName(int courseId)
+        {
+            string gradeSchemeName = "";
+            DataTable data = DataProvider.Instance.ExecuteQuery(
+                "SELECT GradeScheme.Name " +
+                "FROM GRADESCHEME, COURSE " +
+                "WHERE COURSE.GradeSchemeID = GRADESCHEME.GradeSchemeID " +
+                "      AND COURSE.CourseID = @CourseID",
+                new object[] { courseId });
+
+            if (data.Rows.Count > 0)
+            {
+                DataRow row = data.Rows[0];
+                gradeSchemeName = row["Name"].ToString();
+            }
+            return gradeSchemeName;
+        }
+
+        public static void UpdateCourse(Course updatedCourse)
+        {
+            DataProvider.Instance.ExecuteNonQuery(
+                "UPDATE COURSE " +
+                "SET GradeSchemeID = @GradeSchemeID , Name = @Name , Description = @Description , " +
+                "    NumberOfLessons = @NumberOfLessons , NumberOfWeeks = @NumberOfWeeks , " +
+                "    Tuition = @Tuition , StandardGrade = @StandardGrade " +
+                "WHERE CourseID = @CourseID",
+
+                new object[] {
+                    updatedCourse.GradeSchemeID,
+                    updatedCourse.Name,
+                    updatedCourse.Description,
+                    updatedCourse.NumberOfLessons,
+                    updatedCourse.NumberOfWeeks,
+                    updatedCourse.Tuition,
+                    updatedCourse.StandardGrade,
+                    updatedCourse.CourseID});
+        }
+
         public static List<Course> GetAllCourses()
         {
             List<Course> courses = new List<Course>();

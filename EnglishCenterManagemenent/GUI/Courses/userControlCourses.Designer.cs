@@ -332,6 +332,7 @@ namespace EnglishCenterManagemenent.GUI
             this.buttonUpdate.TabIndex = 3;
             this.buttonUpdate.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_update_24px_white;
             this.buttonUpdate.Values.Text = "Update";
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // buttonDelete
             // 

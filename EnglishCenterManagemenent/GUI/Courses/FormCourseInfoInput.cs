@@ -22,7 +22,7 @@ namespace EnglishCenterManagemenent.GUI.Courses
         private string courseTuitionText;
         private string courseStandardGradeText;
 
-
+        private int courseId = -1;
         private int gradeSchemeId;
         private string name;
         private string description;
@@ -31,14 +31,36 @@ namespace EnglishCenterManagemenent.GUI.Courses
         private int tuition;
         private float standardGrade;
 
+        private Course currentCourse = null;
+
+        // This flag decides if user is adding new data or updating old data
+        private bool isAddingNewData = true;
         private List<GradeScheme> gradeSchemeList = new List<GradeScheme>();
-        public FormCourseInfoInput()
+
+        public FormCourseInfoInput(Course currentCourse)
         {
             InitializeComponent();
+
+
             foreach (GradeScheme gradeScheme in GradeSchemeDAO.GetAllGradeScheme())
             {
                 gradeSchemeList.Add(gradeScheme);
                 comboBoxGradeScheme.Items.Add(gradeScheme.Name);
+            }
+            this.currentCourse = currentCourse;
+            if (currentCourse != null)
+            {
+                isAddingNewData = false;
+                courseId = currentCourse.CourseID;
+                textBoxCourseName.Text = currentCourse.Name;
+                textBoxCourseDescription.Text = currentCourse.Description;
+                textBoxCourseLessonNum.Text = currentCourse.NumberOfLessons.ToString();
+                textBoxCourseWeekNum.Text = currentCourse.NumberOfWeeks.ToString();
+                textBoxCourseTuition.Text = currentCourse.Tuition.ToString();
+                textBoxStandardGrade.Text = currentCourse.StandardGrade.ToString();
+
+                comboBoxGradeScheme.SelectedIndex = comboBoxGradeScheme.FindStringExact(
+                CourseDAO.GetCourseGradeSchemeName(currentCourse.CourseID));
             }
         }
 
@@ -60,13 +82,14 @@ namespace EnglishCenterManagemenent.GUI.Courses
                     numberOfWeeks = int.Parse(courseWeekNumText);
                     tuition = int.Parse(courseTuitionText);
                     standardGrade = float.Parse(courseStandardGradeText);
-
-
+                    
                     Course newCourse = new Course(
-                        -1, gradeSchemeId, name, description, 
+                        courseId, gradeSchemeId, name, description, 
                         numberOfLessons, numberOfWeeks, tuition, standardGrade);
 
-                    CourseDAO.AddCourse(newCourse);
+                    if (isAddingNewData) CourseDAO.AddCourse(newCourse);
+                    else CourseDAO.UpdateCourse(newCourse);
+
                     ShowInfoMessageBox("Course saved !");
                 }
                 
@@ -87,18 +110,18 @@ namespace EnglishCenterManagemenent.GUI.Courses
             courseLessonNumText = textBoxCourseLessonNum.Text.Trim(); ;
             courseWeekNumText = textBoxCourseWeekNum.Text.Trim(); ;
             courseTuitionText = textBoxCourseTuition.Text.Trim().Replace(" ", ""); ;
-            courseStandardGradeText = textBoxStandardGrade.Text.Trim().Replace(" ", ""); ;
+            courseStandardGradeText = textBoxStandardGrade.Text.Trim().Replace(" ", ""); 
 
             return
                 courseNameText == "" || gradeSchemeIdText == "" ||
                 courseLessonNumText == "" || courseWeekNumText == "" ||
                 courseTuitionText == "" || courseStandardGradeText == "";
         }
+
         private void ShowErrorMessageBox(string message)
         {
             MessageBox.Show(message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-
 
         private void ShowInfoMessageBox(string message)
         {

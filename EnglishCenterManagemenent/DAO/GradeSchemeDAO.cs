@@ -22,6 +22,11 @@ namespace EnglishCenterManagemenent.DAO
                     newGradeScheme.Rounding });
         }
 
+        public static void DeleteAllGradeSchemes()
+        {
+            DataProvider.Instance.ExecuteNonQuery("DELETE FROM dbo.GRADESCHEME");
+        }
+
         public static List<GradeScheme> GetAllGradeScheme()
         {
             List<GradeScheme> gradeSchemes = new List<GradeScheme>();

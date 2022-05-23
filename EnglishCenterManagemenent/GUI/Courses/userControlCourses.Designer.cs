@@ -61,7 +61,10 @@ namespace EnglishCenterManagemenent.GUI
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.textBoxSearch.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.textBoxSearch.TabIndex = 0;
-            this.textBoxSearch.Text = "Nhập tên, lớp";
+            this.textBoxSearch.Text = "What are you looking for ?";
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
+            this.textBoxSearch.Enter += new System.EventHandler(this.textBoxSearch_Enter);
+            this.textBoxSearch.Leave += new System.EventHandler(this.textBoxSearch_Leave);
             // 
             // kryptonPaletteGeneral
             // 
@@ -305,6 +308,7 @@ namespace EnglishCenterManagemenent.GUI
             this.buttonAdd.TabIndex = 3;
             this.buttonAdd.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_plus_24px_white;
             this.buttonAdd.Values.Text = "Add";
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonUpdate
             // 
@@ -331,6 +335,7 @@ namespace EnglishCenterManagemenent.GUI
             this.buttonUpdate.TabIndex = 3;
             this.buttonUpdate.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_update_24px_white;
             this.buttonUpdate.Values.Text = "Update";
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // buttonDelete
             // 
@@ -350,6 +355,7 @@ namespace EnglishCenterManagemenent.GUI
             this.buttonDelete.TabIndex = 3;
             this.buttonDelete.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_trashcan_24px_white;
             this.buttonDelete.Values.Text = "Delete";
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // dataGridView
             // 
@@ -357,6 +363,7 @@ namespace EnglishCenterManagemenent.GUI
             this.dataGridView.AllowUserToDeleteRows = false;
             this.dataGridView.AllowUserToResizeColumns = false;
             this.dataGridView.AllowUserToResizeRows = false;
+            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView.ColumnHeadersHeight = 60;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -399,43 +406,43 @@ namespace EnglishCenterManagemenent.GUI
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.Width = 206;
+            this.Column1.Width = 130;
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Address";
+            this.Column2.HeaderText = "Number of Lessons";
             this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column2.Width = 206;
+            this.Column2.Width = 265;
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Date Of Birth";
+            this.Column3.HeaderText = "Number of Weeks";
             this.Column3.MinimumWidth = 8;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column3.Width = 207;
+            this.Column3.Width = 252;
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "Email";
+            this.Column4.HeaderText = "Tuition";
             this.Column4.MinimumWidth = 8;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column4.Width = 206;
+            this.Column4.Width = 140;
             // 
             // Column5
             // 
-            this.Column5.HeaderText = "Average Grade";
+            this.Column5.HeaderText = "Standard Grade";
             this.Column5.MinimumWidth = 8;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column5.Width = 206;
+            this.Column5.Width = 234;
             // 
             // panelSearchIcon
             // 
@@ -499,12 +506,12 @@ namespace EnglishCenterManagemenent.GUI
         private ComponentFactory.Krypton.Toolkit.KryptonButton buttonUpdate;
         private ComponentFactory.Krypton.Toolkit.KryptonButton buttonDelete;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView dataGridView;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel panelSearchIcon;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton buttonGradeSchemes;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private ComponentFactory.Krypton.Toolkit.KryptonPanel panelSearchIcon;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton buttonGradeSchemes;
     }
 }

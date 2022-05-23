@@ -26,9 +26,9 @@ namespace EnglishCenterManagemenent.GUI
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            //FormEmployeeInfoInput formEmployeeInfoInput = new FormEmployeeInfoInput(null);
-            //formEmployeeInfoInput.ShowDialog();
-            //FillDataGridView();
+            FormEmployeeInfoInput formEmployeeInfoInput = new FormEmployeeInfoInput(null);
+            formEmployeeInfoInput.ShowDialog();
+            FillDataGridView();
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)

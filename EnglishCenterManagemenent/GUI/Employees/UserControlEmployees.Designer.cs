@@ -60,6 +60,9 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.textBoxSearch.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.textBoxSearch.TabIndex = 0;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
+            this.textBoxSearch.Enter += new System.EventHandler(this.textBoxSearch_Enter);
+            this.textBoxSearch.Leave += new System.EventHandler(this.textBoxSearch_Leave);
             // 
             // kryptonPaletteGeneral
             // 
@@ -303,6 +306,7 @@
             this.buttonAdd.TabIndex = 3;
             this.buttonAdd.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_plus_24px_white;
             this.buttonAdd.Values.Text = "Add";
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonUpdate
             // 
@@ -329,6 +333,7 @@
             this.buttonUpdate.TabIndex = 3;
             this.buttonUpdate.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_update_24px_white;
             this.buttonUpdate.Values.Text = "Update";
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // buttonDelete
             // 
@@ -348,6 +353,7 @@
             this.buttonDelete.TabIndex = 3;
             this.buttonDelete.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_trashcan_24px_white;
             this.buttonDelete.Values.Text = "Delete";
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // dataGridView
             // 

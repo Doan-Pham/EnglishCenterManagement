@@ -20,5 +20,23 @@ namespace EnglishCenterManagemenent.DAO
 
             return employees;
         }
+
+        public static string GetEmployeeRoleName(int employeeId)
+        {
+            string roleName = "";
+            DataTable data = DataProvider.Instance.ExecuteQuery(
+                "SELECT Role.Name " +
+                "FROM ROLE, EMPLOYEE " +
+                "WHERE EMPLOYEE.RoleID = ROLE.RoleID " +
+                "      AND EMPLOYEE.EmployeeID = @EmployeeID",
+                new object[] { employeeId });
+
+            if (data.Rows.Count > 0)
+            {
+                DataRow row = data.Rows[0];
+                roleName = row["Name"].ToString();
+            }
+            return roleName;
+        }
     }
 }

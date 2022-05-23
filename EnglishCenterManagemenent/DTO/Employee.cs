@@ -31,7 +31,6 @@ namespace EnglishCenterManagemenent.DTO
 
             if (row["DateOfBirth"] != DBNull.Value)
                 DateOfBirth = (DateTime)row["DateOfBirth"];
-
             Phone = (string)row["Phone"];
             Certificate = (string)row["Certificate"];
             Email = (string)row["Email"];

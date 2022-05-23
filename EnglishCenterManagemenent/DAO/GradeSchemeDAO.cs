@@ -26,6 +26,7 @@ namespace EnglishCenterManagemenent.DAO
         {
             DataProvider.Instance.ExecuteNonQuery("DELETE FROM dbo.GRADESCHEME");
         }
+
         public static List<GradeScheme> GetAllGradeScheme()
         {
             List<GradeScheme> gradeSchemes = new List<GradeScheme>();

@@ -1,9 +1,8 @@
-CREATE DATABASE MANAGEMENT
+﻿CREATE DATABASE MANAGEMENT
 USE MANAGEMENT
 
-
 CREATE TABLE ROLE(
-    RoleID INT NOT NULL IDENTITY(1,1) ,
+    RoleID INT NOT NULL IDENTITY(1,1),
     Name NVARCHAR(50),
     Description NVARCHAR(100),
     constraint pk_ro primary key (RoleID)
@@ -87,7 +86,6 @@ CREATE TABLE STUDENTATTENDANCE(
     Date DATE NOT NULL,
     IsPresent INT,
     constraint pk_sta primary key (StudentID,ClassID,Date)
-
 )
 
 CREATE TABLE SCHEDULE(
@@ -99,12 +97,12 @@ CREATE TABLE SCHEDULE(
 )
 
 CREATE TABLE CLASS_TEACHER_SCHEDULE(
-    EmplyeeID INT NOT NULL,
+    EmployeeID INT NOT NULL,
     ClassID INT NOT NULL,
-    SheduleID INT NOT NULL,
-    constraint pk_clts primary key (EmplyeeID,ClassID,SheduleID)
+    ScheduleID INT NOT NULL,
+    constraint pk_clts primary key (EmployeeID,ClassID,ScheduleID)
 )
--- ALTER TABLE MONAN ADD CONSTRAINT fk_ma FOREIGN KEY (MaLoaiMonAn) REFERENCES LOAIMONAN(MaLoaiMonAn)
+
 ALTER TABLE EMPLOYEE ADD CONSTRAINT fk_emp FOREIGN KEY (RoleID) REFERENCES ROLE(RoleID)
 ALTER TABLE USERS ADD CONSTRAINT fk_usr FOREIGN KEY (RoleID) REFERENCES ROLE(RoleID)
 ALTER TABLE COURSE ADD CONSTRAINT fk_co FOREIGN KEY (GradeSchemeID) REFERENCES GRADESCHEME(GradeSchemeID)
@@ -114,6 +112,58 @@ ALTER TABLE STUDENTGRADE ADD CONSTRAINT fk_stg1 FOREIGN KEY (StudentID) REFERENC
 ALTER TABLE STUDENTGRADE ADD CONSTRAINT fk_stg2 FOREIGN KEY (ClassID) REFERENCES CLASS(ClassID)
 ALTER TABLE STUDENTATTENDANCE ADD CONSTRAINT fk_sta1 FOREIGN KEY (StudentID) REFERENCES STUDENT(StudentID)
 ALTER TABLE STUDENTATTENDANCE ADD CONSTRAINT fk_sta2 FOREIGN KEY (ClassID) REFERENCES CLASS(ClassID)
-ALTER TABLE CLASS_TEACHER_SCHEDULE ADD CONSTRAINT fk_clts1 FOREIGN KEY (EmplyeeID) REFERENCES EMPLOYEE(EmployeeID)
+ALTER TABLE CLASS_TEACHER_SCHEDULE ADD CONSTRAINT fk_clts1 FOREIGN KEY (EmployeeID) REFERENCES EMPLOYEE(EmployeeID)
 ALTER TABLE CLASS_TEACHER_SCHEDULE ADD CONSTRAINT fk_clts2 FOREIGN KEY (ClassID) REFERENCES CLASS(ClassID)
-ALTER TABLE CLASS_TEACHER_SCHEDULE ADD CONSTRAINT fk_clts3 FOREIGN KEY (SheduleID) REFERENCES SCHEDULE(ScheduleID)
+ALTER TABLE CLASS_TEACHER_SCHEDULE ADD CONSTRAINT fk_clts3 FOREIGN KEY (ScheduleID) REFERENCES SCHEDULE(ScheduleID)
+
+--Add data
+INSERT INTO ROLE(Name, Description)
+VALUES(N'admin', N'This is admin')
+
+DELETE FROM ROLE
+
+INSERT INTO USERS(RoleID, Username, Password)
+VALUES(1, N'admin', N'1')
+
+INSERT INTO GRADESCHEME(Name, LowestGrade, HighestGrade, Rounding)
+VALUES (N'IELTS', 1.0, 9.0,0.5)
+
+DELETE FROM GRADESCHEME
+
+INSERT INTO COURSE(GradeSchemeID, Name, Description, NumberOfLessons, NumberOfWeeks, Tuition)
+VALUES (7, N'IELTS BASIC', N'IELTS - Basic course', 45, 15, 4000000)
+
+UPDATE COURSE SET GradeSchemeID = 7 , Name = 'A' , Description = '' ,     NumberOfLessons = 45 , NumberOfWeeks = 30 ,     Tuition = 0 , StandardGrade = 30 WHERE CourseID = 2
+
+SELECT GRADESCHEME.Name 
+FROM GRADESCHEME, COURSE
+WHERE GRADESCHEME.GradeSchemeID = COURSE.GradeSchemeID AND COURSE.CourseID = 2
+
+INSERT INTO USERS(RoleID, Username, Password)
+VALUES(1, N'admin', N'1')
+
+SET DATEFORMAT dmy
+INSERT INTO EMPLOYEE(RoleId, LastName, FirstName, Address, DateOfBirth, Phone, Certificate, Email)
+VALUES(1, N'Nguyễn Thế', N'Bảo', N'43 Trường Chinh','1-1-1981', N'0996353540', NULL, N'ntbhcmuit@gmail.com')
+
+--procedure
+CREATE PROC GetAccountByUsername
+@username nvarchar(50)
+AS 
+BEGIN
+	SELECT * FROM USERS WHERE Username = @username
+END
+
+EXEC USP_GetAccountByUsername @username = N'admin'
+
+--store procedure for Login
+CREATE PROC USP_Login
+@username nvarchar(50), @password nvarchar(100)
+AS 
+BEGIN
+	SELECT * FROM USERS
+	WHERE Username = @username AND Password = @password
+END
+
+EXEC USP_Login @username = N'admin', @password = N'1'
+

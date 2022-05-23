@@ -35,6 +35,20 @@ namespace EnglishCenterManagemenent.DTO
             Certificate = (string)row["Certificate"];
             Email = (string)row["Email"];
         }
+
+        public Employee(int employeeID, int roleID, string firstName, string lastName, string address, DateTime? dateOfBirth, string phone, string certificate, string email)
+        {
+            EmployeeID = employeeID;
+            RoleID = roleID;
+            FirstName = firstName;
+            LastName = lastName;
+            Address = address;
+            DateOfBirth = dateOfBirth;
+            Phone = phone;
+            Certificate = certificate;
+            Email = email;
+        }
+
         public int EmployeeID { get => employeeID; set => employeeID = value; }
         public int RoleID { get => roleID; set => roleID = value; }
         public string FirstName { get => firstName; set => firstName = value; }

@@ -38,5 +38,45 @@ namespace EnglishCenterManagemenent.DAO
             }
             return roleName;
         }
+
+        public static void AddEmployee(Employee newEmployee)
+        {
+            DataProvider.Instance.ExecuteNonQuery(
+                    "INSERT INTO EMPLOYEE(RoleID, FirstName, LastName, " +
+                    "Address, DateOfBirth, Phone, Certificate, Email) " +
+
+                    "VALUES ( @RoleID , @FirstName , @LastName , " +
+                    "@Address , @DateOfBirth , @Phone , @Certificate , @Email )",
+
+                    new object[] {
+                    newEmployee.RoleID,
+                    newEmployee.FirstName,
+                    newEmployee.LastName,
+                    newEmployee.Address,
+                    newEmployee.DateOfBirth,
+                    newEmployee.Phone,
+                    newEmployee.Certificate,
+                    newEmployee.Email});
+        }
+
+        public static void UpdateEmployee(Employee newEmployee)
+        {
+            DataProvider.Instance.ExecuteNonQuery(
+                "UPDATE EMPLOYEE " +
+                "SET RoleID = @RoleID , FirstName = @FirstName , LastName = @LastName , " +
+                "    Address = @Address , DateOfBirth = @DateOfBirth , " +
+                "    Phone = @Phone , Certificate = @Certificate , Email = @Email" +
+                "WHERE EmployeeID = @EmployeeID",
+
+                new object[] {
+                    newEmployee.RoleID,
+                    newEmployee.FirstName,
+                    newEmployee.LastName,
+                    newEmployee.Address,
+                    newEmployee.DateOfBirth,
+                    newEmployee.Phone,
+                    newEmployee.Certificate,
+                    newEmployee.Email});
+        }
     }
 }

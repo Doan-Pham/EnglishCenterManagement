@@ -83,24 +83,25 @@ namespace EnglishCenterManagemenent.GUI
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
-            //// If we don't check this, the placeholer text becomes part of the filtering, which
-            //// is not wanted
-            //if (textBoxSearch.Text == TEXTBOX_SEARCH_PLACEHOLDER) return;
+            // If we don't check this, the placeholer text becomes part of the filtering, which
+            // is not wanted
+            if (textBoxSearch.Text == TEXTBOX_SEARCH_PLACEHOLDER) return;
 
-            //dataGridView.Rows.Clear();
-            //courseList.Clear();
-            //foreach (Employee employee in EmployeeDAO.GetFilteredEmployee(textBoxSearch.Text))
-            //{
-            //    courseList.Add(employee);
-            //    dataGridView.Rows.Add(new object[]
-            //    {
-            //        employee.Name,
-            //        employee.NumberOfLessons,
-            //        employee.NumberOfWeeks,
-            //        employee.Tuition,
-            //        employee.StandardGrade,
-            //    });
-            //}
+            dataGridView.Rows.Clear();
+            employeeList.Clear();
+            foreach (Employee employee in EmployeeDAO.GetFilteredEmployee(textBoxSearch.Text))
+            {
+                employeeList.Add(employee);
+                dataGridView.Rows.Add(new object[]
+                {
+                    employee.LastName,
+                    employee.FirstName,
+                    employee.Address,
+                    $"{employee.DateOfBirth: MM/dd/yyyy}",
+                    employee.Phone,
+                    employee.Email,
+                });
+            }
         }
         // Remove placeholder text from textBoxSearch when user clicks on it to type
         private void textBoxSearch_Enter(object sender, EventArgs e)

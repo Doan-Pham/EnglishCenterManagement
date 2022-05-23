@@ -65,6 +65,21 @@ namespace EnglishCenterManagemenent.DAO
                 "DELETE FROM dbo.EMPLOYEE WHERE EmployeeID = @EmployeeID",
                 new object[] { deletedEmployee.EmployeeID });
         }
+        public static List<Employee> GetFilteredEmployee(string info)
+        {
+            List<Employee> employees = new List<Employee>();
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(
+                "SELECT * FROM dbo.EMPLOYEE " +
+                "WHERE FirstName LIKE '%" + info + "%' OR LastName LIKE '%" + info + "%' " +
+                "OR Address LIKE '%" + info + "%' OR DateOfBirth LIKE '%" + info + "%' " +
+                "OR Phone LIKE '%" + info + "%' OR Certificate LIKE '%" + info + "%' " +
+                "OR Email LIKE '%" + info + "%' ");
+            foreach (DataRow row in data.Rows)
+                employees.Add(new Employee(row));
+
+            return employees;
+        }
         public static void UpdateEmployee(Employee newEmployee)
         {
             DataProvider.Instance.ExecuteNonQuery(

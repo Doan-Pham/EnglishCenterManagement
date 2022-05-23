@@ -68,8 +68,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\CourseDAO.cs" />
+    <Compile Include="DAO\EmployeeDAO.cs" />
     <Compile Include="DAO\GradeSchemeDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\RoleDAO.cs" />
     <Compile Include="DAO\UsersDAO.cs" />
     <Compile Include="DTO\Class.cs" />
     <Compile Include="DTO\ClassTeacherSchedule.cs" />
@@ -99,6 +101,12 @@
     </Compile>
     <Compile Include="GUI\Courses\FormCourseInfoInput.Designer.cs">
       <DependentUpon>FormCourseInfoInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Employees\FormEmployeeInfoInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Employees\FormEmployeeInfoInput.Designer.cs">
+      <DependentUpon>FormEmployeeInfoInput.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Main\FormLogin.cs">
       <SubType>Form</SubType>
@@ -178,6 +186,9 @@
     <EmbeddedResource Include="GUI\Courses\FormCourseInfoInput.resx">
       <DependentUpon>FormCourseInfoInput.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Employees\FormEmployeeInfoInput.resx">
+      <DependentUpon>FormEmployeeInfoInput.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Main\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -200,6 +211,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Employees\UserControlEmployees.resx">
       <DependentUpon>UserControlEmployees.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Students\UserControlStudentAttendance.resx">
       <DependentUpon>UserControlStudentAttendance.cs</DependentUpon>

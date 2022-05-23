@@ -124,19 +124,6 @@ namespace EnglishCenterManagemenent.GUI.Employees
                 employeePhoneText == "";
         }
 
-        private bool CheckValidCertificate()
-        {
-            //standardGrade = float.Parse(employeeCertificateText);
-            //Role employeeRole = roleList
-            //    .ElementAt(comboBoxRole.SelectedIndex);
-
-            //return
-            //    standardGrade >= employeeRole.LowestGrade &&
-            //    standardGrade <= employeeRole.HighestGrade &&
-            //    standardGrade % employeeRole.Rounding == 0;
-            return false;
-
-        }
         private void ShowErrorMessageBox(string message)
         {
             MessageBox.Show(message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);

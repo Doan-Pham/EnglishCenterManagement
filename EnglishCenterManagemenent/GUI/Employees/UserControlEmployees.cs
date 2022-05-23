@@ -35,27 +35,27 @@ namespace EnglishCenterManagemenent.GUI
         {
             if (dataGridView.SelectedRows.Count == 0) return;
             FillDataGridView();
-            //DialogResult dialog = ShowAskingMessageBox
-            //    ("Are you sure you want to delete this employee: " +
-            //    courseList.ElementAt(dataGridView.CurrentCell.RowIndex).Name + "?");
+            DialogResult dialog = ShowAskingMessageBox
+                ("Are you sure you want to delete this employee: " +
+                employeeList.ElementAt(dataGridView.CurrentCell.RowIndex).FirstName + "?");
 
-            //if (dialog == DialogResult.OK)
-            //{
-            //    EmployeeDAO.DeleteEmployee(courseList.ElementAt(dataGridView.CurrentCell.RowIndex));
-            //    ShowInfoMessageBox("Employee deleted !");
-            //    FillDataGridView();
-            //}
+            if (dialog == DialogResult.OK)
+            {
+                EmployeeDAO.DeleteEmployee(employeeList.ElementAt(dataGridView.CurrentCell.RowIndex));
+                ShowInfoMessageBox("Employee deleted !");
+                FillDataGridView();
+            }
 
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            //if (dataGridView.SelectedRows.Count == 0) return;
-            //FormEmployeeInfoInput formEmployeeInfoInput = new FormEmployeeInfoInput(
-            //    courseList.ElementAt(dataGridView.CurrentCell.RowIndex));
+            if (dataGridView.SelectedRows.Count == 0) return;
+            FormEmployeeInfoInput formEmployeeInfoInput = new FormEmployeeInfoInput(
+                employeeList.ElementAt(dataGridView.CurrentCell.RowIndex));
 
-            //formEmployeeInfoInput.ShowDialog();
-            //FillDataGridView();
+            formEmployeeInfoInput.ShowDialog();
+            FillDataGridView();
         }
         /// <summary>
         /// Fill this user control's datagridview with data from database

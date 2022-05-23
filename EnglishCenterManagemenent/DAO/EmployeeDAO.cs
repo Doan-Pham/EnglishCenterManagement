@@ -59,13 +59,19 @@ namespace EnglishCenterManagemenent.DAO
                     newEmployee.Email});
         }
 
+        public static void DeleteEmployee(Employee deletedEmployee)
+        {
+            DataProvider.Instance.ExecuteNonQuery(
+                "DELETE FROM dbo.EMPLOYEE WHERE EmployeeID = @EmployeeID",
+                new object[] { deletedEmployee.EmployeeID });
+        }
         public static void UpdateEmployee(Employee newEmployee)
         {
             DataProvider.Instance.ExecuteNonQuery(
                 "UPDATE EMPLOYEE " +
                 "SET RoleID = @RoleID , FirstName = @FirstName , LastName = @LastName , " +
                 "    Address = @Address , DateOfBirth = @DateOfBirth , " +
-                "    Phone = @Phone , Certificate = @Certificate , Email = @Email" +
+                "    Phone = @Phone , Certificate = @Certificate , Email = @Email " +
                 "WHERE EmployeeID = @EmployeeID",
 
                 new object[] {
@@ -76,7 +82,8 @@ namespace EnglishCenterManagemenent.DAO
                     newEmployee.DateOfBirth,
                     newEmployee.Phone,
                     newEmployee.Certificate,
-                    newEmployee.Email});
+                    newEmployee.Email,
+                    newEmployee.EmployeeID});
         }
     }
 }

@@ -41,12 +41,15 @@ namespace EnglishCenterManagemenent.GUI.Courses
         {
             InitializeComponent();
 
-
+            // Put all the gradescheme's name into combobox and also add the gradescheme to a list
+            // for later access
             foreach (GradeScheme gradeScheme in GradeSchemeDAO.GetAllGradeScheme())
             {
                 gradeSchemeList.Add(gradeScheme);
                 comboBoxGradeScheme.Items.Add(gradeScheme.Name);
             }
+
+            // If user is updating course, put all the course's data into controls
             this.currentCourse = currentCourse;
             if (currentCourse != null)
             {
@@ -124,6 +127,7 @@ namespace EnglishCenterManagemenent.GUI.Courses
             standardGrade = float.Parse(courseStandardGradeText);
             GradeScheme courseGradeScheme = gradeSchemeList
                 .ElementAt(comboBoxGradeScheme.SelectedIndex);
+
             return 
                 standardGrade >= courseGradeScheme.LowestGrade &&
                 standardGrade <= courseGradeScheme.HighestGrade &&

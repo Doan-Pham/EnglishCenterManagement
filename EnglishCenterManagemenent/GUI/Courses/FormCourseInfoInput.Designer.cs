@@ -694,7 +694,7 @@
             // textBoxCourseTuition
             // 
             this.textBoxCourseTuition.Culture = new System.Globalization.CultureInfo("vi-VN");
-            this.textBoxCourseTuition.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Overwrite;
+            this.textBoxCourseTuition.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Insert;
             this.textBoxCourseTuition.Location = new System.Drawing.Point(68, 660);
             this.textBoxCourseTuition.Mask = "000000000 VND";
             this.textBoxCourseTuition.Name = "textBoxCourseTuition";
@@ -759,13 +759,12 @@
             // textBoxStandardGrade
             // 
             this.textBoxStandardGrade.Culture = new System.Globalization.CultureInfo("vi-VN");
-            this.textBoxStandardGrade.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Overwrite;
+            this.textBoxStandardGrade.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Insert;
             this.textBoxStandardGrade.Location = new System.Drawing.Point(389, 660);
             this.textBoxStandardGrade.Mask = "###,##";
             this.textBoxStandardGrade.Name = "textBoxStandardGrade";
             this.textBoxStandardGrade.Palette = this.kryptonPaletteGeneral;
             this.textBoxStandardGrade.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.textBoxStandardGrade.PromptChar = '#';
             this.textBoxStandardGrade.Size = new System.Drawing.Size(235, 35);
             this.textBoxStandardGrade.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 

@@ -15,8 +15,12 @@ namespace EnglishCenterManagemenent.GUI
 {
     public partial class UserControlCourses : UserControl
     {
+        // This is the placeholder text for textBoxSearch, when you click on the textbox to type,
+        // the placeholder text disappears, and only reappear when you clear the textbox and stop
+        // focusing on it
         private const string TEXTBOX_SEARCH_PLACEHOLDER = "What are you looking for ?";
 
+        // A list to keep track of all the courses
         private List<Course> courseList = new List<Course>();
         public UserControlCourses()
         {
@@ -28,6 +32,7 @@ namespace EnglishCenterManagemenent.GUI
         {
             FillDataGridView();
         }
+
         private void buttonGradeSchemes_Click(object sender, EventArgs e)
         {
             FormCourseGradeScheme formCourseGradeScheme = new FormCourseGradeScheme();
@@ -106,12 +111,15 @@ namespace EnglishCenterManagemenent.GUI
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
         }
 
+        // Remove placeholder text from textBoxSearch when user clicks on it to type
         private void textBoxSearch_Enter(object sender, EventArgs e)
         {
             if (textBoxSearch.Text == TEXTBOX_SEARCH_PLACEHOLDER)
                 textBoxSearch.Text = "";
         }
 
+        // Fill the textBoxSearch with placeholder text when user clears the textBox and stop
+        // focusing on it
         private void textBoxSearch_Leave(object sender, EventArgs e)
         {
             if (textBoxSearch.Text == "")
@@ -120,6 +128,8 @@ namespace EnglishCenterManagemenent.GUI
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
+            // If we don't check this, the placeholer text becomes part of the filtering, which
+            // is not wanted
             if (textBoxSearch.Text == TEXTBOX_SEARCH_PLACEHOLDER) return;
             
             dataGridView.Rows.Clear();

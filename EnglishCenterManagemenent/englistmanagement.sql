@@ -146,6 +146,10 @@ SET DATEFORMAT dmy
 INSERT INTO EMPLOYEE(RoleId, LastName, FirstName, Address, DateOfBirth, Phone, Certificate, Email)
 VALUES(1, N'Nguyễn Thế', N'Bảo', N'43 Trường Chinh','1-1-1981', N'0996353540', NULL, N'ntbhcmuit@gmail.com')
 
+INSERT INTO CLASS(CourseID, Name, StartDate, EndDate, NumberOfStudents)
+VALUES(2, N'TOEFL BASIC 01', '25-05-2022', '28-05-2022',0)
+
+
 --procedure
 CREATE PROC GetAccountByUsername
 @username nvarchar(50)

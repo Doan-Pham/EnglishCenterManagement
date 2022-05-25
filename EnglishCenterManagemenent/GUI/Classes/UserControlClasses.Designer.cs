@@ -35,13 +35,13 @@
             this.buttonUpdate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.buttonDelete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.dataGridView = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
+            this.panelSearchIcon = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.buttonStudentsList = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panelSearchIcon = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.buttonStudentsList = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelSearchIcon)).BeginInit();
             this.SuspendLayout();
@@ -60,7 +60,10 @@
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.textBoxSearch.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.textBoxSearch.TabIndex = 0;
-            this.textBoxSearch.Text = "Nhập tên, lớp";
+            this.textBoxSearch.Text = "What are you looking for ?";
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
+            this.textBoxSearch.Enter += new System.EventHandler(this.textBoxSearch_Enter);
+            this.textBoxSearch.Leave += new System.EventHandler(this.textBoxSearch_Leave);
             // 
             // kryptonPaletteGeneral
             // 
@@ -304,6 +307,7 @@
             this.buttonAdd.TabIndex = 3;
             this.buttonAdd.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_plus_24px_white;
             this.buttonAdd.Values.Text = "Add";
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonUpdate
             // 
@@ -330,6 +334,7 @@
             this.buttonUpdate.TabIndex = 3;
             this.buttonUpdate.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_update_24px_white;
             this.buttonUpdate.Values.Text = "Update";
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // buttonDelete
             // 
@@ -349,6 +354,7 @@
             this.buttonDelete.TabIndex = 3;
             this.buttonDelete.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_trashcan_24px_white;
             this.buttonDelete.Values.Text = "Delete";
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // dataGridView
             // 
@@ -356,13 +362,14 @@
             this.dataGridView.AllowUserToDeleteRows = false;
             this.dataGridView.AllowUserToResizeColumns = false;
             this.dataGridView.AllowUserToResizeRows = false;
+            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView.ColumnHeadersHeight = 60;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column5,
             this.Column1,
             this.Column2,
             this.Column3,
-            this.Column4,
-            this.Column5});
+            this.Column4});
             this.dataGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridView.GridStyles.Style = ComponentFactory.Krypton.Toolkit.DataGridViewStyle.Custom1;
             this.dataGridView.GridStyles.StyleBackground = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundCustom1;
@@ -370,7 +377,7 @@
             this.dataGridView.GridStyles.StyleDataCells = ComponentFactory.Krypton.Toolkit.GridStyle.Custom1;
             this.dataGridView.GridStyles.StyleRow = ComponentFactory.Krypton.Toolkit.GridStyle.Custom1;
             this.dataGridView.HideOuterBorders = true;
-            this.dataGridView.Location = new System.Drawing.Point(35, 218);
+            this.dataGridView.Location = new System.Drawing.Point(35, 225);
             this.dataGridView.MultiSelect = false;
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.Palette = this.kryptonPaletteGeneral;
@@ -391,51 +398,6 @@
             this.dataGridView.StateNormal.HeaderColumn.Content.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(176)))), ((int)(((byte)(181)))));
             this.dataGridView.TabIndex = 5;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Name";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.Width = 206;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Address";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column2.Width = 206;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Date Of Birth";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column3.Width = 207;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Email";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column4.Width = 206;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Average Grade";
-            this.Column5.MinimumWidth = 8;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column5.Width = 206;
-            // 
             // panelSearchIcon
             // 
             this.panelSearchIcon.Location = new System.Drawing.Point(48, 47);
@@ -451,7 +413,7 @@
             // 
             this.buttonStudentsList.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom2;
             this.buttonStudentsList.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStudentsList.Location = new System.Drawing.Point(677, 126);
+            this.buttonStudentsList.Location = new System.Drawing.Point(666, 132);
             this.buttonStudentsList.Name = "buttonStudentsList";
             this.buttonStudentsList.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
             this.buttonStudentsList.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
@@ -465,6 +427,50 @@
             this.buttonStudentsList.TabIndex = 3;
             this.buttonStudentsList.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_student_24px_white;
             this.buttonStudentsList.Values.Text = "View students list";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Course Name";
+            this.Column5.MinimumWidth = 8;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 207;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Class Name";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column1.Width = 189;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Start Date";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column2.Width = 175;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "End Date";
+            this.Column3.MinimumWidth = 8;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column3.Width = 163;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Number of Students";
+            this.Column4.MinimumWidth = 8;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column4.Width = 275;
             // 
             // UserControlClasses
             // 
@@ -497,12 +503,12 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton buttonUpdate;
         private ComponentFactory.Krypton.Toolkit.KryptonButton buttonDelete;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView dataGridView;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel panelSearchIcon;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton buttonStudentsList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private ComponentFactory.Krypton.Toolkit.KryptonPanel panelSearchIcon;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton buttonStudentsList;
     }
 }

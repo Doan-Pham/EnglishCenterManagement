@@ -117,13 +117,34 @@ ALTER TABLE CLASS_TEACHER_SCHEDULE ADD CONSTRAINT fk_clts2 FOREIGN KEY (ClassID)
 ALTER TABLE CLASS_TEACHER_SCHEDULE ADD CONSTRAINT fk_clts3 FOREIGN KEY (ScheduleID) REFERENCES SCHEDULE(ScheduleID)
 
 --Add data
---ROLE
-INSERT INTO ROLE(Name, Description) VALUES(N'admin', N'This is admin')
-INSERT INTO ROLE(Name, Description) VALUES(N'staff', N'This is staff')
+INSERT INTO ROLE(Name, Description)
+VALUES(N'admin', N'This is admin')
 
---USERS
-INSERT INTO USERS(RoleID, Username, Password) VALUES(1, N'admin', N'1')
-INSERT INTO USERS(RoleID, Username, Password) VALUES(2, N'staff', N'abc')            
+DELETE FROM ROLE
+
+INSERT INTO USERS(RoleID, Username, Password)
+VALUES(1, N'admin', N'1')
+
+INSERT INTO GRADESCHEME(Name, LowestGrade, HighestGrade, Rounding)
+VALUES (N'IELTS', 1.0, 9.0,0.5)
+
+DELETE FROM GRADESCHEME
+
+INSERT INTO COURSE(GradeSchemeID, Name, Description, NumberOfLessons, NumberOfWeeks, Tuition)
+VALUES (7, N'IELTS BASIC', N'IELTS - Basic course', 45, 15, 4000000)
+
+UPDATE COURSE SET GradeSchemeID = 7 , Name = 'A' , Description = '' ,     NumberOfLessons = 45 , NumberOfWeeks = 30 ,     Tuition = 0 , StandardGrade = 30 WHERE CourseID = 2
+
+SELECT GRADESCHEME.Name 
+FROM GRADESCHEME, COURSE
+WHERE GRADESCHEME.GradeSchemeID = COURSE.GradeSchemeID AND COURSE.CourseID = 2
+
+INSERT INTO USERS(RoleID, Username, Password)
+VALUES(1, N'admin', N'1')
+
+SET DATEFORMAT dmy
+INSERT INTO EMPLOYEE(RoleId, LastName, FirstName, Address, DateOfBirth, Phone, Certificate, Email)
+VALUES(1, N'Nguyễn Thế', N'Bảo', N'43 Trường Chinh','1-1-1981', N'0996353540', NULL, N'ntbhcmuit@gmail.com')
 
 --procedure
 CREATE PROC GetAccountByUsername
@@ -141,7 +162,10 @@ CREATE PROC USP_Login
 AS 
 BEGIN
 	SELECT * FROM USERS
-	WHERE Username = @username AND Password = @password
+	WHERE Username = @username COLLATE SQL_Latin1_General_CP1_CS_AS
+	AND Password = @password COLLATE SQL_Latin1_General_CP1_CS_AS
 END
 
+
 EXEC USP_Login @username = N'admin', @password = N'1'
+

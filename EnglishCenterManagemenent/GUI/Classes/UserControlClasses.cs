@@ -122,24 +122,24 @@ namespace EnglishCenterManagemenent.GUI
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
-            //// If we don't check this, the placeholer text becomes part of the filtering, which
-            //// is not wanted
-            //if (textBoxSearch.Text == TEXTBOX_SEARCH_PLACEHOLDER) return;
+            // If we don't check this, the placeholer text becomes part of the filtering, which
+            // is not wanted
+            if (textBoxSearch.Text == TEXTBOX_SEARCH_PLACEHOLDER) return;
 
-            //dataGridView.Rows.Clear();
-            //classList.Clear();
-            //foreach (Class classVar in ClassDAO.GetFilteredClass(textBoxSearch.Text))
-            //{
-            //    classList.Add(classVar);
-            //    dataGridView.Rows.Add(new object[]
-            //    {
-            //        classVar.Name,
-            //        classVar.NumberOfLessons,
-            //        classVar.NumberOfWeeks,
-            //        classVar.Tuition,
-            //        classVar.StandardGrade,
-            //    });
-            //}
+            dataGridView.Rows.Clear();
+            classList.Clear();
+            foreach (Class classVar in ClassDAO.GetFilteredClass(textBoxSearch.Text))
+            {
+                classList.Add(classVar);
+                dataGridView.Rows.Add(new object[]
+                {
+                    ClassDAO.GetClassCourseName(classVar.ClassID),
+                    classVar.Name,
+                    $"{classVar.StartDate: MM/dd/yyyy}",
+                    $"{classVar.EndDate: MM/dd/yyyy}",
+                    classVar.NumberOfStudents
+                });
+            }
         }
     }
 }

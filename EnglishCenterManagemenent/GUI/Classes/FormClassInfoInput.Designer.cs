@@ -51,8 +51,6 @@
             this.comboBoxTeacher = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.kryptonPaletteGrid = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
-            this.textBoxClassId = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxCourse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxTeacher)).BeginInit();
             this.SuspendLayout();
@@ -439,7 +437,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(537, 133);
+            this.label7.Location = new System.Drawing.Point(327, 128);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(123, 35);
             this.label7.TabIndex = 2;
@@ -448,7 +446,7 @@
             // kryptonTextBox6
             // 
             this.kryptonTextBox6.AlwaysActive = false;
-            this.kryptonTextBox6.Location = new System.Drawing.Point(543, 171);
+            this.kryptonTextBox6.Location = new System.Drawing.Point(333, 166);
             this.kryptonTextBox6.Name = "kryptonTextBox6";
             this.kryptonTextBox6.Size = new System.Drawing.Size(262, 56);
             this.kryptonTextBox6.StateActive.Back.Color1 = System.Drawing.Color.White;
@@ -475,7 +473,7 @@
             this.comboBoxCourse.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCourse.DropDownWidth = 113;
             this.comboBoxCourse.ItemStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom1;
-            this.comboBoxCourse.Location = new System.Drawing.Point(560, 181);
+            this.comboBoxCourse.Location = new System.Drawing.Point(350, 176);
             this.comboBoxCourse.Name = "comboBoxCourse";
             this.comboBoxCourse.Palette = this.kryptonPaletteGeneral;
             this.comboBoxCourse.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
@@ -875,41 +873,6 @@
             this.kryptonPaletteGrid.LabelStyles.LabelCustom1.StateNormal.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.kryptonPaletteGrid.LabelStyles.LabelCustom1.StateNormal.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             // 
-            // textBoxClassId
-            // 
-            this.textBoxClassId.AlwaysActive = false;
-            this.textBoxClassId.Enabled = false;
-            this.textBoxClassId.Location = new System.Drawing.Point(138, 170);
-            this.textBoxClassId.Name = "textBoxClassId";
-            this.textBoxClassId.Palette = this.kryptonPaletteGeneral;
-            this.textBoxClassId.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.textBoxClassId.ReadOnly = true;
-            this.textBoxClassId.Size = new System.Drawing.Size(262, 59);
-            this.textBoxClassId.StateActive.Back.Color1 = System.Drawing.Color.White;
-            this.textBoxClassId.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(168)))), ((int)(((byte)(47)))));
-            this.textBoxClassId.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textBoxClassId.StateActive.Border.Rounding = 5;
-            this.textBoxClassId.StateActive.Border.Width = 2;
-            this.textBoxClassId.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.textBoxClassId.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textBoxClassId.StateCommon.Border.Rounding = 5;
-            this.textBoxClassId.StateCommon.Border.Width = 2;
-            this.textBoxClassId.StateCommon.Content.Padding = new System.Windows.Forms.Padding(15, 12, 0, 12);
-            this.textBoxClassId.TabIndex = 4;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(132, 132);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 35);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Class ID";
-            // 
             // FormClassInfoInput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 35F);
@@ -928,10 +891,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.kryptonTextBox6);
-            this.Controls.Add(this.textBoxClassId);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.kryptonTextBox4);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.kryptonTextBox2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
@@ -975,7 +936,5 @@
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox comboBoxTeacher;
         private System.Windows.Forms.Label label8;
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPaletteGrid;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBoxClassId;
-        private System.Windows.Forms.Label label6;
     }
 }

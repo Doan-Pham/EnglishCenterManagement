@@ -66,8 +66,8 @@ namespace EnglishCenterManagemenent.GUI.Classes
                 courseId = currentClass.CourseID;
                 textBoxClassName.Text = currentClass.Name;
                 textBoxNumberOfStudents.Text = currentClass.NumberOfStudents.ToString();
-                dateTimePickerStartDate.Text = $"{currentClass.StartDate: MM/dd/yyyy}";
-                dateTimePickerEndDate.Text = $"{currentClass.EndDate: MM/dd/yyyy}";
+                dateTimePickerStartDate.Value = (DateTime) currentClass.StartDate;
+                dateTimePickerEndDate.Value = (DateTime) currentClass.EndDate;
 
                 comboBoxCourse.SelectedIndex = comboBoxCourse.FindStringExact(
                     ClassDAO.GetClassCourseName(currentClass.ClassID));

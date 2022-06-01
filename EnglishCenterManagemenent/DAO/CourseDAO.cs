@@ -110,5 +110,18 @@ namespace EnglishCenterManagemenent.DAO
 
             return courses;
         }
+
+        public static Course GetCourseWithID(int courseId)
+        {
+            List<Course> courses = new List<Course>();
+
+            Course course = null;
+            DataTable data = DataProvider.Instance.ExecuteQuery(
+                "SELECT * FROM dbo.COURSE WHERE CourseID = @CourseID", new object[] { courseId });
+            foreach (DataRow row in data.Rows)
+                course = new Course(row);
+
+            return course;
+        }
     }
 }

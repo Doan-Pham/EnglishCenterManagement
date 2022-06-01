@@ -5,19 +5,22 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace EnglishCenterManagemenent.DAO
 {
     public class ClassDAO
     {
-        public static void AddClass(Class newClass)
+        public static int AddClass(Class newClass)
         {
-            DataProvider.Instance.ExecuteNonQuery(
+            int classId = -1;
+            object result = DataProvider.Instance.ExecuteScalar(
                 "INSERT INTO CLASS(CourseID, Name, NumberOfStudents, " +
-                "StartDate, EndDate, )" +
+                "StartDate, EndDate) " +
 
                 "VALUES ( @CourseID , @Name , @NumberOfStudents , " +
-                "@StartDate , @EndDate )",
+                "@StartDate , @EndDate ) ; " +
+                "SELECT CAST(scope_identity() AS int)",
 
                 new object[] {
                     newClass.CourseID,
@@ -25,6 +28,10 @@ namespace EnglishCenterManagemenent.DAO
                     newClass.NumberOfStudents,
                     newClass.StartDate,
                     newClass.EndDate});
+
+            if (result == null) Debug.WriteLine("[ERROR] ClassDAO.AddClass() failed!");
+            else classId = (int)result;
+            return classId;
         }
 
         public static void DeleteClass(Class deletedClass)
@@ -34,7 +41,7 @@ namespace EnglishCenterManagemenent.DAO
                 new object[] { deletedClass.ClassID });
         }
 
-        public static string GetClassCourseName(int courseId)
+        public static string GetClassCourseName(int classId)
         {
             string courseName = "";
             DataTable data = DataProvider.Instance.ExecuteQuery(
@@ -42,7 +49,7 @@ namespace EnglishCenterManagemenent.DAO
                 "FROM COURSE, CLASS " +
                 "WHERE CLASS.CourseID = COURSE.CourseID " +
                 "      AND CLASS.ClassID = @ClassID",
-                new object[] { courseId });
+                new object[] { classId });
 
             if (data.Rows.Count > 0)
             {
@@ -52,6 +59,24 @@ namespace EnglishCenterManagemenent.DAO
             return courseName;
         }
 
+        public static string GetClassTeacherName(int classId)
+        {
+            string teacherName = "";
+            DataTable data = DataProvider.Instance.ExecuteQuery(
+                "SELECT EMPLOYEE.LastName, EMPLOYEE.FirstName " +
+                "FROM EMPLOYEE, CLASS, CLASS_TEACHER_SCHEDULE " +
+                "WHERE CLASS.ClassId = @ClassId" +
+                "      AND CLASS.ClassId = CLASS_TEACHER_SCHEDULE.ClassId" +
+                "      AND CLASS_TEACHER_SCHEDULE.EmployeeId = EMPLOYEE.EmployeeId " ,
+                new object[] { classId });
+
+            if (data.Rows.Count > 0)
+            {
+                DataRow row = data.Rows[0];
+                teacherName = row["LastName"].ToString() + " " + row["FirstName"].ToString();
+            }
+            return teacherName;
+        }
         public static Course GetClassCourseDetails(int courseId)
         {
             DataTable data = DataProvider.Instance.ExecuteQuery(
@@ -95,7 +120,23 @@ namespace EnglishCenterManagemenent.DAO
                     updatedClass.ClassID});
         }
 
-        public static List<Class> GetAllClasses()
+        public static void AddClassTeacher(int teacherId, int classId) 
+        {
+            DataProvider.Instance.ExecuteNonQuery(
+                "INSERT INTO CLASS_TEACHER_SCHEDULE(ClassId, EmployeeId) " +
+                "VALUES ( @ClassId , @EmployeeId )",
+                new object[] { classId, teacherId, });
+        }
+
+        public static void UpdateClassTeacher(int oldTeacherId, int teacherId, int classId)
+        {
+            DataProvider.Instance.ExecuteNonQuery(
+                "UPDATE CLASS_TEACHER_SCHEDULE(ClassId, EmployeeId) " +
+                "SET EmployeeId = @teacherId " +
+                "WHERE ClassId = @ClassId AND EmployeeId = @oldTeacherId",
+                new object[] { teacherId, classId, oldTeacherId});
+        }
+        public static List<Class> GetAllClass()
         {
             List<Class> classList = new List<Class>();
 

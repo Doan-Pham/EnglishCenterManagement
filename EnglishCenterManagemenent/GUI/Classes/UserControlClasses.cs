@@ -43,7 +43,7 @@ namespace EnglishCenterManagemenent.GUI
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             if (dataGridView.SelectedRows.Count == 0) return;
-            FillDataGridView();
+           
             DialogResult dialog = ShowAskingMessageBox
                 ("Are you sure you want to delete this class: " +
                 classList.ElementAt(dataGridView.CurrentCell.RowIndex).Name + "?");
@@ -55,7 +55,6 @@ namespace EnglishCenterManagemenent.GUI
                 ShowInfoMessageBox("Class deleted !");
                 FillDataGridView();
             }
-
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)

@@ -42,18 +42,19 @@ namespace EnglishCenterManagemenent.GUI
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            //if (dataGridView.SelectedRows.Count == 0) return;
-            //FillDataGridView();
-            //DialogResult dialog = ShowAskingMessageBox
-            //    ("Are you sure you want to delete this classVar: " +
-            //    classList.ElementAt(dataGridView.CurrentCell.RowIndex).Name + "?");
+            if (dataGridView.SelectedRows.Count == 0) return;
+            FillDataGridView();
+            DialogResult dialog = ShowAskingMessageBox
+                ("Are you sure you want to delete this class: " +
+                classList.ElementAt(dataGridView.CurrentCell.RowIndex).Name + "?");
 
-            //if (dialog == DialogResult.OK)
-            //{
-            //    ClassDAO.DeleteClass(classList.ElementAt(dataGridView.CurrentCell.RowIndex));
-            //    ShowInfoMessageBox("Class deleted !");
-            //    FillDataGridView();
-            //}
+            if (dialog == DialogResult.OK)
+            {
+                ClassDAO.DeleteClassTeachers(classList.ElementAt(dataGridView.CurrentCell.RowIndex).ClassID);
+                ClassDAO.DeleteClass(classList.ElementAt(dataGridView.CurrentCell.RowIndex));
+                ShowInfoMessageBox("Class deleted !");
+                FillDataGridView();
+            }
 
         }
 

@@ -72,8 +72,8 @@ namespace EnglishCenterManagemenent.GUI.Classes
                 comboBoxCourse.SelectedIndex = comboBoxCourse.FindStringExact(
                     ClassDAO.GetClassCourseName(currentClass.ClassID));
 
-                comboBoxTeacher.SelectedIndex = comboBoxTeacher.FindStringExact(
-                    ClassDAO.GetClassTeacherName(currentClass.ClassID));
+                comboBoxTeacher.SelectedIndex = Math.Max(0, comboBoxTeacher.FindStringExact(
+                    ClassDAO.GetClassTeacherName(currentClass.ClassID)));
                 oldTeacherId = teacherList.ElementAt(comboBoxTeacher.SelectedIndex).EmployeeID;
             }
         }

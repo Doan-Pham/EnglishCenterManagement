@@ -41,6 +41,13 @@ namespace EnglishCenterManagemenent.DAO
                 new object[] { deletedClass.ClassID });
         }
 
+        public static void DeleteClassTeachers(int classId)
+        {
+            DataProvider.Instance.ExecuteNonQuery(
+                "DELETE FROM dbo.CLASS_TEACHER_SCHEDULE WHERE ClassID = @ClassID",
+                new object[] { classId });
+        }
+
         public static string GetClassCourseName(int classId)
         {
             string courseName = "";

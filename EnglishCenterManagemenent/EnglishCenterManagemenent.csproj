@@ -169,6 +169,12 @@
     <Compile Include="GUI\Students\UserControlStudents.Designer.cs">
       <DependentUpon>UserControlStudents.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Users\FormUserInfoInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Users\FormUserInfoInput.Designer.cs">
+      <DependentUpon>FormUserInfoInput.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Users\UserControlUsers.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -225,8 +231,12 @@
       <DependentUpon>UserControlStudents.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Users\FormUserInfoInput.resx">
+      <DependentUpon>FormUserInfoInput.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Users\UserControlUsers.resx">
       <DependentUpon>UserControlUsers.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

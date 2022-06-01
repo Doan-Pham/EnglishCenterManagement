@@ -130,9 +130,9 @@ namespace EnglishCenterManagemenent.DAO
         public static void AddClassTeacher(int teacherId, int classId) 
         {
             DataProvider.Instance.ExecuteNonQuery(
-                "INSERT INTO CLASS_TEACHER_SCHEDULE(ClassId, EmployeeId) " +
-                "VALUES ( @ClassId , @EmployeeId )",
-                new object[] { classId, teacherId, });
+                "INSERT INTO CLASS_TEACHER_SCHEDULE(ClassId, EmployeeId, ScheduleId) " +
+                "VALUES ( @ClassId , @EmployeeId , 1)",
+                new object[] { classId, teacherId });
         }
 
         public static void UpdateClassTeacher(int oldTeacherId, int teacherId, int classId)

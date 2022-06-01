@@ -99,9 +99,10 @@ CREATE TABLE SCHEDULE(
 CREATE TABLE CLASS_TEACHER_SCHEDULE(
     EmployeeID INT NOT NULL,
     ClassID INT NOT NULL,
-    ScheduleID INT NOT NULL,
-    constraint pk_clts primary key (EmployeeID,ClassID,ScheduleID)
+    ScheduleID INT,
+    constraint pk_clts primary key (EmployeeID,ClassID)
 )
+
 
 ALTER TABLE EMPLOYEE ADD CONSTRAINT fk_emp FOREIGN KEY (RoleID) REFERENCES ROLE(RoleID)
 ALTER TABLE USERS ADD CONSTRAINT fk_usr FOREIGN KEY (RoleID) REFERENCES ROLE(RoleID)
@@ -119,6 +120,13 @@ ALTER TABLE CLASS_TEACHER_SCHEDULE ADD CONSTRAINT fk_clts3 FOREIGN KEY (Schedule
 --Add data
 INSERT INTO ROLE(Name, Description)
 VALUES(N'admin', N'This is admin')
+
+INSERT INTO ROLE(Name, Description)
+VALUES(N'receptionist', N'This is receptionist')
+
+INSERT INTO ROLE(Name, Description)
+VALUES(N'teacher', N'This is teacher')
+
 
 DELETE FROM ROLE
 
@@ -146,7 +154,23 @@ SET DATEFORMAT dmy
 INSERT INTO EMPLOYEE(RoleId, LastName, FirstName, Address, DateOfBirth, Phone, Certificate, Email)
 VALUES(1, N'Nguyễn Thế', N'Bảo', N'43 Trường Chinh','1-1-1981', N'0996353540', NULL, N'ntbhcmuit@gmail.com')
 
+INSERT INTO CLASS(CourseID, Name, StartDate, EndDate, NumberOfStudents)
+VALUES(2, N'TOEFL BASIC 01', '25-05-2022', '28-05-2022',0)
+
+INSERT INTO EMPLOYEE(RoleId, LastName, FirstName, Address, DateOfBirth, Phone, Certificate, Email)
+VALUES(3, N'Nguyễn Thế', N'Vỹ', N'43 Trường Chinh','1-1-1981', N'0996353540','' , N'ntbhcmuit@gmail.com')
+
+GO
+INSERT INTO CLASS_TEACHER_SCHEDULE(EmployeeID, ClassID)
+VALUES(6,2)
+
+GO
+UPDATE CLASS_TEACHER_SCHEDULE SET EmployeeID = 3 WHERE ClassId = 2 AND EmployeeID = 
+
+ SELECT * FROM dbo.EMPLOYEE  
+                WHERE RoleID = (SELECT RoleID FROM ROLE WHERE Name = 'teacher')
 --procedure
+GO
 CREATE PROC GetAccountByUsername
 @username nvarchar(50)
 AS 
@@ -154,9 +178,12 @@ BEGIN
 	SELECT * FROM USERS WHERE Username = @username
 END
 
+
 EXEC USP_GetAccountByUsername @username = N'admin'
 
 --store procedure for Login
+
+GO
 CREATE PROC USP_Login
 @username nvarchar(50), @password nvarchar(100)
 AS 

@@ -69,6 +69,7 @@ namespace EnglishCenterManagemenent.GUI
                 employeeList.Add(employee);
                 dataGridView.Rows.Add(new object[]
                 {
+                    EmployeeDAO.GetEmployeeRoleName(employee.EmployeeID),
                     employee.LastName,
                     employee.FirstName,
                     employee.Address,
@@ -94,6 +95,7 @@ namespace EnglishCenterManagemenent.GUI
                 employeeList.Add(employee);
                 dataGridView.Rows.Add(new object[]
                 {
+                    EmployeeDAO.GetEmployeeRoleName(employee.EmployeeID),
                     employee.LastName,
                     employee.FirstName,
                     employee.Address,

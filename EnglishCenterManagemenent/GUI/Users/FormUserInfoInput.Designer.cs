@@ -392,6 +392,7 @@
             this.buttonSave.Size = new System.Drawing.Size(120, 61);
             this.buttonSave.TabIndex = 9;
             this.buttonSave.Values.Text = "Save";
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonCancel
             // 
@@ -429,6 +430,7 @@
             this.buttonCancel.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
             this.buttonCancel.TabIndex = 10;
             this.buttonCancel.Values.Text = "Cancel";
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // label8
             // 

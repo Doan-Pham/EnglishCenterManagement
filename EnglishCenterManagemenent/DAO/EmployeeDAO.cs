@@ -59,6 +59,19 @@ namespace EnglishCenterManagemenent.DAO
                     newEmployee.Email});
         }
 
+        public static List<Employee> GetAllTeachers()
+        {
+            List<Employee> teachers = new List<Employee>();
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(
+                "SELECT * FROM dbo.EMPLOYEE " +
+                "WHERE RoleID = (SELECT RoleID FROM ROLE WHERE Name = 'teacher') ");
+            foreach (DataRow row in data.Rows)
+                teachers.Add(new Employee(row));
+
+            return teachers;
+        }
+
         public static void DeleteEmployee(Employee deletedEmployee)
         {
             DataProvider.Instance.ExecuteNonQuery(

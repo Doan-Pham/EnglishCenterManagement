@@ -59,12 +59,12 @@ namespace EnglishCenterManagemenent.GUI
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            //if (dataGridView.SelectedRows.Count == 0) return;
-            //FormClassInfoInput formClassInfoInput = new FormClassInfoInput(
-            //    classList.ElementAt(dataGridView.CurrentCell.RowIndex));
+            if (dataGridView.SelectedRows.Count == 0) return;
+            FormClassInfoInput formClassInfoInput = new FormClassInfoInput(
+                classList.ElementAt(dataGridView.CurrentCell.RowIndex));
 
-            //formClassInfoInput.ShowDialog();
-            //FillDataGridView();
+            formClassInfoInput.ShowDialog();
+            FillDataGridView();
         }
 
 

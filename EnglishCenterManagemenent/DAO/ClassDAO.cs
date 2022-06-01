@@ -131,7 +131,7 @@ namespace EnglishCenterManagemenent.DAO
         public static void UpdateClassTeacher(int oldTeacherId, int teacherId, int classId)
         {
             DataProvider.Instance.ExecuteNonQuery(
-                "UPDATE CLASS_TEACHER_SCHEDULE(ClassId, EmployeeId) " +
+                "UPDATE CLASS_TEACHER_SCHEDULE " +
                 "SET EmployeeId = @teacherId " +
                 "WHERE ClassId = @ClassId AND EmployeeId = @oldTeacherId",
                 new object[] { teacherId, classId, oldTeacherId});

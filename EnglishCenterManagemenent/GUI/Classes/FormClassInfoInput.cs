@@ -55,6 +55,8 @@ namespace EnglishCenterManagemenent.GUI.Classes
                 teacherList.Add(teacher);
                 comboBoxTeacher.Items.Add(teacher.LastName + " " + teacher.FirstName);
             }
+            comboBoxTeacher.SelectedIndex = 0;
+
             // If user is updating course, put all the course's data into controls
             this.currentClass = currentClass;
             if (currentClass != null)

@@ -31,7 +31,7 @@ namespace EnglishCenterManagemenent.DTO
             if (row["DateOfBirth"] != DBNull.Value)
                 DateOfBirth = (DateTime)row["DateOfBirth"];
             Phone = (string)row["Phone"];
-            AverageGrade = (float)row["AverageGrade"];
+            AverageGrade = (float)Convert.ToDouble(row["AverageGrade"].ToString());
         }
 
         public Student(int studentID, int roleID, string firstName, string lastName, string address, DateTime? dateOfBirth, string phone, float averageGrade)

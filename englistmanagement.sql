@@ -120,6 +120,11 @@ ALTER TABLE CLASS_TEACHER_SCHEDULE ADD CONSTRAINT fk_clts3 FOREIGN KEY (Schedule
 INSERT INTO ROLE(Name, Description)
 VALUES(N'admin', N'This is admin')
 
+INSERT INTO ROLE(Name, Description)
+VALUES(N'receptionist', N'This is admin')
+
+INSERT INTO ROLE(Name, Description)
+VALUES(N'admin', N'This is admin')
 DELETE FROM ROLE
 
 INSERT INTO USERS(RoleID, Username, Password)

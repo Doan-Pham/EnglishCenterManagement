@@ -35,9 +35,9 @@ namespace EnglishCenterManagemenent.GUI
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            //FormClassInfoInput formClassInfoInput = new FormClassInfoInput(null);
-            //formClassInfoInput.ShowDialog();
-            //FillDataGridView();
+            FormClassInfoInput formClassInfoInput = new FormClassInfoInput(null);
+            formClassInfoInput.ShowDialog();
+            FillDataGridView();
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
@@ -75,16 +75,18 @@ namespace EnglishCenterManagemenent.GUI
         {
             dataGridView.Rows.Clear();
             classList.Clear();
-            foreach (Class classVar in ClassDAO.GetAllClasses())
+            foreach (Class classVar in ClassDAO.GetAllClass())
             {
                 classList.Add(classVar);
                 dataGridView.Rows.Add(new object[]
                 {
                     ClassDAO.GetClassCourseName(classVar.ClassID),
+                    ClassDAO.GetClassTeacherName(classVar.ClassID),
                     classVar.Name,
-                    $"{classVar.StartDate: MM/dd/yyyy}",
-                    $"{classVar.EndDate: MM/dd/yyyy}",
-                    classVar.NumberOfStudents
+                    $"{classVar.StartDate: dd/MM/yyyy}",
+                    $"{classVar.EndDate: dd/MM/yyyy}",
+                    classVar.NumberOfStudents,
+
                 });
             }
         }
@@ -134,10 +136,12 @@ namespace EnglishCenterManagemenent.GUI
                 dataGridView.Rows.Add(new object[]
                 {
                     ClassDAO.GetClassCourseName(classVar.ClassID),
+                    ClassDAO.GetClassTeacherName(classVar.ClassID),
                     classVar.Name,
-                    $"{classVar.StartDate: MM/dd/yyyy}",
-                    $"{classVar.EndDate: MM/dd/yyyy}",
-                    classVar.NumberOfStudents
+                    $"{classVar.StartDate: dd/MM/yyyy}",
+                    $"{classVar.EndDate: dd/MM/yyyy}",
+                    classVar.NumberOfStudents,
+
                 });
             }
         }

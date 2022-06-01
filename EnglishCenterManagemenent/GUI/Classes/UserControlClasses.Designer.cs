@@ -38,6 +38,7 @@
             this.panelSearchIcon = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.buttonStudentsList = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -366,6 +367,7 @@
             this.dataGridView.ColumnHeadersHeight = 60;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column5,
+            this.Column6,
             this.Column1,
             this.Column2,
             this.Column3,
@@ -435,6 +437,14 @@
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             this.Column5.Width = 207;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Teacher";
+            this.Column6.MinimumWidth = 8;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 151;
             // 
             // Column1
             // 
@@ -506,6 +516,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonPanel panelSearchIcon;
         private ComponentFactory.Krypton.Toolkit.KryptonButton buttonStudentsList;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

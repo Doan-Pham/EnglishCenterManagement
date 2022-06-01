@@ -33,24 +33,22 @@ namespace EnglishCenterManagemenent.GUI
             this.kryptonPaletteGeneral = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.kryptonTextBox3 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.textBoxStudentName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.kryptonTextBox4 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonDateTimePicker1 = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.dateTimePickerStudentDOB = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
-            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.kryptonTextBox5 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.textBoxStudentAddress = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.kryptonTextBox6 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.kryptonComboBox1 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonMaskedTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonMaskedTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
+            this.comboBoxClassId = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.buttonSave = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.buttonCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.textBoxStudentPhone = new ComponentFactory.Krypton.Toolkit.KryptonMaskedTextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxClassId)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonPaletteGeneral
@@ -301,29 +299,29 @@ namespace EnglishCenterManagemenent.GUI
             this.label1.TabIndex = 2;
             this.label1.Text = "Name";
             // 
-            // kryptonTextBox3
+            // textBoxStudentName
             // 
-            this.kryptonTextBox3.AlwaysActive = false;
-            this.kryptonTextBox3.Location = new System.Drawing.Point(51, 287);
-            this.kryptonTextBox3.Name = "kryptonTextBox3";
-            this.kryptonTextBox3.Palette = this.kryptonPaletteGeneral;
-            this.kryptonTextBox3.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonTextBox3.Size = new System.Drawing.Size(583, 59);
-            this.kryptonTextBox3.StateActive.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBox3.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(168)))), ((int)(((byte)(47)))));
-            this.kryptonTextBox3.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.textBoxStudentName.AlwaysActive = false;
+            this.textBoxStudentName.Location = new System.Drawing.Point(51, 287);
+            this.textBoxStudentName.Name = "textBoxStudentName";
+            this.textBoxStudentName.Palette = this.kryptonPaletteGeneral;
+            this.textBoxStudentName.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.textBoxStudentName.Size = new System.Drawing.Size(583, 59);
+            this.textBoxStudentName.StateActive.Back.Color1 = System.Drawing.Color.White;
+            this.textBoxStudentName.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(168)))), ((int)(((byte)(47)))));
+            this.textBoxStudentName.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox3.StateActive.Border.Rounding = 5;
-            this.kryptonTextBox3.StateActive.Border.Width = 2;
-            this.kryptonTextBox3.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.kryptonTextBox3.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.textBoxStudentName.StateActive.Border.Rounding = 5;
+            this.textBoxStudentName.StateActive.Border.Width = 2;
+            this.textBoxStudentName.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textBoxStudentName.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox3.StateCommon.Border.Rounding = 5;
-            this.kryptonTextBox3.StateCommon.Border.Width = 2;
-            this.kryptonTextBox3.StateCommon.Content.Padding = new System.Windows.Forms.Padding(15, 12, 0, 12);
-            this.kryptonTextBox3.TabIndex = 4;
+            this.textBoxStudentName.StateCommon.Border.Rounding = 5;
+            this.textBoxStudentName.StateCommon.Border.Width = 2;
+            this.textBoxStudentName.StateCommon.Content.Padding = new System.Windows.Forms.Padding(15, 12, 0, 12);
+            this.textBoxStudentName.TabIndex = 4;
             // 
             // label2
             // 
@@ -348,6 +346,7 @@ namespace EnglishCenterManagemenent.GUI
             this.kryptonTextBox2.AlwaysActive = false;
             this.kryptonTextBox2.Location = new System.Drawing.Point(51, 539);
             this.kryptonTextBox2.Name = "kryptonTextBox2";
+            this.kryptonTextBox2.ReadOnly = true;
             this.kryptonTextBox2.Size = new System.Drawing.Size(260, 56);
             this.kryptonTextBox2.StateActive.Back.Color1 = System.Drawing.Color.White;
             this.kryptonTextBox2.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(168)))), ((int)(((byte)(47)))));
@@ -381,6 +380,7 @@ namespace EnglishCenterManagemenent.GUI
             this.kryptonTextBox4.Name = "kryptonTextBox4";
             this.kryptonTextBox4.Palette = this.kryptonPaletteGeneral;
             this.kryptonTextBox4.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kryptonTextBox4.ReadOnly = true;
             this.kryptonTextBox4.Size = new System.Drawing.Size(262, 59);
             this.kryptonTextBox4.StateActive.Back.Color1 = System.Drawing.Color.White;
             this.kryptonTextBox4.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(168)))), ((int)(((byte)(47)))));
@@ -398,27 +398,27 @@ namespace EnglishCenterManagemenent.GUI
             this.kryptonTextBox4.StateCommon.Content.Padding = new System.Windows.Forms.Padding(15, 12, 0, 12);
             this.kryptonTextBox4.TabIndex = 4;
             // 
-            // kryptonDateTimePicker1
+            // dateTimePickerStudentDOB
             // 
-            this.kryptonDateTimePicker1.AutoShift = true;
-            this.kryptonDateTimePicker1.CalendarHeaderStyle = ComponentFactory.Krypton.Toolkit.HeaderStyle.Custom1;
-            this.kryptonDateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.kryptonDateTimePicker1.CustomNullText = "dd/MM/yyyy";
-            this.kryptonDateTimePicker1.DropButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Form;
-            this.kryptonDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.kryptonDateTimePicker1.Location = new System.Drawing.Point(57, 549);
-            this.kryptonDateTimePicker1.Name = "kryptonDateTimePicker1";
-            this.kryptonDateTimePicker1.Palette = this.kryptonPaletteGeneral;
-            this.kryptonDateTimePicker1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonDateTimePicker1.Size = new System.Drawing.Size(246, 36);
-            this.kryptonDateTimePicker1.StateCommon.Border.Color1 = System.Drawing.Color.Transparent;
-            this.kryptonDateTimePicker1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.dateTimePickerStudentDOB.AutoShift = true;
+            this.dateTimePickerStudentDOB.CalendarHeaderStyle = ComponentFactory.Krypton.Toolkit.HeaderStyle.Custom1;
+            this.dateTimePickerStudentDOB.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePickerStudentDOB.CustomNullText = "dd/MM/yyyy";
+            this.dateTimePickerStudentDOB.DropButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Form;
+            this.dateTimePickerStudentDOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerStudentDOB.Location = new System.Drawing.Point(57, 549);
+            this.dateTimePickerStudentDOB.Name = "dateTimePickerStudentDOB";
+            this.dateTimePickerStudentDOB.Palette = this.kryptonPaletteGeneral;
+            this.dateTimePickerStudentDOB.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.dateTimePickerStudentDOB.Size = new System.Drawing.Size(246, 36);
+            this.dateTimePickerStudentDOB.StateCommon.Border.Color1 = System.Drawing.Color.Transparent;
+            this.dateTimePickerStudentDOB.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonDateTimePicker1.StateCommon.Border.Rounding = 5;
-            this.kryptonDateTimePicker1.StateCommon.Border.Width = 1;
-            this.kryptonDateTimePicker1.TabIndex = 5;
-            this.kryptonDateTimePicker1.UpDownButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Form;
+            this.dateTimePickerStudentDOB.StateCommon.Border.Rounding = 5;
+            this.dateTimePickerStudentDOB.StateCommon.Border.Width = 1;
+            this.dateTimePickerStudentDOB.TabIndex = 5;
+            this.dateTimePickerStudentDOB.UpDownButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Form;
             // 
             // label5
             // 
@@ -430,66 +430,34 @@ namespace EnglishCenterManagemenent.GUI
             this.label5.TabIndex = 6;
             this.label5.Text = "*";
             // 
-            // kryptonTextBox1
+            // textBoxStudentAddress
             // 
-            this.kryptonTextBox1.AlwaysActive = false;
-            this.kryptonTextBox1.Location = new System.Drawing.Point(51, 407);
-            this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.Palette = this.kryptonPaletteGeneral;
-            this.kryptonTextBox1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonTextBox1.Size = new System.Drawing.Size(583, 59);
-            this.kryptonTextBox1.StateActive.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBox1.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(168)))), ((int)(((byte)(47)))));
-            this.kryptonTextBox1.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.textBoxStudentAddress.AlwaysActive = false;
+            this.textBoxStudentAddress.Location = new System.Drawing.Point(51, 407);
+            this.textBoxStudentAddress.Name = "textBoxStudentAddress";
+            this.textBoxStudentAddress.Palette = this.kryptonPaletteGeneral;
+            this.textBoxStudentAddress.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.textBoxStudentAddress.Size = new System.Drawing.Size(583, 59);
+            this.textBoxStudentAddress.StateActive.Back.Color1 = System.Drawing.Color.White;
+            this.textBoxStudentAddress.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(168)))), ((int)(((byte)(47)))));
+            this.textBoxStudentAddress.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateActive.Border.Rounding = 5;
-            this.kryptonTextBox1.StateActive.Border.Width = 2;
-            this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.textBoxStudentAddress.StateActive.Border.Rounding = 5;
+            this.textBoxStudentAddress.StateActive.Border.Width = 2;
+            this.textBoxStudentAddress.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textBoxStudentAddress.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateCommon.Border.Rounding = 5;
-            this.kryptonTextBox1.StateCommon.Border.Width = 2;
-            this.kryptonTextBox1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(15, 12, 0, 12);
-            this.kryptonTextBox1.TabIndex = 4;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(45, 130);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(131, 35);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Student ID";
-            // 
-            // kryptonTextBox5
-            // 
-            this.kryptonTextBox5.AlwaysActive = false;
-            this.kryptonTextBox5.Enabled = false;
-            this.kryptonTextBox5.Location = new System.Drawing.Point(51, 168);
-            this.kryptonTextBox5.Name = "kryptonTextBox5";
-            this.kryptonTextBox5.Size = new System.Drawing.Size(262, 56);
-            this.kryptonTextBox5.StateActive.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonTextBox5.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(168)))), ((int)(((byte)(47)))));
-            this.kryptonTextBox5.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox5.StateActive.Border.Rounding = 5;
-            this.kryptonTextBox5.StateActive.Border.Width = 2;
-            this.kryptonTextBox5.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
-            this.kryptonTextBox5.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox5.StateCommon.Border.Rounding = 5;
-            this.kryptonTextBox5.StateCommon.Border.Width = 2;
-            this.kryptonTextBox5.StateCommon.Content.Padding = new System.Windows.Forms.Padding(15, 12, 0, 12);
-            this.kryptonTextBox5.TabIndex = 4;
+            this.textBoxStudentAddress.StateCommon.Border.Rounding = 5;
+            this.textBoxStudentAddress.StateCommon.Border.Width = 2;
+            this.textBoxStudentAddress.StateCommon.Content.Padding = new System.Windows.Forms.Padding(15, 12, 0, 12);
+            this.textBoxStudentAddress.TabIndex = 4;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(366, 130);
+            this.label7.Location = new System.Drawing.Point(193, 118);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(105, 35);
             this.label7.TabIndex = 2;
@@ -498,8 +466,9 @@ namespace EnglishCenterManagemenent.GUI
             // kryptonTextBox6
             // 
             this.kryptonTextBox6.AlwaysActive = false;
-            this.kryptonTextBox6.Location = new System.Drawing.Point(372, 168);
+            this.kryptonTextBox6.Location = new System.Drawing.Point(199, 156);
             this.kryptonTextBox6.Name = "kryptonTextBox6";
+            this.kryptonTextBox6.ReadOnly = true;
             this.kryptonTextBox6.Size = new System.Drawing.Size(262, 56);
             this.kryptonTextBox6.StateActive.Back.Color1 = System.Drawing.Color.White;
             this.kryptonTextBox6.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(168)))), ((int)(((byte)(47)))));
@@ -517,95 +486,95 @@ namespace EnglishCenterManagemenent.GUI
             this.kryptonTextBox6.StateCommon.Content.Padding = new System.Windows.Forms.Padding(15, 12, 0, 12);
             this.kryptonTextBox6.TabIndex = 4;
             // 
-            // kryptonComboBox1
+            // comboBoxClassId
             // 
-            this.kryptonComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystemDirectories;
-            this.kryptonComboBox1.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.FormMain;
-            this.kryptonComboBox1.DropButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Form;
-            this.kryptonComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.kryptonComboBox1.DropDownWidth = 113;
-            this.kryptonComboBox1.ItemStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom1;
-            this.kryptonComboBox1.Location = new System.Drawing.Point(389, 178);
-            this.kryptonComboBox1.Name = "kryptonComboBox1";
-            this.kryptonComboBox1.Palette = this.kryptonPaletteGeneral;
-            this.kryptonComboBox1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonComboBox1.Size = new System.Drawing.Size(235, 36);
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Transparent;
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.comboBoxClassId.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.FileSystemDirectories;
+            this.comboBoxClassId.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.FormMain;
+            this.comboBoxClassId.DropButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Form;
+            this.comboBoxClassId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxClassId.DropDownWidth = 113;
+            this.comboBoxClassId.ItemStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom1;
+            this.comboBoxClassId.Location = new System.Drawing.Point(216, 166);
+            this.comboBoxClassId.Name = "comboBoxClassId";
+            this.comboBoxClassId.Palette = this.kryptonPaletteGeneral;
+            this.comboBoxClassId.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.comboBoxClassId.Size = new System.Drawing.Size(235, 36);
+            this.comboBoxClassId.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Transparent;
+            this.comboBoxClassId.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.Rounding = 5;
-            this.kryptonComboBox1.StateCommon.ComboBox.Border.Width = 1;
-            this.kryptonComboBox1.TabIndex = 7;
+            this.comboBoxClassId.StateCommon.ComboBox.Border.Rounding = 5;
+            this.comboBoxClassId.StateCommon.ComboBox.Border.Width = 1;
+            this.comboBoxClassId.TabIndex = 7;
             // 
-            // kryptonButton1
+            // buttonSave
             // 
-            this.kryptonButton1.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom1;
-            this.kryptonButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonButton1.Location = new System.Drawing.Point(341, 681);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Palette = this.kryptonPaletteGeneral;
-            this.kryptonButton1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonButton1.Size = new System.Drawing.Size(120, 61);
-            this.kryptonButton1.TabIndex = 8;
-            this.kryptonButton1.Values.Text = "Save";
+            this.buttonSave.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom1;
+            this.buttonSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSave.Location = new System.Drawing.Point(341, 681);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Palette = this.kryptonPaletteGeneral;
+            this.buttonSave.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.buttonSave.Size = new System.Drawing.Size(120, 61);
+            this.buttonSave.TabIndex = 8;
+            this.buttonSave.Values.Text = "Save";
             // 
-            // kryptonButton2
+            // buttonCancel
             // 
-            this.kryptonButton2.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom1;
-            this.kryptonButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.kryptonButton2.Location = new System.Drawing.Point(512, 681);
-            this.kryptonButton2.Name = "kryptonButton2";
-            this.kryptonButton2.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonButton2.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
-            this.kryptonButton2.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
-            this.kryptonButton2.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.buttonCancel.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom1;
+            this.buttonCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonCancel.Location = new System.Drawing.Point(512, 681);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.OverrideDefault.Back.Color1 = System.Drawing.Color.White;
+            this.buttonCancel.OverrideDefault.Back.Color2 = System.Drawing.Color.White;
+            this.buttonCancel.OverrideDefault.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
+            this.buttonCancel.OverrideDefault.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton2.OverrideDefault.Border.Width = 3;
-            this.kryptonButton2.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
-            this.kryptonButton2.OverrideFocus.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonButton2.OverrideFocus.Back.Color2 = System.Drawing.Color.White;
-            this.kryptonButton2.OverrideFocus.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
-            this.kryptonButton2.OverrideFocus.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
-            this.kryptonButton2.OverrideFocus.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.buttonCancel.OverrideDefault.Border.Width = 3;
+            this.buttonCancel.OverrideDefault.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
+            this.buttonCancel.OverrideFocus.Back.Color1 = System.Drawing.Color.White;
+            this.buttonCancel.OverrideFocus.Back.Color2 = System.Drawing.Color.White;
+            this.buttonCancel.OverrideFocus.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
+            this.buttonCancel.OverrideFocus.Border.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
+            this.buttonCancel.OverrideFocus.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton2.OverrideFocus.Border.Width = 3;
-            this.kryptonButton2.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
-            this.kryptonButton2.Palette = this.kryptonPaletteGeneral;
-            this.kryptonButton2.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonButton2.Size = new System.Drawing.Size(124, 61);
-            this.kryptonButton2.StateCommon.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonButton2.StateCommon.Back.Color2 = System.Drawing.Color.White;
-            this.kryptonButton2.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
-            this.kryptonButton2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.buttonCancel.OverrideFocus.Border.Width = 3;
+            this.buttonCancel.OverrideFocus.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
+            this.buttonCancel.Palette = this.kryptonPaletteGeneral;
+            this.buttonCancel.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.buttonCancel.Size = new System.Drawing.Size(124, 61);
+            this.buttonCancel.StateCommon.Back.Color1 = System.Drawing.Color.White;
+            this.buttonCancel.StateCommon.Back.Color2 = System.Drawing.Color.White;
+            this.buttonCancel.StateCommon.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
+            this.buttonCancel.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton2.StateCommon.Border.Width = 3;
-            this.kryptonButton2.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
-            this.kryptonButton2.TabIndex = 8;
-            this.kryptonButton2.Values.Text = "Cancel";
+            this.buttonCancel.StateCommon.Border.Width = 3;
+            this.buttonCancel.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
+            this.buttonCancel.TabIndex = 8;
+            this.buttonCancel.Values.Text = "Cancel";
             // 
-            // kryptonMaskedTextBox1
+            // textBoxStudentPhone
             // 
-            this.kryptonMaskedTextBox1.Location = new System.Drawing.Point(389, 550);
-            this.kryptonMaskedTextBox1.Mask = "0999999999";
-            this.kryptonMaskedTextBox1.Name = "kryptonMaskedTextBox1";
-            this.kryptonMaskedTextBox1.Palette = this.kryptonPaletteGeneral;
-            this.kryptonMaskedTextBox1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonMaskedTextBox1.Size = new System.Drawing.Size(235, 35);
-            this.kryptonMaskedTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.textBoxStudentPhone.Location = new System.Drawing.Point(389, 550);
+            this.textBoxStudentPhone.Mask = "0999999999";
+            this.textBoxStudentPhone.Name = "textBoxStudentPhone";
+            this.textBoxStudentPhone.Palette = this.kryptonPaletteGeneral;
+            this.textBoxStudentPhone.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.textBoxStudentPhone.Size = new System.Drawing.Size(235, 35);
+            this.textBoxStudentPhone.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonMaskedTextBox1.StateCommon.Border.Width = 0;
-            this.kryptonMaskedTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.Black;
-            this.kryptonMaskedTextBox1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(0);
-            this.kryptonMaskedTextBox1.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.textBoxStudentPhone.StateCommon.Border.Width = 0;
+            this.textBoxStudentPhone.StateCommon.Content.Color1 = System.Drawing.Color.Black;
+            this.textBoxStudentPhone.StateCommon.Content.Padding = new System.Windows.Forms.Padding(0);
+            this.textBoxStudentPhone.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonMaskedTextBox1.StateNormal.Border.Width = 0;
-            this.kryptonMaskedTextBox1.TabIndex = 10;
+            this.textBoxStudentPhone.StateNormal.Border.Width = 0;
+            this.textBoxStudentPhone.TabIndex = 10;
             // 
             // FormStudentInfoInput
             // 
@@ -613,23 +582,21 @@ namespace EnglishCenterManagemenent.GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(690, 800);
-            this.Controls.Add(this.kryptonMaskedTextBox1);
-            this.Controls.Add(this.kryptonButton2);
-            this.Controls.Add(this.kryptonButton1);
-            this.Controls.Add(this.kryptonComboBox1);
+            this.Controls.Add(this.comboBoxClassId);
+            this.Controls.Add(this.textBoxStudentName);
+            this.Controls.Add(this.textBoxStudentAddress);
+            this.Controls.Add(this.dateTimePickerStudentDOB);
+            this.Controls.Add(this.textBoxStudentPhone);
+            this.Controls.Add(this.buttonCancel);
+            this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.kryptonDateTimePicker1);
             this.Controls.Add(this.kryptonTextBox6);
-            this.Controls.Add(this.kryptonTextBox5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.kryptonTextBox4);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.kryptonTextBox2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.kryptonTextBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.kryptonTextBox3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.kryptonLabel1);
             this.DoubleBuffered = true;
@@ -638,7 +605,7 @@ namespace EnglishCenterManagemenent.GUI
             this.Name = "FormStudentInfoInput";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Student Information";
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxClassId)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -649,22 +616,20 @@ namespace EnglishCenterManagemenent.GUI
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPaletteGeneral;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private System.Windows.Forms.Label label1;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox3;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBoxStudentName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
         private System.Windows.Forms.Label label4;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox4;
-        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker kryptonDateTimePicker1;
+        private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker dateTimePickerStudentDOB;
         private System.Windows.Forms.Label label5;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
-        private System.Windows.Forms.Label label6;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox5;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBoxStudentAddress;
         private System.Windows.Forms.Label label7;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox6;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox1;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
-        private ComponentFactory.Krypton.Toolkit.KryptonMaskedTextBox kryptonMaskedTextBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox comboBoxClassId;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton buttonSave;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton buttonCancel;
+        private ComponentFactory.Krypton.Toolkit.KryptonMaskedTextBox textBoxStudentPhone;
     }
 }

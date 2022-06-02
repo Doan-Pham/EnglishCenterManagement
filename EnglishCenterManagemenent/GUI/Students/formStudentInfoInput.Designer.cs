@@ -327,7 +327,7 @@ namespace EnglishCenterManagemenent.GUI
             this.textBoxStudentFirstName.StateCommon.Border.Rounding = 5;
             this.textBoxStudentFirstName.StateCommon.Border.Width = 2;
             this.textBoxStudentFirstName.StateCommon.Content.Padding = new System.Windows.Forms.Padding(15, 12, 0, 12);
-            this.textBoxStudentFirstName.TabIndex = 4;
+            this.textBoxStudentFirstName.TabIndex = 1;
             // 
             // label2
             // 
@@ -424,7 +424,7 @@ namespace EnglishCenterManagemenent.GUI
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.dateTimePickerStudentDOB.StateCommon.Border.Rounding = 5;
             this.dateTimePickerStudentDOB.StateCommon.Border.Width = 1;
-            this.dateTimePickerStudentDOB.TabIndex = 5;
+            this.dateTimePickerStudentDOB.TabIndex = 4;
             this.dateTimePickerStudentDOB.UpDownButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Form;
             // 
             // label5
@@ -459,7 +459,7 @@ namespace EnglishCenterManagemenent.GUI
             this.textBoxStudentAddress.StateCommon.Border.Rounding = 5;
             this.textBoxStudentAddress.StateCommon.Border.Width = 2;
             this.textBoxStudentAddress.StateCommon.Content.Padding = new System.Windows.Forms.Padding(15, 12, 0, 12);
-            this.textBoxStudentAddress.TabIndex = 4;
+            this.textBoxStudentAddress.TabIndex = 3;
             // 
             // label7
             // 
@@ -583,7 +583,7 @@ namespace EnglishCenterManagemenent.GUI
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.textBoxStudentPhone.StateNormal.Border.Width = 0;
-            this.textBoxStudentPhone.TabIndex = 10;
+            this.textBoxStudentPhone.TabIndex = 5;
             // 
             // label6
             // 
@@ -607,9 +607,11 @@ namespace EnglishCenterManagemenent.GUI
             // textBoxStudentLastName
             // 
             this.textBoxStudentLastName.AlwaysActive = false;
-            this.textBoxStudentLastName.Location = new System.Drawing.Point(372, 287);
+            this.textBoxStudentLastName.Location = new System.Drawing.Point(372, 290);
             this.textBoxStudentLastName.Name = "textBoxStudentLastName";
-            this.textBoxStudentLastName.Size = new System.Drawing.Size(262, 52);
+            this.textBoxStudentLastName.Palette = this.kryptonPaletteGeneral;
+            this.textBoxStudentLastName.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.textBoxStudentLastName.Size = new System.Drawing.Size(262, 55);
             this.textBoxStudentLastName.StateActive.Back.Color1 = System.Drawing.Color.White;
             this.textBoxStudentLastName.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(168)))), ((int)(((byte)(47)))));
             this.textBoxStudentLastName.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -624,7 +626,7 @@ namespace EnglishCenterManagemenent.GUI
             this.textBoxStudentLastName.StateCommon.Border.Rounding = 5;
             this.textBoxStudentLastName.StateCommon.Border.Width = 2;
             this.textBoxStudentLastName.StateCommon.Content.Padding = new System.Windows.Forms.Padding(15, 12, 0, 12);
-            this.textBoxStudentLastName.TabIndex = 4;
+            this.textBoxStudentLastName.TabIndex = 2;
             // 
             // label9
             // 

@@ -34,10 +34,10 @@ namespace EnglishCenterManagemenent.DTO
             AverageGrade = (float)Convert.ToDouble(row["AverageGrade"].ToString());
         }
 
-        public Student(int studentID, int roleID, string firstName, string lastName, string address, DateTime? dateOfBirth, string phone, float averageGrade)
+        public Student(int studentID, int classID, string firstName, string lastName, string address, DateTime? dateOfBirth, string phone, float averageGrade)
         {
             StudentID = studentID;
-            ClassID = roleID;
+            ClassID = classID;
             FirstName = firstName;
             LastName = lastName;
             Address = address;

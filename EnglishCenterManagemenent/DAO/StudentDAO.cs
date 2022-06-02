@@ -21,13 +21,32 @@ namespace EnglishCenterManagemenent.DAO
             return students;
         }
 
+        public static string GetStudentClass(int studentId)
+        {
+            string className = "";
+            DataTable data = DataProvider.Instance.ExecuteQuery(
+                "SELECT Class.Name " +
+                "FROM CLASS, STUDENT " +
+                "WHERE CLASS.ClassID = STUDENT.ClassID " +
+                "      AND STUDENT.StudentID = @StudentID",
+                new object[] { studentId });
+
+            if (data.Rows.Count > 0)
+            {
+                DataRow row = data.Rows[0];
+                className = row["Name"].ToString();
+            }
+            return className;
+        }
+
         public static void AddStudent(Student newStudent)
         {
-            DataProvider.Instance.ExecuteNonQuery(
+            DataProvider.Instance.ExecuteScalar(
                     "INSERT INTO STUDENT(ClassID, LastName, FirstName, " +
                     "Address, DateOfBirth, Phone, AverageGrade) " +
-                    "VALUES ( @ClassID, @LastName, @FirstName, " +
-                    "@Address, @DateOfBirth, @Phone, @AverageGrade)",
+
+                    "VALUES ( @ClassID , @LastName , @FirstName , " +
+                    "@Address , @DateOfBirth , @Phone , @AverageGrade )",
 
                     new object[] {
                     newStudent.ClassID,
@@ -38,5 +57,33 @@ namespace EnglishCenterManagemenent.DAO
                     newStudent.Phone,
                     newStudent.AverageGrade });
         }
+
+        public static void DeleteStudent(Student deletedStudent)
+        {
+            DataProvider.Instance.ExecuteNonQuery(
+                "DELETE FROM dbo.STUDENT WHERE StudentID = @StudentID",
+                new object[] { deletedStudent.StudentID });
+        }
+
+        public static void UpdateStudent(Student newStudent)
+        {
+            DataProvider.Instance.ExecuteNonQuery(
+                "UPDATE STUDENT " +
+                "SET ClassID = @ClassID , FirstName = @FirstName , LastName = @LastName , " +
+                "    Address = @Address , DateOfBirth = @DateOfBirth , " +
+                "    Phone = @Phone , AverageGrade = @AverageGrade " +
+                "WHERE StudentID = @StudentID",
+
+                new object[] {
+                    newStudent.ClassID,
+                    newStudent.FirstName,
+                    newStudent.LastName,
+                    newStudent.Address,
+                    newStudent.DateOfBirth,
+                    newStudent.Phone,
+                    newStudent.AverageGrade,
+                    newStudent.StudentID});
+        }
+
     }
 }

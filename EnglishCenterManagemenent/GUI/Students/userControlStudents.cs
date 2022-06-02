@@ -1,6 +1,5 @@
 ﻿using EnglishCenterManagemenent.DAO;
 using EnglishCenterManagemenent.DTO;
-using EnglishCenterManagemenent.GUI.Employees;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,9 +34,8 @@ namespace EnglishCenterManagemenent.GUI
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             if (dataGridView.SelectedRows.Count == 0) return;
-            FillDataGridView();
             DialogResult dialog = ShowAskingMessageBox
-                ("Are you sure you want to delete this employee: " +
+                ("Are you sure you want to delete this student: " +
                 studentList.ElementAt(dataGridView.CurrentCell.RowIndex).FirstName + "?");
 
             if (dialog == DialogResult.OK)
@@ -48,6 +46,18 @@ namespace EnglishCenterManagemenent.GUI
             }
         }
 
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            if (dataGridView.SelectedRows.Count == 0) return;
+            FormStudentInfoInput formStudentInfoInput = new FormStudentInfoInput(
+                studentList.ElementAt(dataGridView.CurrentCell.RowIndex));
+
+            formStudentInfoInput.ShowDialog();
+            FillDataGridView();
+        }
+        /// <summary>
+        /// Fill this user control's datagridview with data from database
+        /// </summary>
         private void FillDataGridView()
         {
             dataGridView.Rows.Clear();
@@ -57,7 +67,7 @@ namespace EnglishCenterManagemenent.GUI
                 studentList.Add(student);
                 dataGridView.Rows.Add(new object[]
                 {
-                    student.ClassID,
+                    StudentDAO.GetStudentClass(student.StudentID),
                     student.LastName,
                     student.FirstName,
                     student.Address,
@@ -76,12 +86,12 @@ namespace EnglishCenterManagemenent.GUI
 
             dataGridView.Rows.Clear();
             studentList.Clear();
-            foreach (Student student in StudentDAO.GetAllStudents())
+            foreach (Student student in StudentDAO.GetFilteredStudent(textBoxSearch.Text))
             {
                 studentList.Add(student);
                 dataGridView.Rows.Add(new object[]
                 {
-                    student.ClassID,
+                    StudentDAO.GetStudentClass(student.StudentID),
                     student.LastName,
                     student.FirstName,
                     student.Address,
@@ -134,6 +144,5 @@ namespace EnglishCenterManagemenent.GUI
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
         }
 
-        
     }
 }

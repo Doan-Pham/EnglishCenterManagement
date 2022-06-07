@@ -26,7 +26,7 @@ namespace EnglishCenterManagemenent
             if (Login(username, password))
             {
                 //MessageBox.Show("OK");
-                FormMain formMain = new FormMain();
+                FormMain formMain = new FormMain(username);
                 this.Hide();
                 formMain.Show();
             }
@@ -41,5 +41,9 @@ namespace EnglishCenterManagemenent
             return UsersDAO.Instance.Login(username, password);
         }
 
+        private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -12,9 +12,11 @@ namespace EnglishCenterManagemenent
 {
     public partial class FormMain : Form
     {
-        public FormMain()
+        public FormMain(string username)
         {
             InitializeComponent();
+            labelCurrentUser.Text = username;
+            selectedPanel.StateCommon.Color1 = Color.Orange;
         }
 
         #region Menu buttons click events
@@ -23,30 +25,40 @@ namespace EnglishCenterManagemenent
         {
             userControlDashboard.BringToFront();
             labelCurrentUserControl.Text = "Dashboard";
+            selectedPanel.Height = buttonDashboard.Height;
+            selectedPanel.Top = buttonDashboard.Top;
         }
 
         private void buttonUser_Click(object sender, EventArgs e)
         {
             userControlUsers.BringToFront();
             labelCurrentUserControl.Text = "Users";
+            selectedPanel.Height = buttonUser.Height;
+            selectedPanel.Top = buttonUser.Top;
         }
 
         private void buttonCourse_Click(object sender, EventArgs e)
         {
             userControlCourses.BringToFront();
             labelCurrentUserControl.Text = "Courses";
+            selectedPanel.Height = buttonCourse.Height;
+            selectedPanel.Top = buttonCourse.Top;
         }
 
         private void buttonClass_Click(object sender, EventArgs e)
         {
             userControlClasses.BringToFront();
             labelCurrentUserControl.Text = "Classes";
+            selectedPanel.Height = buttonClass.Height;
+            selectedPanel.Top = buttonClass.Top;
         }
 
         private void buttonEmployee_Click(object sender, EventArgs e)
         {
             userControlEmployees.BringToFront();
             labelCurrentUserControl.Text = "Employees";
+            selectedPanel.Height = buttonEmployee.Height;
+            selectedPanel.Top = buttonEmployee.Top;
         }
 
         private void buttonStudent_Click(object sender, EventArgs e)
@@ -54,9 +66,25 @@ namespace EnglishCenterManagemenent
             userControlStudents.BringToFront();
             labelCurrentUserControl.Text = "Students";
             userControlStudents.formMainInstance = this;
+            selectedPanel.Height = buttonStudent.Height;
+            selectedPanel.Top = buttonStudent.Top;
         }
 
         #endregion
 
+        // logout and show formLogin
+        private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                FormLogin formLogin = new FormLogin();
+                formLogin.Show();
+            }
+
+        }
     }
 }

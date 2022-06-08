@@ -41,6 +41,7 @@ namespace EnglishCenterManagemenent
         {
             userControlClasses.BringToFront();
             labelCurrentUserControl.Text = "Classes";
+            userControlClasses.formMainInstance = this;
         }
 
         private void buttonEmployee_Click(object sender, EventArgs e)
@@ -52,6 +53,7 @@ namespace EnglishCenterManagemenent
         private void buttonStudent_Click(object sender, EventArgs e)
         {
             userControlStudents.BringToFront();
+            userControlStudents.Focus();
             labelCurrentUserControl.Text = "Students";
             userControlStudents.formMainInstance = this;
         }

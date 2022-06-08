@@ -20,7 +20,17 @@ namespace EnglishCenterManagemenent.DAO
 
             return students;
         }
+        public static List<Student> GetStudentsByClassId(int classId)
+        {
+            List<Student> students = new List<Student>();
 
+            DataTable data = DataProvider.Instance.ExecuteQuery(
+                "SELECT * FROM dbo.STUDENT WHERE ClassId = @ClassId", new object[] {classId});
+            foreach (DataRow row in data.Rows)
+                students.Add(new Student(row));
+
+            return students;
+        }
         public static string GetStudentClass(int studentId)
         {
             string className = "";

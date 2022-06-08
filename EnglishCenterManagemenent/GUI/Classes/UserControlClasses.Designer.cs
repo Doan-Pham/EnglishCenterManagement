@@ -35,14 +35,14 @@
             this.buttonUpdate = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.buttonDelete = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.dataGridView = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.panelSearchIcon = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.buttonStudentsList = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelSearchIcon = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.buttonStudentsList = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelSearchIcon)).BeginInit();
             this.SuspendLayout();
@@ -400,36 +400,6 @@
             this.dataGridView.StateNormal.HeaderColumn.Content.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(176)))), ((int)(((byte)(181)))));
             this.dataGridView.TabIndex = 5;
             // 
-            // panelSearchIcon
-            // 
-            this.panelSearchIcon.Location = new System.Drawing.Point(48, 47);
-            this.panelSearchIcon.Name = "panelSearchIcon";
-            this.panelSearchIcon.Size = new System.Drawing.Size(48, 48);
-            this.panelSearchIcon.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panelSearchIcon.StateNormal.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panelSearchIcon.StateNormal.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_search_32px_gray;
-            this.panelSearchIcon.StateNormal.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
-            this.panelSearchIcon.TabIndex = 6;
-            // 
-            // buttonStudentsList
-            // 
-            this.buttonStudentsList.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom2;
-            this.buttonStudentsList.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonStudentsList.Location = new System.Drawing.Point(666, 132);
-            this.buttonStudentsList.Name = "buttonStudentsList";
-            this.buttonStudentsList.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
-            this.buttonStudentsList.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
-            this.buttonStudentsList.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(67)))), ((int)(((byte)(62)))));
-            this.buttonStudentsList.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(67)))), ((int)(((byte)(62)))));
-            this.buttonStudentsList.Palette = this.kryptonPaletteGeneral;
-            this.buttonStudentsList.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.buttonStudentsList.Size = new System.Drawing.Size(304, 67);
-            this.buttonStudentsList.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(86)))), ((int)(((byte)(160)))));
-            this.buttonStudentsList.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
-            this.buttonStudentsList.TabIndex = 3;
-            this.buttonStudentsList.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_student_24px_white;
-            this.buttonStudentsList.Values.Text = "View students list";
-            // 
             // Column5
             // 
             this.Column5.HeaderText = "Course Name";
@@ -481,6 +451,37 @@
             this.Column4.ReadOnly = true;
             this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Column4.Width = 275;
+            // 
+            // panelSearchIcon
+            // 
+            this.panelSearchIcon.Location = new System.Drawing.Point(48, 47);
+            this.panelSearchIcon.Name = "panelSearchIcon";
+            this.panelSearchIcon.Size = new System.Drawing.Size(48, 48);
+            this.panelSearchIcon.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.panelSearchIcon.StateNormal.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.panelSearchIcon.StateNormal.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_search_32px_gray;
+            this.panelSearchIcon.StateNormal.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            this.panelSearchIcon.TabIndex = 6;
+            // 
+            // buttonStudentsList
+            // 
+            this.buttonStudentsList.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom2;
+            this.buttonStudentsList.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonStudentsList.Location = new System.Drawing.Point(666, 132);
+            this.buttonStudentsList.Name = "buttonStudentsList";
+            this.buttonStudentsList.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
+            this.buttonStudentsList.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
+            this.buttonStudentsList.OverrideFocus.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(67)))), ((int)(((byte)(62)))));
+            this.buttonStudentsList.OverrideFocus.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(67)))), ((int)(((byte)(62)))));
+            this.buttonStudentsList.Palette = this.kryptonPaletteGeneral;
+            this.buttonStudentsList.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.buttonStudentsList.Size = new System.Drawing.Size(304, 67);
+            this.buttonStudentsList.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(86)))), ((int)(((byte)(160)))));
+            this.buttonStudentsList.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(90)))), ((int)(((byte)(86)))));
+            this.buttonStudentsList.TabIndex = 3;
+            this.buttonStudentsList.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_student_24px_white;
+            this.buttonStudentsList.Values.Text = "View students list";
+            this.buttonStudentsList.Click += new System.EventHandler(this.buttonStudentsList_Click);
             // 
             // UserControlClasses
             // 

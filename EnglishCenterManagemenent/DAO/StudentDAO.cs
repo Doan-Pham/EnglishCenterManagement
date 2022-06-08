@@ -57,10 +57,10 @@ namespace EnglishCenterManagemenent.DAO
         public static void AddStudent(Student newStudent)
         {
             DataProvider.Instance.ExecuteScalar(
-                    "INSERT INTO STUDENT(ClassID, LastName, FirstName, " +
+                    "INSERT INTO STUDENT(ClassID, FirstName, LastName, " +
                     "Address, DateOfBirth, Phone, AverageGrade) " +
 
-                    "VALUES ( @ClassID , @LastName , @FirstName , " +
+                    "VALUES ( @ClassID , @FirstName , @LastName , " +
                     "@Address , @DateOfBirth , @Phone , @AverageGrade )",
 
                     new object[] {

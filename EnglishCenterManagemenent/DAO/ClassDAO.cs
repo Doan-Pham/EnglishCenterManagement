@@ -166,5 +166,21 @@ namespace EnglishCenterManagemenent.DAO
                 "AND TEST.ClassID = STUDENT.ClassID",
                 new object[] {classId});
         }
+
+        public static List<Test> GetClassAllTests(int classId)
+        {
+            List<Test> testList = new List<Test>();
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(
+                "SELECT TEST.TestID, TEST.ClassID, TEST.Name, TEST.TestDate, TEST.StartTime, TEST.EndTime, TEST.ROOM, TEST.NumberOfExaminees, TEST.Type " +
+                "FROM CLASS, TEST " +
+                "WHERE CLASS.ClassID = @ClassId " +
+                "AND CLASS.ClassID = TEST.ClassID",
+                new object[] {classId});
+            foreach (DataRow row in data.Rows)
+                testList.Add(new Test(row));
+
+            return testList;
+        }
     }
 }

@@ -85,6 +85,7 @@
     <Compile Include="DTO\Student.cs" />
     <Compile Include="DTO\StudentAttendance.cs" />
     <Compile Include="DTO\StudentGrade.cs" />
+    <Compile Include="DTO\Test.cs" />
     <Compile Include="DTO\Users.cs" />
     <Compile Include="GUI\Courses\FormCourseGradeScheme.cs">
       <SubType>Form</SubType>

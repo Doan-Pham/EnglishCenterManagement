@@ -36,11 +36,8 @@ namespace EnglishCenterManagemenent.GUI
             this.buttonCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.dataGridView = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.panelSearchIcon = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Test_1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Test_2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Test_3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelSearchIcon)).BeginInit();
             this.SuspendLayout();
@@ -327,13 +324,11 @@ namespace EnglishCenterManagemenent.GUI
             // 
             this.dataGridView.AllowUserToAddRows = false;
             this.dataGridView.AllowUserToDeleteRows = false;
+            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView.ColumnHeadersHeight = 60;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column7,
-            this.Column6,
-            this.Test_1,
-            this.Test_2,
-            this.Test_3});
+            this.Column1,
+            this.Column2});
             this.dataGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridView.GridStyles.Style = ComponentFactory.Krypton.Toolkit.DataGridViewStyle.Custom1;
             this.dataGridView.GridStyles.StyleBackground = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundCustom1;
@@ -372,42 +367,21 @@ namespace EnglishCenterManagemenent.GUI
             this.panelSearchIcon.StateNormal.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
             this.panelSearchIcon.TabIndex = 7;
             // 
-            // Column7
+            // Column1
             // 
-            this.Column7.HeaderText = "Class";
-            this.Column7.MinimumWidth = 8;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 172;
+            this.Column1.HeaderText = "Class";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 123;
             // 
-            // Column6
+            // Column2
             // 
-            this.Column6.HeaderText = "Student";
-            this.Column6.MinimumWidth = 8;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 172;
-            // 
-            // Test_1
-            // 
-            this.Test_1.HeaderText = "Test 1";
-            this.Test_1.MinimumWidth = 8;
-            this.Test_1.Name = "Test_1";
-            this.Test_1.Width = 172;
-            // 
-            // Test_2
-            // 
-            this.Test_2.HeaderText = "Test 2";
-            this.Test_2.MinimumWidth = 8;
-            this.Test_2.Name = "Test_2";
-            this.Test_2.Width = 172;
-            // 
-            // Test_3
-            // 
-            this.Test_3.HeaderText = "Test 3";
-            this.Test_3.MinimumWidth = 8;
-            this.Test_3.Name = "Test_3";
-            this.Test_3.Width = 172;
+            this.Column2.HeaderText = "Student";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 150;
             // 
             // UserControlStudentGrades
             // 
@@ -439,10 +413,7 @@ namespace EnglishCenterManagemenent.GUI
         private ComponentFactory.Krypton.Toolkit.KryptonButton buttonCancel;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView dataGridView;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel panelSearchIcon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Test_1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Test_2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Test_3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

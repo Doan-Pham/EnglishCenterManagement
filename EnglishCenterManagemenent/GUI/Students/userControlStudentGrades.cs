@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EnglishCenterManagemenent.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,30 +13,39 @@ namespace EnglishCenterManagemenent.GUI
 {
     public partial class UserControlStudentGrades : UserControl
     {
+        int classId = -1;
         public UserControlStudentGrades()
         {
             InitializeComponent();
-            float a = 9.957f;
-            dataGridView.Rows.Add(new object[] { "Pre1", "2051", "Huỳnh", a.ToString("#.##"), 4.5, 4.5 });
-            dataGridView.Rows.Add(new object[] { "Pre1", "2051", "Huỳnh", "9.0", 9.0, 9.0 });
-            dataGridView.Rows.Add(new object[] { "Pre1", "2051", "Huỳnh", 9.0, 9.0, 9.0 });
+            FillDataGridView();
         }
+
+        public void SetClass(int classId)
+        {
+            this.classId = classId;
+        }
+
         private void FillDataGridView()
         {
-            //dataGridView.Rows.Clear();
-            //foreach (Student student in studentList)
-            //{
-            //    dataGridView.Rows.Add(new object[]
-            //    {
-            //        StudentDAO.GetStudentClass(student.StudentID),
-            //        student.LastName,
-            //        student.FirstName,
-            //        student.Address,
-            //        $"{student.DateOfBirth: MM/dd/yyyy}",
-            //        student.Phone,
-            //        student.AverageGrade,
-            //    });
-            //}
+            if (classId < 0) return;
+            dataGridView.Rows.Clear();
+            DataTable dataTable = ClassDAO.GetClassTestsResult(classId);
+
+            foreach (DataRow row in dataTable.Rows)
+            {
+                dataGridView.Rows.Add(new object[]
+                {
+                    (string)row["ClassName"],
+                    (string)row["LastName"] + " " + (string)row["FirstName"],
+                    (string)row["TestName"],
+                    (float)Convert.ToDouble(row["Grade"].ToString()),
+                });
+            }
+        }
+
+        private void UserControlStudentGrades_Enter(object sender, EventArgs e)
+        {
+            FillDataGridView();
         }
     }
 }

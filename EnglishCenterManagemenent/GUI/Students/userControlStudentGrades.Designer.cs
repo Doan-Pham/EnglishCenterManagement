@@ -423,6 +423,7 @@ namespace EnglishCenterManagemenent.GUI
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "UserControlStudentGrades";
             this.Size = new System.Drawing.Size(1110, 788);
+            this.Enter += new System.EventHandler(this.UserControlStudentGrades_Enter);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelSearchIcon)).EndInit();
             this.ResumeLayout(false);

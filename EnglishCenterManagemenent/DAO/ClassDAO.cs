@@ -153,5 +153,18 @@ namespace EnglishCenterManagemenent.DAO
 
             return classList;
         }
+
+        public static DataTable GetClassTestsResult(int classId)
+        {
+            return DataProvider.Instance.ExecuteQuery(
+                "SELECT CLASS.ClassID, CLASS.Name AS 'ClassName',STUDENT.StudentID, STUDENT.FirstName, STUDENT.LastName, TEST.Name AS 'TestName', TESTRESULT.Grade " +
+                "FROM CLASS, TEST, TESTRESULT, STUDENT " +
+                "WHERE CLASS.ClassID = @ClassID " +
+                "AND CLASS.ClassID = TEST.ClassID " +
+                "AND TEST.TestID = TESTRESULT.TestID " +
+                "AND TESTRESULT.StudentID = STUDENT.StudentID " +
+                "AND TEST.ClassID = STUDENT.ClassID",
+                new object[] {classId});
+        }
     }
 }

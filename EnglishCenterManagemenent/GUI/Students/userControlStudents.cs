@@ -18,6 +18,8 @@ namespace EnglishCenterManagemenent.GUI
         private const string TEXTBOX_SEARCH_PLACEHOLDER = "What are you looking for ?";
 
         private List<Student> studentList = new List<Student>();
+
+        // In case showing only students of a certain class
         int studentsClassId = -1;
         public UserControlStudents()
         {
@@ -77,7 +79,9 @@ namespace EnglishCenterManagemenent.GUI
 
         private void buttonGrading_Click(object sender, EventArgs e)
         {
+            formMainInstance.userControlStudentGrades.SetClass(studentsClassId);
             formMainInstance.userControlStudentGrades.BringToFront();
+            formMainInstance.userControlStudentGrades.Focus();
             formMainInstance.labelCurrentUserControl.Text = "Students Grades";
         }
 

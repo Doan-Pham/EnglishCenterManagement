@@ -110,5 +110,20 @@ namespace EnglishCenterManagemenent.DAO
                     newStudent.StudentID});
         }
 
+        public static float GetStudentTestResultByTestId(int studentId, int testId)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery(
+                "SELECT Grade FROM dbo.TESTRESULT " +
+                "WHERE TestId = @TestId AND StudentId = @StudentId", 
+                new object[] { testId, studentId });
+
+            float grade = -1;
+            if (data.Rows.Count > 0)
+            {
+                DataRow row = data.Rows[0];
+                grade = (float)Convert.ToDouble(row["Grade"].ToString());
+            }
+            return grade;
+        }
     }
 }

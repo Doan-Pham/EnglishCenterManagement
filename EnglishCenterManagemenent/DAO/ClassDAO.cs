@@ -182,5 +182,19 @@ namespace EnglishCenterManagemenent.DAO
 
             return testList;
         }
+
+        public static DataTable GetStudentTestsResult(int classId, int studentId)
+        {
+            return DataProvider.Instance.ExecuteQuery(
+                "SELECT [1] AS 'Test1', [2] AS 'Test2', [3] AS 'Test3' " +
+                "FROM " +
+                "(SELECT StudentID, TESTRESULT.TestID, Grade  " +
+                " FROM dbo.TESTRESULT, dbo.TEST " +
+                " WHERE TEST.ClassID = @ClassID AND TEST.TestID = TESTRESULT.TestID AND StudentID = @studentId ) TRS " +
+                "PIVOT " +
+                "( AVG(Grade) FOR TestID IN  ( [1], [2], [3] )  ) AS pvt",
+                new object[] { classId, studentId });
+                
+        }
     }
 }

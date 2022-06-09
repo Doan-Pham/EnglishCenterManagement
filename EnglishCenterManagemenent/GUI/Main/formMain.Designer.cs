@@ -46,13 +46,13 @@ namespace EnglishCenterManagemenent
             this.userControlDashboard = new EnglishCenterManagemenent.GUI.UserControlDashboard();
             this.userControlClasses = new EnglishCenterManagemenent.GUI.UserControlClasses();
             this.userControlStudents = new EnglishCenterManagemenent.GUI.UserControlStudents();
-            this.userControlStudentGrades = new EnglishCenterManagemenent.GUI.UserControlStudentGrades();
             this.userControlStudentAttendance = new EnglishCenterManagemenent.GUI.UserControlStudentAttendance();
             this.userControlCourses = new EnglishCenterManagemenent.GUI.UserControlCourses();
             this.userControlUsers = new EnglishCenterManagemenent.GUI.UserControlUsers();
             this.userControlEmployees = new EnglishCenterManagemenent.GUI.UserControlEmployees();
             this.panelCurrentUserControl = new System.Windows.Forms.Panel();
             this.labelCurrentUserControl = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.userControlStudentGrades = new EnglishCenterManagemenent.GUI.UserControlStudentGrades();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelCurrentUser)).BeginInit();
             this.panelCurrentUser.SuspendLayout();
@@ -364,9 +364,9 @@ namespace EnglishCenterManagemenent
             // panelMain
             // 
             this.panelMain.Controls.Add(this.userControlDashboard);
+            this.panelMain.Controls.Add(this.userControlStudentGrades);
             this.panelMain.Controls.Add(this.userControlClasses);
             this.panelMain.Controls.Add(this.userControlStudents);
-            this.panelMain.Controls.Add(this.userControlStudentGrades);
             this.panelMain.Controls.Add(this.userControlStudentAttendance);
             this.panelMain.Controls.Add(this.userControlCourses);
             this.panelMain.Controls.Add(this.userControlUsers);
@@ -394,6 +394,7 @@ namespace EnglishCenterManagemenent
             this.userControlClasses.BackColor = System.Drawing.Color.White;
             this.userControlClasses.Dock = System.Windows.Forms.DockStyle.Fill;
             this.userControlClasses.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlClasses.formMainInstance = null;
             this.userControlClasses.Location = new System.Drawing.Point(0, 0);
             this.userControlClasses.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.userControlClasses.Name = "userControlClasses";
@@ -411,17 +412,6 @@ namespace EnglishCenterManagemenent
             this.userControlStudents.Name = "userControlStudents";
             this.userControlStudents.Size = new System.Drawing.Size(1110, 788);
             this.userControlStudents.TabIndex = 11;
-            // 
-            // userControlStudentGrades
-            // 
-            this.userControlStudentGrades.BackColor = System.Drawing.Color.White;
-            this.userControlStudentGrades.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlStudentGrades.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userControlStudentGrades.Location = new System.Drawing.Point(0, 0);
-            this.userControlStudentGrades.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.userControlStudentGrades.Name = "userControlStudentGrades";
-            this.userControlStudentGrades.Size = new System.Drawing.Size(1110, 788);
-            this.userControlStudentGrades.TabIndex = 3;
             // 
             // userControlStudentAttendance
             // 
@@ -492,6 +482,17 @@ namespace EnglishCenterManagemenent
             this.labelCurrentUserControl.TabIndex = 0;
             this.labelCurrentUserControl.Values.Text = "Dashboard";
             // 
+            // userControlStudentGrades
+            // 
+            this.userControlStudentGrades.BackColor = System.Drawing.Color.White;
+            this.userControlStudentGrades.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlStudentGrades.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlStudentGrades.Location = new System.Drawing.Point(0, 0);
+            this.userControlStudentGrades.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.userControlStudentGrades.Name = "userControlStudentGrades";
+            this.userControlStudentGrades.Size = new System.Drawing.Size(1110, 788);
+            this.userControlStudentGrades.TabIndex = 13;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
@@ -535,7 +536,6 @@ namespace EnglishCenterManagemenent
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Panel panelCurrentUserControl;
         private GUI.UserControlDashboard userControlDashboard;
-        public GUI.UserControlStudentGrades userControlStudentGrades;
         public GUI.UserControlStudentAttendance userControlStudentAttendance;
         public ComponentFactory.Krypton.Toolkit.KryptonLabel labelCurrentUserControl;
         private GUI.UserControlCourses userControlCourses;
@@ -543,5 +543,6 @@ namespace EnglishCenterManagemenent
         private GUI.UserControlEmployees userControlEmployees;
         private GUI.UserControlClasses userControlClasses;
         public GUI.UserControlStudents userControlStudents;
+        public GUI.UserControlStudentGrades userControlStudentGrades;
     }
 }

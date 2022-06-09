@@ -205,12 +205,14 @@ namespace EnglishCenterManagemenent.GUI
             if (studentsClassId == -1)
             {
                 buttonAttendance.Visible = false;
+                buttonGrading.Visible = false;
                 buttonAdd.Visible = true;
                 buttonUpdate.Visible = true;
                 buttonDelete.Visible = true;
             }
             else
             {
+                buttonGrading.Visible = true;
                 buttonAttendance.Visible = true;
                 buttonAdd.Visible = false;
                 buttonUpdate.Visible = false;

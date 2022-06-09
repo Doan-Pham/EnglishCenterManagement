@@ -76,6 +76,7 @@ namespace EnglishCenterManagemenent.GUI
                 (classList.ElementAt(dataGridView.CurrentCell.RowIndex).ClassID);
             formMainInstance.userControlStudents.Focus();
             formMainInstance.userControlStudents.BringToFront();
+            formMainInstance.userControlStudents.formMainInstance = formMainInstance;
             formMainInstance.labelCurrentUserControl.Text = "Class's students";
         }
 

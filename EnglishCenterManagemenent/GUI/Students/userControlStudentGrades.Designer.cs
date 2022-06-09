@@ -38,7 +38,6 @@ namespace EnglishCenterManagemenent.GUI
             this.panelSearchIcon = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Test_1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Test_2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Test_3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -332,7 +331,6 @@ namespace EnglishCenterManagemenent.GUI
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column7,
             this.Column6,
-            this.Column1,
             this.Test_1,
             this.Test_2,
             this.Test_3});
@@ -376,7 +374,7 @@ namespace EnglishCenterManagemenent.GUI
             // 
             // Column7
             // 
-            this.Column7.HeaderText = "Class ID";
+            this.Column7.HeaderText = "Class";
             this.Column7.MinimumWidth = 8;
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
@@ -384,19 +382,11 @@ namespace EnglishCenterManagemenent.GUI
             // 
             // Column6
             // 
-            this.Column6.HeaderText = "Student ID";
+            this.Column6.HeaderText = "Student";
             this.Column6.MinimumWidth = 8;
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             this.Column6.Width = 172;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Name";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 171;
             // 
             // Test_1
             // 
@@ -450,7 +440,6 @@ namespace EnglishCenterManagemenent.GUI
         private ComponentFactory.Krypton.Toolkit.KryptonPanel panelSearchIcon;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Test_1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Test_2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Test_3;

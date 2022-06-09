@@ -53,9 +53,9 @@ namespace EnglishCenterManagemenent
         private void buttonStudent_Click(object sender, EventArgs e)
         {
             userControlStudents.BringToFront();
-            userControlStudents.Focus();
             labelCurrentUserControl.Text = "Students";
             userControlStudents.formMainInstance = this;
+            userControlStudents.Focus();
         }
 
         #endregion

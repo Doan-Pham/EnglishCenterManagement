@@ -30,37 +30,17 @@ namespace EnglishCenterManagemenent.GUI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.textBoxSearch = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonPaletteGeneral = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.buttonSave = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.buttonCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.dataGridView = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.panelSearchIcon = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Test_1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Test_2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Test_3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelSearchIcon = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
+            this.textBoxSearch = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelSearchIcon)).BeginInit();
             this.SuspendLayout();
-            // 
-            // textBoxSearch
-            // 
-            this.textBoxSearch.Location = new System.Drawing.Point(35, 37);
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Palette = this.kryptonPaletteGeneral;
-            this.textBoxSearch.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.textBoxSearch.Size = new System.Drawing.Size(477, 67);
-            this.textBoxSearch.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.textBoxSearch.StateCommon.Border.Color1 = System.Drawing.Color.Transparent;
-            this.textBoxSearch.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.textBoxSearch.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
-            this.textBoxSearch.TabIndex = 0;
-            this.textBoxSearch.Text = "Nhập tên, lớp";
             // 
             // kryptonPaletteGeneral
             // 
@@ -328,14 +308,11 @@ namespace EnglishCenterManagemenent.GUI
             // 
             this.dataGridView.AllowUserToAddRows = false;
             this.dataGridView.AllowUserToDeleteRows = false;
+            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView.ColumnHeadersHeight = 60;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column7,
-            this.Column6,
             this.Column1,
-            this.Test_1,
-            this.Test_2,
-            this.Test_3});
+            this.Column2});
             this.dataGridView.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridView.GridStyles.Style = ComponentFactory.Krypton.Toolkit.DataGridViewStyle.Custom1;
             this.dataGridView.GridStyles.StyleBackground = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundCustom1;
@@ -362,6 +339,24 @@ namespace EnglishCenterManagemenent.GUI
             this.dataGridView.StateNormal.HeaderColumn.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(176)))), ((int)(((byte)(181)))));
             this.dataGridView.StateNormal.HeaderColumn.Content.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(176)))), ((int)(((byte)(181)))));
             this.dataGridView.TabIndex = 5;
+            this.dataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellEndEdit);
+            this.dataGridView.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dataGridView_CellValidating);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Class";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 123;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Student";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 150;
             // 
             // panelSearchIcon
             // 
@@ -374,50 +369,21 @@ namespace EnglishCenterManagemenent.GUI
             this.panelSearchIcon.StateNormal.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
             this.panelSearchIcon.TabIndex = 7;
             // 
-            // Column7
+            // textBoxSearch
             // 
-            this.Column7.HeaderText = "Class ID";
-            this.Column7.MinimumWidth = 8;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 172;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Student ID";
-            this.Column6.MinimumWidth = 8;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 172;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Name";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 171;
-            // 
-            // Test_1
-            // 
-            this.Test_1.HeaderText = "Test 1";
-            this.Test_1.MinimumWidth = 8;
-            this.Test_1.Name = "Test_1";
-            this.Test_1.Width = 172;
-            // 
-            // Test_2
-            // 
-            this.Test_2.HeaderText = "Test 2";
-            this.Test_2.MinimumWidth = 8;
-            this.Test_2.Name = "Test_2";
-            this.Test_2.Width = 172;
-            // 
-            // Test_3
-            // 
-            this.Test_3.HeaderText = "Test 3";
-            this.Test_3.MinimumWidth = 8;
-            this.Test_3.Name = "Test_3";
-            this.Test_3.Width = 172;
+            this.textBoxSearch.Location = new System.Drawing.Point(35, 37);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Palette = this.kryptonPaletteGeneral;
+            this.textBoxSearch.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.textBoxSearch.Size = new System.Drawing.Size(477, 67);
+            this.textBoxSearch.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.textBoxSearch.StateCommon.Border.Color1 = System.Drawing.Color.Transparent;
+            this.textBoxSearch.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.textBoxSearch.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
+            this.textBoxSearch.TabIndex = 0;
+            this.textBoxSearch.Text = "Nhập tên, lớp";
             // 
             // UserControlStudentGrades
             // 
@@ -433,6 +399,7 @@ namespace EnglishCenterManagemenent.GUI
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "UserControlStudentGrades";
             this.Size = new System.Drawing.Size(1110, 788);
+            this.Enter += new System.EventHandler(this.UserControlStudentGrades_Enter);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelSearchIcon)).EndInit();
             this.ResumeLayout(false);
@@ -441,18 +408,13 @@ namespace EnglishCenterManagemenent.GUI
         }
 
         #endregion
-
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBoxSearch;
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPaletteGeneral;
         private ComponentFactory.Krypton.Toolkit.KryptonButton buttonSave;
         private ComponentFactory.Krypton.Toolkit.KryptonButton buttonCancel;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView dataGridView;
-        private ComponentFactory.Krypton.Toolkit.KryptonPanel panelSearchIcon;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Test_1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Test_2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Test_3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private ComponentFactory.Krypton.Toolkit.KryptonPanel panelSearchIcon;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox textBoxSearch;
     }
 }

@@ -37,5 +37,21 @@ namespace EnglishCenterManagemenent.DAO
 
             return gradeSchemes;
         }
+
+        public static GradeScheme GetGradeSchemeByClassId(int classId)
+        {
+            GradeScheme gradeScheme = null;
+            DataTable data = DataProvider.Instance.ExecuteQuery(
+                "SELECT GRADESCHEME.GradeSchemeID, GRADESCHEME.Name, GRADESCHEME.LowestGrade, GRADESCHEME.HighestGrade, GRADESCHEME.Rounding " +
+                "FROM CLASS, COURSE, GRADESCHEME " +
+                "WHERE CLASS.ClassID = @ClassID " +
+                "AND CLASS.CourseID = COURSE.CourseID " +
+                "AND COURSE.GradeSchemeID = GRADESCHEME.GradeSchemeID",
+                new object[] { classId });
+
+            if (data.Rows.Count > 0)
+                gradeScheme = (new GradeScheme(data.Rows[0]));
+            return gradeScheme;
+        }
     }
 }

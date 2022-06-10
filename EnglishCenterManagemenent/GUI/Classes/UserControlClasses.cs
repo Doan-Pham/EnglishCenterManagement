@@ -15,6 +15,9 @@ namespace EnglishCenterManagemenent.GUI
 {
     public partial class UserControlClasses : UserControl
     {
+        public FormMain formMainInstance { get; set; }
+
+
         // This is the placeholder text for textBoxSearch, when you click on the textbox to type,
         // the placeholder text disappears, and only reappear when you clear the textbox and stop
         // focusing on it
@@ -67,6 +70,15 @@ namespace EnglishCenterManagemenent.GUI
             FillDataGridView();
         }
 
+        private void buttonStudentsList_Click(object sender, EventArgs e)
+        {
+            formMainInstance.userControlStudents.SetStudentsClass
+                (classList.ElementAt(dataGridView.CurrentCell.RowIndex).ClassID);
+            formMainInstance.userControlStudents.Focus();
+            formMainInstance.userControlStudents.BringToFront();
+            formMainInstance.userControlStudents.formMainInstance = formMainInstance;
+            formMainInstance.labelCurrentUserControl.Text = "Class's students";
+        }
 
         /// <summary>
         /// Fill this user control's datagridview with data from database
@@ -145,5 +157,7 @@ namespace EnglishCenterManagemenent.GUI
                 });
             }
         }
+
+
     }
 }

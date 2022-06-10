@@ -74,6 +74,7 @@
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\RoleDAO.cs" />
     <Compile Include="DAO\StudentDAO.cs" />
+    <Compile Include="DAO\TestResultDAO.cs" />
     <Compile Include="DAO\UsersDAO.cs" />
     <Compile Include="DTO\Class.cs" />
     <Compile Include="DTO\ClassTeacherSchedule.cs" />
@@ -85,6 +86,7 @@
     <Compile Include="DTO\Student.cs" />
     <Compile Include="DTO\StudentAttendance.cs" />
     <Compile Include="DTO\StudentGrade.cs" />
+    <Compile Include="DTO\Test.cs" />
     <Compile Include="DTO\Users.cs" />
     <Compile Include="GUI\Courses\FormCourseGradeScheme.cs">
       <SubType>Form</SubType>

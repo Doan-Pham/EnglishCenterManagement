@@ -72,12 +72,35 @@ CREATE TABLE STUDENT(
     constraint pk_st primary key (StudentID)
 )
 
+-- TODO: DROP THIS TABLE
 CREATE TABLE STUDENTGRADE(
     StudentID INT NOT NULL,
     ClassID INT NOT NULL,
     TestName NVARCHAR(50),
     Grade FLOAT,
     constraint pk_stg primary key (StudentID,ClassID)
+)
+DROP TABLE STUDENTGRADE
+
+-- TODO: ADD THESE 2 TABLES
+CREATE TABLE TEST(
+	TestID INT NOT NULL IDENTITY(1,1),
+	ClassID INT,
+    Name NVARCHAR(50),
+	TestDate DATE,
+	StartTime TIME,
+    EndTime TIME,
+	ROOM NVARCHAR(50),
+    NumberOfExaminees INT,
+	Type INT,
+    constraint pk_t primary key (TestID)
+)
+
+CREATE TABLE TESTRESULT(
+	TestID INT NOT NULL ,
+	StudentID INT NOT NULL,
+    Grade FLOAT,
+    constraint pk_trs primary key (TestID, StudentID)
 )
 
 CREATE TABLE STUDENTATTENDANCE(
@@ -104,14 +127,26 @@ CREATE TABLE CLASS_TEACHER_SCHEDULE(
 )
 
 ALTER TABLE EMPLOYEE ADD CONSTRAINT fk_emp FOREIGN KEY (RoleID) REFERENCES ROLE(RoleID)
+
 ALTER TABLE USERS ADD CONSTRAINT fk_usr FOREIGN KEY (RoleID) REFERENCES ROLE(RoleID)
+
 ALTER TABLE COURSE ADD CONSTRAINT fk_co FOREIGN KEY (GradeSchemeID) REFERENCES GRADESCHEME(GradeSchemeID)
+
 ALTER TABLE CLASS ADD CONSTRAINT fk_cls FOREIGN KEY (CourseID) REFERENCES COURSE(CourseID)
+
 ALTER TABLE STUDENT ADD CONSTRAINT fk_st FOREIGN KEY (ClassID) REFERENCES CLASS(ClassID)
+
 ALTER TABLE STUDENTGRADE ADD CONSTRAINT fk_stg1 FOREIGN KEY (StudentID) REFERENCES STUDENT(StudentID)
 ALTER TABLE STUDENTGRADE ADD CONSTRAINT fk_stg2 FOREIGN KEY (ClassID) REFERENCES CLASS(ClassID)
+
+-- TODO: ADD THESE 3 CONSTRAINTS
+ALTER TABLE TEST ADD CONSTRAINT fk_t FOREIGN KEY (ClassID) REFERENCES CLASS(ClassID)
+ALTER TABLE TESTRESULT ADD CONSTRAINT fk_trs1 FOREIGN KEY (TestID) REFERENCES TEST(TestID)
+ALTER TABLE TESTRESULT ADD CONSTRAINT fk_trs2 FOREIGN KEY (StudentID) REFERENCES STUDENT(StudentID)
+
 ALTER TABLE STUDENTATTENDANCE ADD CONSTRAINT fk_sta1 FOREIGN KEY (StudentID) REFERENCES STUDENT(StudentID)
 ALTER TABLE STUDENTATTENDANCE ADD CONSTRAINT fk_sta2 FOREIGN KEY (ClassID) REFERENCES CLASS(ClassID)
+
 ALTER TABLE CLASS_TEACHER_SCHEDULE ADD CONSTRAINT fk_clts1 FOREIGN KEY (EmployeeID) REFERENCES EMPLOYEE(EmployeeID)
 ALTER TABLE CLASS_TEACHER_SCHEDULE ADD CONSTRAINT fk_clts2 FOREIGN KEY (ClassID) REFERENCES CLASS(ClassID)
 ALTER TABLE CLASS_TEACHER_SCHEDULE ADD CONSTRAINT fk_clts3 FOREIGN KEY (ScheduleID) REFERENCES SCHEDULE(ScheduleID)
@@ -121,10 +156,11 @@ INSERT INTO ROLE(Name, Description)
 VALUES(N'admin', N'This is admin')
 
 INSERT INTO ROLE(Name, Description)
-VALUES(N'receptionist', N'This is admin')
+VALUES(N'receptionist', N'This is receptionist')
 
 INSERT INTO ROLE(Name, Description)
-VALUES(N'admin', N'This is admin')
+VALUES(N'teacher', N'This is teacher')
+
 DELETE FROM ROLE
 
 INSERT INTO USERS(RoleID, Username, Password)
@@ -150,6 +186,95 @@ VALUES(1, N'admin', N'1')
 SET DATEFORMAT dmy
 INSERT INTO EMPLOYEE(RoleId, LastName, FirstName, Address, DateOfBirth, Phone, Certificate, Email)
 VALUES(1, N'Nguyễn Thế', N'Bảo', N'43 Trường Chinh','1-1-1981', N'0996353540', NULL, N'ntbhcmuit@gmail.com')
+
+-- Data for tests-related operations
+INSERT INTO TEST(ClassId, Name) VALUES (7, 'Test 1')
+INSERT INTO TEST(ClassId, Name) VALUES (7, 'Test 2')
+INSERT INTO TEST(ClassId, Name) VALUES (7, 'Test 3')
+INSERT INTO TEST(ClassId, Name) VALUES (7, 'Test 4')
+
+INSERT INTO TESTRESULT(TestID, StudentID, Grade) VALUES (1, 1, 5.5)
+INSERT INTO TESTRESULT(TestID, StudentID, Grade) VALUES (2, 1, 6.6)
+INSERT INTO TESTRESULT(TestID, StudentID, Grade) VALUES (3, 1, 7.7)
+
+
+
+-- TESTING OUT PIVOT OPERATION - NOT READY FOR USE
+SELECT ClassName, StudentID, [1] AS 'Test 1', [2] AS 'Test 2', [3] AS 'Test 3'
+FROM
+(
+SELECT CLASS.ClassID, CLASS.Name AS 'ClassName',STUDENT.StudentID, STUDENT.FirstName, STUDENT.LastName, TEST.TestID, TEST.Name AS 'TestName', TESTRESULT.Grade
+FROM CLASS, TEST, TESTRESULT, STUDENT
+WHERE  CLASS.ClassID = 7
+AND CLASS.ClassID = TEST.ClassID 
+	  AND TEST.TestID = TESTRESULT.TestID 
+	  AND TESTRESULT.StudentID = STUDENT.StudentID 
+	  AND TEST.ClassID = STUDENT.ClassID
+	  )TRS
+
+PIVOT
+(  
+	AVG(Grade)  
+	FOR TestID IN  
+	( [1], [2], [3] )  
+) AS pvt 
+
+
+SELECT TEST.TestID, TEST.ClassID, TEST.Name, TEST.TestDate, TEST.StartTime, TEST.EndTime, TEST.ROOM, TEST.NumberOfExaminees, TEST.Type
+FROM CLASS, TEST
+WHERE CLASS.ClassID = 7 AND CLASS.ClassID = TEST.ClassID
+
+
+
+DECLARE @tests AS NVARCHAR(MAX), @query  AS NVARCHAR(MAX)
+SELECT @tests = STUFF((SELECT ',' + QUOTENAME(Name) 
+                    from TEST
+                    group by Name
+                    order by Name
+            FOR XML PATH(''), TYPE
+            ).value('.', 'NVARCHAR(MAX)') 
+        ,1,1,'')
+
+SET @query = 
+'SELECT ' + @tests + 
+'FROM   
+(SELECT StudentID, TESTRESULT.TestID, Grade , TEST.Name
+FROM dbo.TESTRESULT, dbo.TEST 
+WHERE TEST.ClassID = 7 AND TEST.TestID = TESTRESULT.TestID AND StudentID = 1 ) TRS
+PIVOT
+(  
+AVG(Grade) FOR TRS.Name IN  
+('+ @tests+' )  
+) AS pvt   '
+
+EXECUTE(@query)
+
+
+GO
+SELECT [1] AS 'Test 1', [2] 'Test 2', [3] 'Test 3'
+FROM   
+(SELECT StudentID, TESTRESULT.TestID, Grade , dbo.TEST.Name
+FROM dbo.TESTRESULT, dbo.TEST 
+WHERE TEST.ClassID = 7 AND TEST.TestID = TESTRESULT.TestID AND StudentID = 1 ) TRS
+PIVOT
+(  AVG(Grade) FOR TRS.Name IN  
+( [1], [2], [3] )  
+) AS pvt  
+
+
+
+-- SOME RANDOM STUFF
+SELECT Grade FROM dbo.TESTRESULT 
+WHERE TestId = 1 AND StudentId = 1
+
+SELECT * FROM dbo.TESTRESULT 
+WHERE StudentID = 1 AND TestID = 1
+
+UPDATE dbo.TESTRESULT 
+SET Grade = 7.5 
+WHERE TestID = 3 AND StudentID = 1
+
+
 
 --procedure
 CREATE PROC GetAccountByUsername

@@ -153,5 +153,48 @@ namespace EnglishCenterManagemenent.DAO
 
             return classList;
         }
+
+        public static DataTable GetClassTestsResult(int classId)
+        {
+            return DataProvider.Instance.ExecuteQuery(
+                "SELECT CLASS.ClassID, CLASS.Name AS 'ClassName',STUDENT.StudentID, STUDENT.FirstName, STUDENT.LastName, TEST.Name AS 'TestName', TESTRESULT.Grade " +
+                "FROM CLASS, TEST, TESTRESULT, STUDENT " +
+                "WHERE CLASS.ClassID = @ClassID " +
+                "AND CLASS.ClassID = TEST.ClassID " +
+                "AND TEST.TestID = TESTRESULT.TestID " +
+                "AND TESTRESULT.StudentID = STUDENT.StudentID " +
+                "AND TEST.ClassID = STUDENT.ClassID",
+                new object[] {classId});
+        }
+
+        public static List<Test> GetClassAllTests(int classId)
+        {
+            List<Test> testList = new List<Test>();
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(
+                "SELECT TEST.TestID, TEST.ClassID, TEST.Name, TEST.TestDate, TEST.StartTime, TEST.EndTime, TEST.ROOM, TEST.NumberOfExaminees, TEST.Type " +
+                "FROM CLASS, TEST " +
+                "WHERE CLASS.ClassID = @ClassId " +
+                "AND CLASS.ClassID = TEST.ClassID",
+                new object[] {classId});
+            foreach (DataRow row in data.Rows)
+                testList.Add(new Test(row));
+
+            return testList;
+        }
+
+        public static DataTable GetStudentTestsResult(int classId, int studentId)
+        {
+            return DataProvider.Instance.ExecuteQuery(
+                "SELECT [1] AS 'Test1', [2] AS 'Test2', [3] AS 'Test3' " +
+                "FROM " +
+                "(SELECT StudentID, TESTRESULT.TestID, Grade  " +
+                " FROM dbo.TESTRESULT, dbo.TEST " +
+                " WHERE TEST.ClassID = @ClassID AND TEST.TestID = TESTRESULT.TestID AND StudentID = @studentId ) TRS " +
+                "PIVOT " +
+                "( AVG(Grade) FOR TestID IN  ( [1], [2], [3] )  ) AS pvt",
+                new object[] { classId, studentId });
+                
+        }
     }
 }

@@ -35,9 +35,9 @@ namespace EnglishCenterManagemenent.GUI
             this.buttonSave = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.buttonCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.dataGridView = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
-            this.panelSearchIcon = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelSearchIcon = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelSearchIcon)).BeginInit();
             this.SuspendLayout();
@@ -355,17 +355,8 @@ namespace EnglishCenterManagemenent.GUI
             this.dataGridView.StateNormal.HeaderColumn.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(176)))), ((int)(((byte)(181)))));
             this.dataGridView.StateNormal.HeaderColumn.Content.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(176)))), ((int)(((byte)(181)))));
             this.dataGridView.TabIndex = 5;
-            // 
-            // panelSearchIcon
-            // 
-            this.panelSearchIcon.Location = new System.Drawing.Point(48, 46);
-            this.panelSearchIcon.Name = "panelSearchIcon";
-            this.panelSearchIcon.Size = new System.Drawing.Size(48, 48);
-            this.panelSearchIcon.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panelSearchIcon.StateNormal.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.panelSearchIcon.StateNormal.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_search_32px_gray;
-            this.panelSearchIcon.StateNormal.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
-            this.panelSearchIcon.TabIndex = 7;
+            this.dataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellEndEdit);
+            this.dataGridView.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dataGridView_CellValidating);
             // 
             // Column1
             // 
@@ -382,6 +373,17 @@ namespace EnglishCenterManagemenent.GUI
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             this.Column2.Width = 150;
+            // 
+            // panelSearchIcon
+            // 
+            this.panelSearchIcon.Location = new System.Drawing.Point(48, 46);
+            this.panelSearchIcon.Name = "panelSearchIcon";
+            this.panelSearchIcon.Size = new System.Drawing.Size(48, 48);
+            this.panelSearchIcon.StateNormal.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.panelSearchIcon.StateNormal.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.panelSearchIcon.StateNormal.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_search_32px_gray;
+            this.panelSearchIcon.StateNormal.ImageStyle = ComponentFactory.Krypton.Toolkit.PaletteImageStyle.CenterMiddle;
+            this.panelSearchIcon.TabIndex = 7;
             // 
             // UserControlStudentGrades
             // 

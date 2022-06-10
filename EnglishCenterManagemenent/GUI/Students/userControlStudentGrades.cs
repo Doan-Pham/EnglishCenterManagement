@@ -97,5 +97,53 @@ namespace EnglishCenterManagemenent.GUI
         {
             FillDataGridView();
         }
+
+        private void dataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            return;
+        }
+
+        private bool CheckValidGrade(float grade)
+        {
+            GradeScheme courseGradeScheme = GradeSchemeDAO.GetGradeSchemeByClassId(studentsClassId);
+
+            return
+                grade >= courseGradeScheme.LowestGrade &&
+                grade <= courseGradeScheme.HighestGrade &&
+                grade % courseGradeScheme.Rounding == 0;
+
+        }
+
+        private void ShowErrorMessageBox(string message)
+        {
+            MessageBox.Show(message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void ShowInfoMessageBox(string message)
+        {
+            MessageBox.Show(message, "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private DialogResult ShowAskingMessageBox(string message)
+        {
+            return MessageBox.Show(message, "INFO",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+        }
+
+        private void dataGridView_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            // Exclude the first 2 columns which contain class and student name
+            // TODO: Find some way to avoid hardcoding this
+            if (e.ColumnIndex < 2) return;
+
+            float grade;
+            if ((!float.TryParse((string)e.FormattedValue, out grade) ||
+                !CheckValidGrade(grade)) &&
+                (e.FormattedValue.ToString().Trim() != ""))
+            {
+                dataGridView.CancelEdit();
+                ShowErrorMessageBox("Invalid grade! Please input again");
+            };
+        }
     }
 }

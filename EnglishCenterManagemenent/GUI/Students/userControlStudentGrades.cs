@@ -81,15 +81,6 @@ namespace EnglishCenterManagemenent.GUI
                     studentTestsResult[8],
                     studentTestsResult[9],
                 });
-
-                //foreach (Test test in ClassDAO.GetClassAllTests(studentsClassId))
-                //{
-                //    dataGridView.Columns.Add("Column" + columnIndex++, test.Name);
-                //    if (row["DateOfBirth"] != DBNull.Value)
-                //        AverageGrade = (float)Convert.ToDouble(row["AverageGrade"].ToString());
-                //}
-                //{
-                //});
             }
         }
 
@@ -134,16 +125,25 @@ namespace EnglishCenterManagemenent.GUI
         {
             // Exclude the first 2 columns which contain class and student name
             // TODO: Find some way to avoid hardcoding this
-            if (e.ColumnIndex < 2) return;
-
+            if (e.ColumnIndex < 2 || (e.FormattedValue.ToString().Trim() == ""))
+            {
+                dataGridView.CancelEdit();
+                return;
+            }
             float grade;
-            if ((!float.TryParse((string)e.FormattedValue, out grade) ||
-                !CheckValidGrade(grade)) &&
-                (e.FormattedValue.ToString().Trim() != ""))
+            if (!float.TryParse((string)e.FormattedValue, out grade) ||
+                !CheckValidGrade(grade))
             {
                 dataGridView.CancelEdit();
                 ShowErrorMessageBox("Invalid grade! Please input again");
-            };
+            }
+            else
+            {
+                TestResultDAO.InsertOrUpdateTestResult(
+                    studentList[e.RowIndex].StudentID,
+                    testList[e.ColumnIndex - 2].TestID,
+                    grade);
+            }
         }
     }
 }

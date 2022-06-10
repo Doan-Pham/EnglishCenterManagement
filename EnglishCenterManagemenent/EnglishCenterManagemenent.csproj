@@ -74,6 +74,7 @@
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\RoleDAO.cs" />
     <Compile Include="DAO\StudentDAO.cs" />
+    <Compile Include="DAO\TestResultDAO.cs" />
     <Compile Include="DAO\UsersDAO.cs" />
     <Compile Include="DTO\Class.cs" />
     <Compile Include="DTO\ClassTeacherSchedule.cs" />

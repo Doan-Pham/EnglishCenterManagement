@@ -48,13 +48,14 @@ namespace EnglishCenterManagemenent.GUI
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             if (dataGridView.SelectedRows.Count == 0) return;
+            Student currentStudent = dataGridView.CurrentRow.Tag as Student;
             DialogResult dialog = ShowAskingMessageBox
                 ("Are you sure you want to delete this student: " +
-                studentList.ElementAt(dataGridView.CurrentCell.RowIndex).FirstName + "?");
+                currentStudent.LastName + " " + currentStudent.FirstName + "?");
 
             if (dialog == DialogResult.OK)
             {
-                StudentDAO.DeleteStudent(studentList.ElementAt(dataGridView.CurrentCell.RowIndex));
+                StudentDAO.DeleteStudent(currentStudent);
                 ShowInfoMessageBox("Student deleted !");
                 FillDataGridView();
             }
@@ -154,6 +155,7 @@ namespace EnglishCenterManagemenent.GUI
                     student.Phone,
                     student.AverageGrade,
                 });
+                dataGridView.Rows[dataGridView.Rows.Count - 1].Tag = student;
             }
         }
 

@@ -20,7 +20,17 @@ namespace EnglishCenterManagemenent.DAO
 
             return students;
         }
+        public static List<Student> GetStudentsByClassId(int classId)
+        {
+            List<Student> students = new List<Student>();
 
+            DataTable data = DataProvider.Instance.ExecuteQuery(
+                "SELECT * FROM dbo.STUDENT WHERE ClassId = @ClassId", new object[] {classId});
+            foreach (DataRow row in data.Rows)
+                students.Add(new Student(row));
+
+            return students;
+        }
         public static string GetStudentClass(int studentId)
         {
             string className = "";
@@ -57,10 +67,10 @@ namespace EnglishCenterManagemenent.DAO
         public static void AddStudent(Student newStudent)
         {
             DataProvider.Instance.ExecuteScalar(
-                    "INSERT INTO STUDENT(ClassID, LastName, FirstName, " +
+                    "INSERT INTO STUDENT(ClassID, FirstName, LastName, " +
                     "Address, DateOfBirth, Phone, AverageGrade) " +
 
-                    "VALUES ( @ClassID , @LastName , @FirstName , " +
+                    "VALUES ( @ClassID , @FirstName , @LastName , " +
                     "@Address , @DateOfBirth , @Phone , @AverageGrade )",
 
                     new object[] {
@@ -100,5 +110,20 @@ namespace EnglishCenterManagemenent.DAO
                     newStudent.StudentID});
         }
 
+        public static float GetStudentTestResultByTestId(int studentId, int testId)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery(
+                "SELECT Grade FROM dbo.TESTRESULT " +
+                "WHERE TestId = @TestId AND StudentId = @StudentId", 
+                new object[] { testId, studentId });
+
+            float grade = -1;
+            if (data.Rows.Count > 0)
+            {
+                DataRow row = data.Rows[0];
+                grade = (float)Convert.ToDouble(row["Grade"].ToString());
+            }
+            return grade;
+        }
     }
 }

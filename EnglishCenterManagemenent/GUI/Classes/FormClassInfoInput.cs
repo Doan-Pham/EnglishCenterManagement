@@ -65,7 +65,7 @@ namespace EnglishCenterManagemenent.GUI.Classes
                 classId = currentClass.ClassID;
                 courseId = currentClass.CourseID;
                 textBoxClassName.Text = currentClass.Name;
-                textBoxNumberOfStudents.Text = currentClass.NumberOfStudents.ToString();
+                textBoxNumberOfStudents.Text = ClassDAO.GetNumberOfStudents(currentClass.ClassID).ToString();
                 dateTimePickerStartDate.Value = (DateTime) currentClass.StartDate;
                 dateTimePickerEndDate.Value = (DateTime) currentClass.EndDate;
 

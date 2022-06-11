@@ -34,7 +34,6 @@ namespace EnglishCenterManagemenent.GUI
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             if (dataGridView.SelectedRows.Count == 0) return;
-            FillDataGridView();
             DialogResult dialog = ShowAskingMessageBox
                 ("Are you sure you want to delete this employee: " +
                 employeeList.ElementAt(dataGridView.CurrentCell.RowIndex).FirstName + "?");

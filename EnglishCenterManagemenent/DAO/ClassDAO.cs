@@ -103,7 +103,7 @@ namespace EnglishCenterManagemenent.DAO
 
             DataTable data = DataProvider.Instance.ExecuteQuery(
                 "SELECT * FROM dbo.CLASS " +
-                "WHERE Name LIKE '%" + info + "%' OR StartDate LIKE '%" + info + "%' " +
+                "WHERE Name LIKE N'%" + info + "%' OR StartDate LIKE '%" + info + "%' " +
                 "OR EndDate LIKE '%" + info + "%' OR NumberOfStudents LIKE '%" + info + "%' ");
             foreach (DataRow row in data.Rows)
                 classList.Add(new Class(row));
@@ -195,6 +195,15 @@ namespace EnglishCenterManagemenent.DAO
                 "( AVG(Grade) FOR TestID IN  ( [1], [2], [3] )  ) AS pvt",
                 new object[] { classId, studentId });
                 
+        }
+
+        public static int GetNumberOfStudents(int classId)
+        {
+            return (int)DataProvider.Instance.ExecuteScalar(
+                "SELECT COUNT(*) " +
+                "FROM STUDENT " +
+                "WHERE ClassID = @ClassID",
+                new object[] { classId });
         }
     }
 }

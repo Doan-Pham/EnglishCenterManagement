@@ -97,7 +97,7 @@ namespace EnglishCenterManagemenent.GUI
                     classVar.Name,
                     $"{classVar.StartDate: dd/MM/yyyy}",
                     $"{classVar.EndDate: dd/MM/yyyy}",
-                    classVar.NumberOfStudents,
+                    ClassDAO.GetNumberOfStudents(classVar.ClassID),
 
                 });
             }
@@ -152,7 +152,7 @@ namespace EnglishCenterManagemenent.GUI
                     classVar.Name,
                     $"{classVar.StartDate: dd/MM/yyyy}",
                     $"{classVar.EndDate: dd/MM/yyyy}",
-                    classVar.NumberOfStudents,
+                    ClassDAO.GetNumberOfStudents(classVar.ClassID),
 
                 });
             }

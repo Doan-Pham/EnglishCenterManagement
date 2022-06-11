@@ -43,6 +43,7 @@ namespace EnglishCenterManagemenent
             labelCurrentUserControl.Text = "Courses";
             selectedPanel.Height = buttonCourse.Height;
             selectedPanel.Top = buttonCourse.Top;
+            userControlCourses.Focus();
         }
 
         private void buttonClass_Click(object sender, EventArgs e)
@@ -52,6 +53,7 @@ namespace EnglishCenterManagemenent
             selectedPanel.Height = buttonClass.Height;
             selectedPanel.Top = buttonClass.Top;
             userControlClasses.formMainInstance = this;
+            userControlClasses.Focus();
         }
 
         private void buttonEmployee_Click(object sender, EventArgs e)
@@ -60,6 +62,7 @@ namespace EnglishCenterManagemenent
             labelCurrentUserControl.Text = "Employees";
             selectedPanel.Height = buttonEmployee.Height;
             selectedPanel.Top = buttonEmployee.Top;
+            userControlEmployees.Focus();
         }
 
         private void buttonStudent_Click(object sender, EventArgs e)

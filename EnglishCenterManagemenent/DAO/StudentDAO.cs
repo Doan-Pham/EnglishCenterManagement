@@ -125,5 +125,11 @@ namespace EnglishCenterManagemenent.DAO
             }
             return grade;
         }
+
+        public static int GetNumberOfStudents()
+        {
+            return (int)DataProvider.Instance.ExecuteScalar(
+                "SELECT COUNT(*) FROM STUDENT");
+        }
     }
 }

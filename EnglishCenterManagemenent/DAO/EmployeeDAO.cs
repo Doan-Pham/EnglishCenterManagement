@@ -113,5 +113,12 @@ namespace EnglishCenterManagemenent.DAO
                     newEmployee.Email,
                     newEmployee.EmployeeID});
         }
+
+        public static int GetNumberOfTeachers()
+        {
+            return (int)DataProvider.Instance.ExecuteScalar(
+                "SELECT COUNT(*) FROM EMPLOYEE " +
+                "WHERE RoleID = (SELECT RoleID FROM ROLE WHERE Name = 'teacher')");
+        }
     }
 }

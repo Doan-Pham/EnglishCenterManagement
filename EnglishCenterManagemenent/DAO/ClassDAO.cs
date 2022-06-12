@@ -197,13 +197,19 @@ namespace EnglishCenterManagemenent.DAO
                 
         }
 
-        public static int GetNumberOfStudents(int classId)
+        public static int GetNumberOfStudentsInClass(int classId)
         {
             return (int)DataProvider.Instance.ExecuteScalar(
                 "SELECT COUNT(*) " +
                 "FROM STUDENT " +
                 "WHERE ClassID = @ClassID",
                 new object[] { classId });
+        }
+
+        public static int GetNumberOfClasses()
+        {
+            return (int)DataProvider.Instance.ExecuteScalar(
+                "SELECT COUNT(*) FROM CLASS");
         }
     }
 }

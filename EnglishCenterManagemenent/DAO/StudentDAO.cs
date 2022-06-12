@@ -85,9 +85,15 @@ namespace EnglishCenterManagemenent.DAO
 
         public static void DeleteStudent(Student deletedStudent)
         {
+            // before delete student, must delete test result of that student
+            DataProvider.Instance.ExecuteNonQuery(
+                "DELETE FROM TESTRESULT WHERE StudentID = @StudentID ",
+                new object[] { deletedStudent.StudentID });
+
             DataProvider.Instance.ExecuteNonQuery(
                 "DELETE FROM dbo.STUDENT WHERE StudentID = @StudentID",
                 new object[] { deletedStudent.StudentID });
+
         }
 
         public static void UpdateStudent(Student newStudent)

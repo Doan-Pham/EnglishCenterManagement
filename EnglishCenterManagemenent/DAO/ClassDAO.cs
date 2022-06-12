@@ -36,6 +36,11 @@ namespace EnglishCenterManagemenent.DAO
 
         public static void DeleteClass(Class deletedClass)
         {
+            // before delete class, must delete tests related to class
+            DataProvider.Instance.ExecuteNonQuery(
+                "DELETE FROM TEST WHERE ClassID = @ClassID",
+                new object[] { deletedClass.ClassID });
+
             DataProvider.Instance.ExecuteNonQuery(
                 "DELETE FROM dbo.CLASS WHERE ClassID = @ClassID",
                 new object[] { deletedClass.ClassID });

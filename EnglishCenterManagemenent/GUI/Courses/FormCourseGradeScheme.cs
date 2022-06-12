@@ -60,6 +60,15 @@ namespace EnglishCenterManagemenent.GUI.Courses
                 {
                     ShowErrorMessageBox("Invalid input, please input only floating numbers !");
                 }
+                else if (Int32.Parse(gradeSchemeHighestGradeText) < 0 || Int32.Parse(gradeSchemeLowestGradeText) < 0 ||
+                        Int32.Parse(gradeSchemeRoundingText) < 0)
+                {
+                    ShowErrorMessageBox("Grade can't be lower than 0 !");
+                }
+                else if (Int32.Parse(gradeSchemeRoundingText) == 0)
+                {
+                    ShowErrorMessageBox("Rounding must be greater than 0 !");
+                }
                 else if (gradeSchemeHighestGrade <= gradeSchemeLowestGrade + gradeSchemeRounding)
                 {
                     ShowErrorMessageBox("Invalid input, highest grade must be higher than lowest!");

@@ -26,7 +26,7 @@ namespace EnglishCenterManagemenent
             if (Login(username, password))
             {
                 //MessageBox.Show("OK");
-                FormMain formMain = new FormMain(username);
+                FormMain formMain = new FormMain(username, password);
                 this.Hide();
                 formMain.Show();
             }

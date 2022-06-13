@@ -70,6 +70,7 @@
     <Compile Include="DAO\ClassDAO.cs" />
     <Compile Include="DAO\CourseDAO.cs" />
     <Compile Include="DAO\EmployeeDAO.cs" />
+    <Compile Include="DAO\Global.cs" />
     <Compile Include="DAO\GradeSchemeDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\RoleDAO.cs" />

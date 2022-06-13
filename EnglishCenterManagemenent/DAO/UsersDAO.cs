@@ -51,6 +51,18 @@ namespace EnglishCenterManagemenent.DAO
             return roleName;
         }
 
+        // overload get roleName from Login
+        public static string GetUserRoleName(string username, string password)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery(
+                "SELECT Role.Name " +
+                "FROM ROLE, USERS " +
+                "WHERE USERS.Username = @username AND USERS.Password = @password " +
+                "AND USERS.RoleID = ROLE.RoleID",
+                new object[] { username, password });
+            return data.Rows[0][0].ToString();
+        }
+
 
         public static void AddUser(Users newUser)
         {

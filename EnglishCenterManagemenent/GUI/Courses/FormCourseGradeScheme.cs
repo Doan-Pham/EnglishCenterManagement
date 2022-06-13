@@ -40,6 +40,16 @@ namespace EnglishCenterManagemenent.GUI.Courses
             }
         }
 
+        private void FormCourseGradeScheme_Load(object sender, EventArgs e)
+        {
+            if (Global.userRole == "teacher" || Global.userRole == "receptionist")
+            {
+                // avoid teacher, receptionist add or delete grade scheme
+                buttonAdd.Enabled = false;
+                buttonSave.Visible = false;
+            }
+        }
+
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             gradeSchemeNameText = textBoxGradeSchemeName.Text.Trim();
@@ -123,5 +133,6 @@ namespace EnglishCenterManagemenent.GUI.Courses
             return MessageBox.Show(message, "INFO",
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
         }
+
     }
 }

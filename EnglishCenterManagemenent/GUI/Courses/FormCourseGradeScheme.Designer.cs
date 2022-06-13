@@ -203,7 +203,7 @@
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Border.Width = 0;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Be Vietnam ExtraBold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(48)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
@@ -301,7 +301,7 @@
             this.kryptonLabel1.Name = "kryptonLabel1";
             this.kryptonLabel1.Palette = this.kryptonPaletteGeneral;
             this.kryptonLabel1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.kryptonLabel1.Size = new System.Drawing.Size(331, 64);
+            this.kryptonLabel1.Size = new System.Drawing.Size(277, 53);
             this.kryptonLabel1.TabIndex = 0;
             this.kryptonLabel1.Values.Text = "Grade Scheme";
             // 
@@ -310,7 +310,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(108, 219);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(165, 35);
+            this.label7.Size = new System.Drawing.Size(141, 30);
             this.label7.TabIndex = 2;
             this.label7.Text = "Lowest Grade";
             // 
@@ -321,7 +321,7 @@
             this.textBoxLowestGrade.Name = "textBoxLowestGrade";
             this.textBoxLowestGrade.Palette = this.kryptonPaletteGeneral;
             this.textBoxLowestGrade.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.textBoxLowestGrade.Size = new System.Drawing.Size(167, 59);
+            this.textBoxLowestGrade.Size = new System.Drawing.Size(167, 55);
             this.textBoxLowestGrade.StateActive.Back.Color1 = System.Drawing.Color.White;
             this.textBoxLowestGrade.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(168)))), ((int)(((byte)(47)))));
             this.textBoxLowestGrade.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -534,7 +534,7 @@
             this.kryptonPaletteGrid.ButtonStyles.ButtonStandalone.StateCommon.Border.Width = 0;
             this.kryptonPaletteGrid.ButtonStyles.ButtonStandalone.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.kryptonPaletteGrid.ButtonStyles.ButtonStandalone.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonPaletteGrid.ButtonStyles.ButtonStandalone.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Be Vietnam ExtraBold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonPaletteGrid.ButtonStyles.ButtonStandalone.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonPaletteGrid.ButtonStyles.ButtonStandalone.StateCommon.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
             this.kryptonPaletteGrid.ButtonStyles.ButtonStandalone.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(48)))));
             this.kryptonPaletteGrid.ButtonStyles.ButtonStandalone.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
@@ -721,7 +721,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(363, 219);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(170, 35);
+            this.label6.Size = new System.Drawing.Size(145, 30);
             this.label6.TabIndex = 2;
             this.label6.Text = "Highest Grade";
             // 
@@ -732,7 +732,7 @@
             this.textBoxHighestGrade.Name = "textBoxHighestGrade";
             this.textBoxHighestGrade.Palette = this.kryptonPaletteGeneral;
             this.textBoxHighestGrade.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.textBoxHighestGrade.Size = new System.Drawing.Size(164, 59);
+            this.textBoxHighestGrade.Size = new System.Drawing.Size(164, 55);
             this.textBoxHighestGrade.StateActive.Back.Color1 = System.Drawing.Color.White;
             this.textBoxHighestGrade.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(168)))), ((int)(((byte)(47)))));
             this.textBoxHighestGrade.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -754,7 +754,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(593, 219);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(117, 35);
+            this.label10.Size = new System.Drawing.Size(100, 30);
             this.label10.TabIndex = 2;
             this.label10.Text = "Rounding";
             // 
@@ -765,7 +765,7 @@
             this.textBoxRounding.Name = "textBoxRounding";
             this.textBoxRounding.Palette = this.kryptonPaletteGeneral;
             this.textBoxRounding.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.textBoxRounding.Size = new System.Drawing.Size(152, 59);
+            this.textBoxRounding.Size = new System.Drawing.Size(152, 55);
             this.textBoxRounding.StateActive.Back.Color1 = System.Drawing.Color.White;
             this.textBoxRounding.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(168)))), ((int)(((byte)(47)))));
             this.textBoxRounding.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -791,7 +791,7 @@
             this.textBoxGradeSchemeId.Palette = this.kryptonPaletteGeneral;
             this.textBoxGradeSchemeId.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.textBoxGradeSchemeId.ReadOnly = true;
-            this.textBoxGradeSchemeId.Size = new System.Drawing.Size(262, 59);
+            this.textBoxGradeSchemeId.Size = new System.Drawing.Size(262, 55);
             this.textBoxGradeSchemeId.StateActive.Back.Color1 = System.Drawing.Color.White;
             this.textBoxGradeSchemeId.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(168)))), ((int)(((byte)(47)))));
             this.textBoxGradeSchemeId.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -813,7 +813,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(108, 104);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 35);
+            this.label1.Size = new System.Drawing.Size(176, 30);
             this.label1.TabIndex = 13;
             this.label1.Text = "Grade Scheme ID";
             // 
@@ -822,7 +822,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(512, 104);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(243, 35);
+            this.label2.Size = new System.Drawing.Size(208, 30);
             this.label2.TabIndex = 13;
             this.label2.Text = "Grade Scheme Name";
             // 
@@ -833,7 +833,7 @@
             this.textBoxGradeSchemeName.Name = "textBoxGradeSchemeName";
             this.textBoxGradeSchemeName.Palette = this.kryptonPaletteGeneral;
             this.textBoxGradeSchemeName.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.textBoxGradeSchemeName.Size = new System.Drawing.Size(262, 59);
+            this.textBoxGradeSchemeName.Size = new System.Drawing.Size(262, 55);
             this.textBoxGradeSchemeName.StateActive.Back.Color1 = System.Drawing.Color.White;
             this.textBoxGradeSchemeName.StateActive.Border.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(168)))), ((int)(((byte)(47)))));
             this.textBoxGradeSchemeName.StateActive.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -892,7 +892,7 @@
             // 
             // FormCourseGradeScheme
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 35F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(974, 732);
@@ -921,6 +921,7 @@
             this.Name = "FormCourseGradeScheme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Grade Scheme";
+            this.Load += new System.EventHandler(this.FormCourseGradeScheme_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGradeScheme)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

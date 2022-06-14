@@ -147,7 +147,13 @@ namespace EnglishCenterManagemenent.GUI
             // If we don't check this, the placeholer text becomes part of the filtering, which
             // is not wanted
             if (textBoxSearch.Text == TEXTBOX_SEARCH_PLACEHOLDER) return;
-            
+
+            if (textBoxSearch.Text.Trim() == "")
+            {
+                FillDataGridView();
+                return;
+            }
+
             dataGridView.Rows.Clear();
             courseList.Clear();
             foreach (Course course in CourseDAO.GetFilteredCourse(textBoxSearch.Text))

@@ -103,6 +103,12 @@ namespace EnglishCenterManagemenent.GUI
             // is not wanted
             if (textBoxSearch.Text == TEXTBOX_SEARCH_PLACEHOLDER) return;
 
+            if (textBoxSearch.Text.Trim() == "")
+            {
+                FillDataGridView();
+                return;
+            }
+
             dataGridView.Rows.Clear();
             employeeList.Clear();
             foreach (Employee employee in EmployeeDAO.GetFilteredEmployee(textBoxSearch.Text))

@@ -106,13 +106,12 @@ namespace EnglishCenterManagemenent.GUI
             dataGridView.Rows.Clear();
             classList.Clear();
 
-            List<Class> classes = ClassDAO.GetAllClass();
+            classList = ClassDAO.GetAllClass();
             if (Global.userRole == "teacher")
-                classes = ClassDAO.GetAllClassByTeacherId(currentTeacherId);
+                classList = ClassDAO.GetAllClassByTeacherId(currentTeacherId);
             
-            foreach (Class classVar in classes)
+            foreach (Class classVar in classList)
             {
-                classList.Add(classVar);
                 dataGridView.Rows.Add(new object[]
                 {
                     ClassDAO.GetClassCourseName(classVar.ClassID),
@@ -164,16 +163,21 @@ namespace EnglishCenterManagemenent.GUI
             // is not wanted
             if (textBoxSearch.Text == TEXTBOX_SEARCH_PLACEHOLDER) return;
 
+            if (textBoxSearch.Text.Trim() == "")
+            {
+                FillDataGridView();
+                return;
+            }
+
             dataGridView.Rows.Clear();
             classList.Clear();
 
-            List<Class> classes = ClassDAO.GetFilteredClass(textBoxSearch.Text);
+            classList = ClassDAO.GetFilteredClass(textBoxSearch.Text);
             if (Global.userRole == "teacher")
-                classes = ClassDAO.GetFilteredClassOfOneTeacher(textBoxSearch.Text, currentTeacherId);
+                classList = ClassDAO.GetFilteredClassOfOneTeacher(textBoxSearch.Text, currentTeacherId);
 
-            foreach (Class classVar in classes)
+            foreach (Class classVar in classList)
             {
-                classList.Add(classVar);
                 dataGridView.Rows.Add(new object[]
                 {
                     ClassDAO.GetClassCourseName(classVar.ClassID),

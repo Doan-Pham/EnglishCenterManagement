@@ -94,14 +94,23 @@ namespace EnglishCenterManagemenent.GUI
         {
             // If we don't check this, the placeholer text becomes part of the filtering, which
             // is not wanted
-            if (textBoxSearch.Text == TEXTBOX_SEARCH_PLACEHOLDER || 
-                textBoxSearch.Text.Trim() == "") return;
+            if (textBoxSearch.Text == TEXTBOX_SEARCH_PLACEHOLDER) return;
+            if (textBoxSearch.Text.Trim() == "")
+            {
+                FillDataGridView();
+                return;
+            }
 
             dataGridView.Rows.Clear();
             studentList.Clear();
-            foreach (Student student in StudentDAO.GetFilteredStudent(textBoxSearch.Text))
+
+            if (studentsClassId == -1) 
+                studentList = StudentDAO.GetFilteredStudent(textBoxSearch.Text);
+            else
+                studentList = StudentDAO.GetFilteredStudentOfOneClass(textBoxSearch.Text, studentsClassId);
+
+            foreach (Student student in studentList)
             {
-                studentList.Add(student);
                 dataGridView.Rows.Add(new object[]
                 {
                     StudentDAO.GetStudentClass(student.StudentID),

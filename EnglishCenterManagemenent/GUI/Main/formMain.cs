@@ -18,6 +18,8 @@ namespace EnglishCenterManagemenent
             InitializeComponent();
             labelCurrentUser.Text = username;
             selectedPanel.StateCommon.Color1 = Color.Orange;
+            Global.userName = username;
+            Global.password = password;
             Global.userRole = UsersDAO.GetUserRoleName(username, password);
         }
 

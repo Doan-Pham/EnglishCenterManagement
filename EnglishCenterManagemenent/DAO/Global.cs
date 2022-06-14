@@ -9,5 +9,7 @@ namespace EnglishCenterManagemenent.DAO
     class Global
     {
         public static string userRole;
+        public static string userName;
+        public static string password;
     }
 }

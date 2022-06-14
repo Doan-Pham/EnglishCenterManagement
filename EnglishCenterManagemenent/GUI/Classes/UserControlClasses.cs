@@ -25,6 +25,8 @@ namespace EnglishCenterManagemenent.GUI
 
         // A list to keep track of all the classVars
         private List<Class> classList = new List<Class>();
+        private int currentTeacherId = -1;
+
         public UserControlClasses()
         {
             InitializeComponent();
@@ -39,7 +41,8 @@ namespace EnglishCenterManagemenent.GUI
                 buttonAdd.Hide();
                 buttonUpdate.Hide();
                 buttonDelete.Hide();
-                buttonStudentsList.Location = new Point(666, 37); 
+                buttonStudentsList.Location = new Point(666, 37);
+                currentTeacherId = EmployeeDAO.GetEmployeeIdByUserName(Global.userName);
             }
             FillDataGridView();
         }
@@ -55,6 +58,13 @@ namespace EnglishCenterManagemenent.GUI
         {
             if (dataGridView.SelectedRows.Count == 0) return;
             Class currentClass = dataGridView.CurrentRow.Tag as Class;
+            if (ClassDAO.GetNumberOfStudentsInClass(currentClass.ClassID) > 0)
+            {
+                ShowErrorMessageBox("Can't delete class because there are still students studying. " +
+                    "Delete all the students first or move them to other classes.");
+                return;
+            }
+
             DialogResult dialog = ShowAskingMessageBox
                 ("Are you sure you want to delete this class: " +
                 currentClass.Name + "?");
@@ -95,7 +105,12 @@ namespace EnglishCenterManagemenent.GUI
         {
             dataGridView.Rows.Clear();
             classList.Clear();
-            foreach (Class classVar in ClassDAO.GetAllClass())
+
+            List<Class> classes = ClassDAO.GetAllClass();
+            if (Global.userRole == "teacher")
+                classes = ClassDAO.GetAllClassByTeacherId(currentTeacherId);
+            
+            foreach (Class classVar in classes)
             {
                 classList.Add(classVar);
                 dataGridView.Rows.Add(new object[]
@@ -151,7 +166,12 @@ namespace EnglishCenterManagemenent.GUI
 
             dataGridView.Rows.Clear();
             classList.Clear();
-            foreach (Class classVar in ClassDAO.GetFilteredClass(textBoxSearch.Text))
+
+            List<Class> classes = ClassDAO.GetFilteredClass(textBoxSearch.Text);
+            if (Global.userRole == "teacher")
+                classes = ClassDAO.GetFilteredClassOfOneTeacher(textBoxSearch.Text, currentTeacherId);
+
+            foreach (Class classVar in classes)
             {
                 classList.Add(classVar);
                 dataGridView.Rows.Add(new object[]

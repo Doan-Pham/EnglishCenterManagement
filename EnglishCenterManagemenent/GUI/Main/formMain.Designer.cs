@@ -518,7 +518,7 @@ namespace EnglishCenterManagemenent
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 39F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1428, 894);
@@ -552,13 +552,7 @@ namespace EnglishCenterManagemenent
         private ComponentFactory.Krypton.Toolkit.KryptonPanel panelCurrentUser;
         private System.Windows.Forms.PictureBox pictureBoxCurrentUser;
         private System.Windows.Forms.Label labelCurrentUser;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton buttonDashboard;
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPaletteGeneral;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton buttonStudent;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton buttonEmployee;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton buttonClass;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton buttonCourse;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton buttonUser;
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Panel panelCurrentUserControl;
         private GUI.UserControlDashboard userControlDashboard;
@@ -572,5 +566,11 @@ namespace EnglishCenterManagemenent
         private ComponentFactory.Krypton.Toolkit.KryptonPanel selectedPanel;
         public GUI.UserControlStudentGrades userControlStudentGrades;
         public GUI.UserControlStudents userControlStudents;
+        public ComponentFactory.Krypton.Toolkit.KryptonButton buttonDashboard;
+        public ComponentFactory.Krypton.Toolkit.KryptonButton buttonStudent;
+        public ComponentFactory.Krypton.Toolkit.KryptonButton buttonEmployee;
+        public ComponentFactory.Krypton.Toolkit.KryptonButton buttonClass;
+        public ComponentFactory.Krypton.Toolkit.KryptonButton buttonCourse;
+        public ComponentFactory.Krypton.Toolkit.KryptonButton buttonUser;
     }
 }

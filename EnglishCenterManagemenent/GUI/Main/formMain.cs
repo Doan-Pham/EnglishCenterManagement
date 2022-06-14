@@ -21,6 +21,7 @@ namespace EnglishCenterManagemenent
             Global.userName = username;
             Global.password = password;
             Global.userRole = UsersDAO.GetUserRoleName(username, password);
+            userControlDashboard.formMainInstance = this;
         }
 
         // Check role of user
@@ -64,6 +65,8 @@ namespace EnglishCenterManagemenent
             labelCurrentUserControl.Text = "Dashboard";
             selectedPanel.Height = buttonDashboard.Height;
             selectedPanel.Top = buttonDashboard.Top;
+            userControlDashboard.formMainInstance = this;
+            userControlDashboard.Focus();
         }
 
         private void buttonUser_Click(object sender, EventArgs e)

@@ -25,16 +25,32 @@ namespace EnglishCenterManagemenent
 
         private void FormMain_Load(object sender, EventArgs e)
         {
+            buttonDashboard.Show();
+            buttonUser.Show();
+            buttonCourse.Show();
+            buttonClass.Show();
+            buttonEmployee.Show();
+            buttonStudent.Show();
+
             if (Global.userRole == "teacher")
             {
-                buttonUser.Enabled = false;
-                //buttonCourse.Enabled = false;
-                buttonEmployee.Enabled = false;
-                
+                buttonDashboard.Hide();
+                buttonUser.Hide();
+                buttonCourse.Hide();
+                buttonEmployee.Hide();
+                buttonStudent.Hide();
+                buttonClass.PerformClick();
             }
+
             else if (Global.userRole == "receptionist")
             {
-                buttonUser.Enabled = false;
+                userControlStudents.BringToFront();
+                buttonDashboard.Hide();
+                buttonUser.Hide();
+                buttonCourse.Hide();
+                buttonClass.Hide();
+                buttonEmployee.Hide();
+                buttonStudent.PerformClick();
             }
         }
 

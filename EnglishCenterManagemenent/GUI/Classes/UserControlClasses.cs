@@ -33,11 +33,13 @@ namespace EnglishCenterManagemenent.GUI
 
         private void UserControlClasses_Load(object sender, EventArgs e)
         {
+            buttonStudentsList.Location = new Point(666, 132);
             if (Global.userRole == "teacher")
             {
-                buttonAdd.Enabled = false;
-                buttonUpdate.Enabled = false;
-                buttonDelete.Enabled = false;
+                buttonAdd.Hide();
+                buttonUpdate.Hide();
+                buttonDelete.Hide();
+                buttonStudentsList.Location = new Point(666, 37); 
             }
             FillDataGridView();
         }

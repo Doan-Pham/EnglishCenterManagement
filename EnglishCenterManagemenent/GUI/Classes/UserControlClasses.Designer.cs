@@ -53,7 +53,7 @@
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Palette = this.kryptonPaletteGeneral;
             this.textBoxSearch.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.textBoxSearch.Size = new System.Drawing.Size(477, 63);
+            this.textBoxSearch.Size = new System.Drawing.Size(477, 67);
             this.textBoxSearch.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.textBoxSearch.StateCommon.Border.Color1 = System.Drawing.Color.Transparent;
             this.textBoxSearch.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -406,7 +406,7 @@
             this.Column5.MinimumWidth = 8;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 177;
+            this.Column5.Width = 207;
             // 
             // Column6
             // 
@@ -414,7 +414,7 @@
             this.Column6.MinimumWidth = 8;
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
-            this.Column6.Width = 129;
+            this.Column6.Width = 151;
             // 
             // Column1
             // 
@@ -423,7 +423,7 @@
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.Width = 161;
+            this.Column1.Width = 189;
             // 
             // Column2
             // 
@@ -432,7 +432,7 @@
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column2.Width = 151;
+            this.Column2.Width = 175;
             // 
             // Column3
             // 
@@ -441,7 +441,7 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column3.Width = 140;
+            this.Column3.Width = 163;
             // 
             // Column4
             // 
@@ -450,7 +450,7 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column4.Width = 235;
+            this.Column4.Width = 275;
             // 
             // panelSearchIcon
             // 
@@ -485,7 +485,7 @@
             // 
             // UserControlClasses
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 39F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panelSearchIcon);

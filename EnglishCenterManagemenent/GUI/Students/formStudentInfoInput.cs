@@ -71,6 +71,8 @@ namespace EnglishCenterManagemenent.GUI
             {
                 if (CheckEmptyFields())
                     ShowErrorMessageBox("Empty input, please fill out all the required fields !");
+                else if (DateTime.Parse(studentDateOfBirthText) > DateTime.Today)
+                    ShowErrorMessageBox("Date of birth must be in the past !");
                 else
                 {
                     classId = classList.ElementAt(comboBoxClass.SelectedIndex).ClassID;

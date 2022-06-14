@@ -36,6 +36,11 @@ namespace EnglishCenterManagemenent.DAO
 
         public static void DeleteClass(Class deletedClass)
         {
+            // before delete class, must delete tests related to class
+            DataProvider.Instance.ExecuteNonQuery(
+                "DELETE FROM TEST WHERE ClassID = @ClassID",
+                new object[] { deletedClass.ClassID });
+
             DataProvider.Instance.ExecuteNonQuery(
                 "DELETE FROM dbo.CLASS WHERE ClassID = @ClassID",
                 new object[] { deletedClass.ClassID });
@@ -103,7 +108,7 @@ namespace EnglishCenterManagemenent.DAO
 
             DataTable data = DataProvider.Instance.ExecuteQuery(
                 "SELECT * FROM dbo.CLASS " +
-                "WHERE Name LIKE '%" + info + "%' OR StartDate LIKE '%" + info + "%' " +
+                "WHERE Name LIKE N'%" + info + "%' OR StartDate LIKE '%" + info + "%' " +
                 "OR EndDate LIKE '%" + info + "%' OR NumberOfStudents LIKE '%" + info + "%' ");
             foreach (DataRow row in data.Rows)
                 classList.Add(new Class(row));
@@ -195,6 +200,21 @@ namespace EnglishCenterManagemenent.DAO
                 "( AVG(Grade) FOR TestID IN  ( [1], [2], [3] )  ) AS pvt",
                 new object[] { classId, studentId });
                 
+        }
+
+        public static int GetNumberOfStudentsInClass(int classId)
+        {
+            return (int)DataProvider.Instance.ExecuteScalar(
+                "SELECT COUNT(*) " +
+                "FROM STUDENT " +
+                "WHERE ClassID = @ClassID",
+                new object[] { classId });
+        }
+
+        public static int GetNumberOfClasses()
+        {
+            return (int)DataProvider.Instance.ExecuteScalar(
+                "SELECT COUNT(*) FROM CLASS");
         }
     }
 }

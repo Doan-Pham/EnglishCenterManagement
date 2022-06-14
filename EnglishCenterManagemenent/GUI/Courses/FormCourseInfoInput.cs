@@ -72,10 +72,12 @@ namespace EnglishCenterManagemenent.GUI.Courses
             DialogResult dialog = ShowAskingMessageBox("Are you sure you want to save ?");
             if (dialog == DialogResult.OK)
             {
-                if (CheckEmptyFields()) 
+                if (CheckEmptyFields())
                     ShowErrorMessageBox("Empty input, please fill out all the required fields !");
-                else if (!CheckValidStandardGrade()) 
+                else if (!CheckValidStandardGrade())
                     ShowErrorMessageBox("Invalid standard grade, please check again !");
+                else if (int.Parse(courseLessonNumText) <= 0 || int.Parse(courseWeekNumText) <= 0)
+                    ShowErrorMessageBox("Number of lessons and weeks must be greater than 0 !");
                 else
                 {
                     gradeSchemeId = gradeSchemeList
@@ -87,9 +89,9 @@ namespace EnglishCenterManagemenent.GUI.Courses
                     numberOfWeeks = int.Parse(courseWeekNumText);
                     tuition = int.Parse(courseTuitionText);
                     standardGrade = float.Parse(courseStandardGradeText);
-                    
+
                     Course newCourse = new Course(
-                        courseId, gradeSchemeId, name, description, 
+                        courseId, gradeSchemeId, name, description,
                         numberOfLessons, numberOfWeeks, tuition, standardGrade);
 
                     if (isAddingNewData) CourseDAO.AddCourse(newCourse);

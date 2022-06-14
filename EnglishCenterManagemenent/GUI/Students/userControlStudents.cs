@@ -180,6 +180,12 @@ namespace EnglishCenterManagemenent.GUI
 
         private void UserControlStudents_Load(object sender, EventArgs e)
         {
+            if (Global.userRole == "teacher")
+            {
+                buttonAdd.Enabled = false;
+                buttonDelete.Enabled = false;
+                buttonUpdate.Enabled = false;
+            }
             if (studentsClassId == -1)
             {
                 buttonAttendance.Visible = false;

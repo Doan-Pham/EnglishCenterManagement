@@ -24,6 +24,20 @@ namespace EnglishCenterManagemenent.GUI
             FillDataGridView();
         }
 
+        private void UserControlEmployees_Load(object sender, EventArgs e)
+        {
+            if (Global.userRole == "receptionist")
+            {
+                buttonAdd.Enabled = false;
+                buttonDelete.Enabled = false;
+
+                if (Global.userRole == "teacher")
+                    buttonUpdate.Enabled = false;
+            }
+            FillDataGridView();
+        }
+
+
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             FormEmployeeInfoInput formEmployeeInfoInput = new FormEmployeeInfoInput(null);
@@ -34,7 +48,6 @@ namespace EnglishCenterManagemenent.GUI
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             if (dataGridView.SelectedRows.Count == 0) return;
-            FillDataGridView();
             DialogResult dialog = ShowAskingMessageBox
                 ("Are you sure you want to delete this employee: " +
                 employeeList.ElementAt(dataGridView.CurrentCell.RowIndex).FirstName + "?");
@@ -134,5 +147,7 @@ namespace EnglishCenterManagemenent.GUI
             return MessageBox.Show(message, "INFO",
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
         }
+
+        
     }
 }

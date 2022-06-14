@@ -84,9 +84,9 @@ namespace EnglishCenterManagemenent.DAO
 
             DataTable data = DataProvider.Instance.ExecuteQuery(
                 "SELECT * FROM dbo.EMPLOYEE " +
-                "WHERE FirstName LIKE '%" + info + "%' OR LastName LIKE '%" + info + "%' " +
-                "OR Address LIKE '%" + info + "%' OR DateOfBirth LIKE '%" + info + "%' " +
-                "OR Phone LIKE '%" + info + "%' OR Certificate LIKE '%" + info + "%' " +
+                "WHERE FirstName LIKE N'%" + info + "%' OR LastName LIKE N'%" + info + "%' " +
+                "OR Address LIKE N'%" + info + "%' OR DateOfBirth LIKE '%" + info + "%' " +
+                "OR Phone LIKE '%" + info + "%' OR Certificate LIKE N'%" + info + "%' " +
                 "OR Email LIKE '%" + info + "%' ");
             foreach (DataRow row in data.Rows)
                 employees.Add(new Employee(row));
@@ -112,6 +112,13 @@ namespace EnglishCenterManagemenent.DAO
                     newEmployee.Certificate,
                     newEmployee.Email,
                     newEmployee.EmployeeID});
+        }
+
+        public static int GetNumberOfTeachers()
+        {
+            return (int)DataProvider.Instance.ExecuteScalar(
+                "SELECT COUNT(*) FROM EMPLOYEE " +
+                "WHERE RoleID = (SELECT RoleID FROM ROLE WHERE Name = 'teacher')");
         }
     }
 }

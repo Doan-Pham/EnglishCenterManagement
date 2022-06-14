@@ -85,9 +85,15 @@ namespace EnglishCenterManagemenent.DAO
 
         public static void DeleteStudent(Student deletedStudent)
         {
+            // before delete student, must delete test result of that student
+            DataProvider.Instance.ExecuteNonQuery(
+                "DELETE FROM TESTRESULT WHERE StudentID = @StudentID ",
+                new object[] { deletedStudent.StudentID });
+
             DataProvider.Instance.ExecuteNonQuery(
                 "DELETE FROM dbo.STUDENT WHERE StudentID = @StudentID",
                 new object[] { deletedStudent.StudentID });
+
         }
 
         public static void UpdateStudent(Student newStudent)
@@ -124,6 +130,12 @@ namespace EnglishCenterManagemenent.DAO
                 grade = (float)Convert.ToDouble(row["Grade"].ToString());
             }
             return grade;
+        }
+
+        public static int GetNumberOfStudents()
+        {
+            return (int)DataProvider.Instance.ExecuteScalar(
+                "SELECT COUNT(*) FROM STUDENT");
         }
     }
 }

@@ -77,6 +77,8 @@ namespace EnglishCenterManagemenent.GUI.Employees
             {
                 if (CheckEmptyFields())
                     ShowErrorMessageBox("Empty input, please fill out all the required fields !");
+                else if (DateTime.Parse(employeeDateOfBirthText) > DateTime.Today)
+                    ShowErrorMessageBox("Date of birth must be in the past !");
                 else
                 {
                     roleId = roleList.ElementAt(comboBoxRole.SelectedIndex).RoleID;

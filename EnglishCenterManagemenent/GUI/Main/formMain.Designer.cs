@@ -45,16 +45,16 @@ namespace EnglishCenterManagemenent
             this.labelCurrentUser = new System.Windows.Forms.Label();
             this.pictureBoxCurrentUser = new System.Windows.Forms.PictureBox();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.panelCurrentUserControl = new System.Windows.Forms.Panel();
-            this.labelCurrentUserControl = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.userControlStudentGrades = new EnglishCenterManagemenent.GUI.UserControlStudentGrades();
             this.userControlDashboard = new EnglishCenterManagemenent.GUI.UserControlDashboard();
+            this.userControlStudentGrades = new EnglishCenterManagemenent.GUI.UserControlStudentGrades();
             this.userControlStudents = new EnglishCenterManagemenent.GUI.UserControlStudents();
             this.userControlClasses = new EnglishCenterManagemenent.GUI.UserControlClasses();
             this.userControlStudentAttendance = new EnglishCenterManagemenent.GUI.UserControlStudentAttendance();
             this.userControlCourses = new EnglishCenterManagemenent.GUI.UserControlCourses();
             this.userControlUsers = new EnglishCenterManagemenent.GUI.UserControlUsers();
             this.userControlEmployees = new EnglishCenterManagemenent.GUI.UserControlEmployees();
+            this.panelCurrentUserControl = new System.Windows.Forms.Panel();
+            this.labelCurrentUserControl = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.selectedPanel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelCurrentUser)).BeginInit();
@@ -368,7 +368,7 @@ namespace EnglishCenterManagemenent
             this.labelCurrentUser.ForeColor = System.Drawing.Color.Black;
             this.labelCurrentUser.Location = new System.Drawing.Point(98, 181);
             this.labelCurrentUser.Name = "labelCurrentUser";
-            this.labelCurrentUser.Size = new System.Drawing.Size(144, 32);
+            this.labelCurrentUser.Size = new System.Drawing.Size(124, 29);
             this.labelCurrentUser.TabIndex = 0;
             this.labelCurrentUser.Text = "Username";
             // 
@@ -400,42 +400,6 @@ namespace EnglishCenterManagemenent
             this.panelMain.Size = new System.Drawing.Size(1110, 788);
             this.panelMain.TabIndex = 1;
             // 
-            // panelCurrentUserControl
-            // 
-            this.panelCurrentUserControl.BackColor = System.Drawing.Color.Transparent;
-            this.panelCurrentUserControl.Controls.Add(this.labelCurrentUserControl);
-            this.panelCurrentUserControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelCurrentUserControl.Location = new System.Drawing.Point(318, 0);
-            this.panelCurrentUserControl.Name = "panelCurrentUserControl";
-            this.panelCurrentUserControl.Size = new System.Drawing.Size(1110, 100);
-            this.panelCurrentUserControl.TabIndex = 2;
-            // 
-            // labelCurrentUserControl
-            // 
-            this.labelCurrentUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelCurrentUserControl.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
-            this.labelCurrentUserControl.Location = new System.Drawing.Point(0, 0);
-            this.labelCurrentUserControl.Name = "labelCurrentUserControl";
-            this.labelCurrentUserControl.Palette = this.kryptonPaletteGeneral;
-            this.labelCurrentUserControl.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.labelCurrentUserControl.Size = new System.Drawing.Size(1110, 100);
-            this.labelCurrentUserControl.StateNormal.Padding = new System.Windows.Forms.Padding(30, -1, -1, -1);
-            this.labelCurrentUserControl.StateNormal.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
-            this.labelCurrentUserControl.StateNormal.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
-            this.labelCurrentUserControl.TabIndex = 0;
-            this.labelCurrentUserControl.Values.Text = "Dashboard";
-            // 
-            // userControlStudentGrades
-            // 
-            this.userControlStudentGrades.BackColor = System.Drawing.Color.White;
-            this.userControlStudentGrades.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControlStudentGrades.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userControlStudentGrades.Location = new System.Drawing.Point(0, 0);
-            this.userControlStudentGrades.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.userControlStudentGrades.Name = "userControlStudentGrades";
-            this.userControlStudentGrades.Size = new System.Drawing.Size(1110, 788);
-            this.userControlStudentGrades.TabIndex = 14;
-            // 
             // userControlDashboard
             // 
             this.userControlDashboard.BackColor = System.Drawing.Color.White;
@@ -447,6 +411,17 @@ namespace EnglishCenterManagemenent
             this.userControlDashboard.Padding = new System.Windows.Forms.Padding(10);
             this.userControlDashboard.Size = new System.Drawing.Size(1110, 788);
             this.userControlDashboard.TabIndex = 2;
+            // 
+            // userControlStudentGrades
+            // 
+            this.userControlStudentGrades.BackColor = System.Drawing.Color.White;
+            this.userControlStudentGrades.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControlStudentGrades.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userControlStudentGrades.Location = new System.Drawing.Point(0, 0);
+            this.userControlStudentGrades.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.userControlStudentGrades.Name = "userControlStudentGrades";
+            this.userControlStudentGrades.Size = new System.Drawing.Size(1110, 788);
+            this.userControlStudentGrades.TabIndex = 14;
             // 
             // userControlStudents
             // 
@@ -516,9 +491,34 @@ namespace EnglishCenterManagemenent
             this.userControlEmployees.Size = new System.Drawing.Size(1110, 788);
             this.userControlEmployees.TabIndex = 10;
             // 
+            // panelCurrentUserControl
+            // 
+            this.panelCurrentUserControl.BackColor = System.Drawing.Color.Transparent;
+            this.panelCurrentUserControl.Controls.Add(this.labelCurrentUserControl);
+            this.panelCurrentUserControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelCurrentUserControl.Location = new System.Drawing.Point(318, 0);
+            this.panelCurrentUserControl.Name = "panelCurrentUserControl";
+            this.panelCurrentUserControl.Size = new System.Drawing.Size(1110, 100);
+            this.panelCurrentUserControl.TabIndex = 2;
+            // 
+            // labelCurrentUserControl
+            // 
+            this.labelCurrentUserControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelCurrentUserControl.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.Custom1;
+            this.labelCurrentUserControl.Location = new System.Drawing.Point(0, 0);
+            this.labelCurrentUserControl.Name = "labelCurrentUserControl";
+            this.labelCurrentUserControl.Palette = this.kryptonPaletteGeneral;
+            this.labelCurrentUserControl.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.labelCurrentUserControl.Size = new System.Drawing.Size(1110, 100);
+            this.labelCurrentUserControl.StateNormal.Padding = new System.Windows.Forms.Padding(30, -1, -1, -1);
+            this.labelCurrentUserControl.StateNormal.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Near;
+            this.labelCurrentUserControl.StateNormal.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
+            this.labelCurrentUserControl.TabIndex = 0;
+            this.labelCurrentUserControl.Values.Text = "Dashboard";
+            // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 26F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1428, 894);
@@ -532,6 +532,7 @@ namespace EnglishCenterManagemenent
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "English Center Management Application";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMain_FormClosing);
+            this.Load += new System.EventHandler(this.FormMain_Load);
             this.panelMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.selectedPanel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelCurrentUser)).EndInit();

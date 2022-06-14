@@ -33,6 +33,12 @@ namespace EnglishCenterManagemenent.GUI
 
         private void UserControlClasses_Load(object sender, EventArgs e)
         {
+            if (Global.userRole == "teacher")
+            {
+                buttonAdd.Enabled = false;
+                buttonUpdate.Enabled = false;
+                buttonDelete.Enabled = false;
+            }
             FillDataGridView();
         }
 
@@ -97,7 +103,7 @@ namespace EnglishCenterManagemenent.GUI
                     classVar.Name,
                     $"{classVar.StartDate: dd/MM/yyyy}",
                     $"{classVar.EndDate: dd/MM/yyyy}",
-                    classVar.NumberOfStudents,
+                    ClassDAO.GetNumberOfStudentsInClass(classVar.ClassID),
 
                 });
             }
@@ -152,12 +158,12 @@ namespace EnglishCenterManagemenent.GUI
                     classVar.Name,
                     $"{classVar.StartDate: dd/MM/yyyy}",
                     $"{classVar.EndDate: dd/MM/yyyy}",
-                    classVar.NumberOfStudents,
+                    ClassDAO.GetNumberOfStudentsInClass(classVar.ClassID),
 
                 });
             }
         }
 
-
+        
     }
 }

@@ -53,7 +53,7 @@ namespace EnglishCenterManagemenent.GUI
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Palette = this.kryptonPaletteGeneral;
             this.textBoxSearch.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.textBoxSearch.Size = new System.Drawing.Size(477, 67);
+            this.textBoxSearch.Size = new System.Drawing.Size(477, 63);
             this.textBoxSearch.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.textBoxSearch.StateCommon.Border.Color1 = System.Drawing.Color.Transparent;
             this.textBoxSearch.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -211,7 +211,7 @@ namespace EnglishCenterManagemenent.GUI
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Border.Width = 0;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Content.ShortText.Color2 = System.Drawing.Color.White;
-            this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Be Vietnam ExtraBold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateCommon.Content.ShortText.Hint = ComponentFactory.Krypton.Toolkit.PaletteTextHint.AntiAlias;
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(200)))), ((int)(((byte)(48)))));
             this.kryptonPaletteGeneral.ButtonStyles.ButtonStandalone.StateNormal.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(115)))), ((int)(((byte)(53)))));
@@ -406,7 +406,7 @@ namespace EnglishCenterManagemenent.GUI
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.Width = 130;
+            this.Column1.Width = 112;
             // 
             // Column2
             // 
@@ -415,7 +415,7 @@ namespace EnglishCenterManagemenent.GUI
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column2.Width = 265;
+            this.Column2.Width = 225;
             // 
             // Column3
             // 
@@ -424,7 +424,7 @@ namespace EnglishCenterManagemenent.GUI
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column3.Width = 252;
+            this.Column3.Width = 215;
             // 
             // Column4
             // 
@@ -433,7 +433,7 @@ namespace EnglishCenterManagemenent.GUI
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column4.Width = 140;
+            this.Column4.Width = 120;
             // 
             // Column5
             // 
@@ -442,7 +442,7 @@ namespace EnglishCenterManagemenent.GUI
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column5.Width = 234;
+            this.Column5.Width = 200;
             // 
             // panelSearchIcon
             // 
@@ -477,7 +477,7 @@ namespace EnglishCenterManagemenent.GUI
             // 
             // UserControlCourses
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 39F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.buttonGradeSchemes);
@@ -491,6 +491,7 @@ namespace EnglishCenterManagemenent.GUI
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "UserControlCourses";
             this.Size = new System.Drawing.Size(1110, 788);
+            this.Load += new System.EventHandler(this.UserControlCourses_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelSearchIcon)).EndInit();
             this.ResumeLayout(false);

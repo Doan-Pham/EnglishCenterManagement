@@ -40,6 +40,16 @@ namespace EnglishCenterManagemenent.GUI.Courses
             }
         }
 
+        private void FormCourseGradeScheme_Load(object sender, EventArgs e)
+        {
+            if (Global.userRole == "teacher" || Global.userRole == "receptionist")
+            {
+                // avoid teacher, receptionist add or delete grade scheme
+                buttonAdd.Enabled = false;
+                buttonSave.Visible = false;
+            }
+        }
+
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             gradeSchemeNameText = textBoxGradeSchemeName.Text.Trim();
@@ -59,6 +69,15 @@ namespace EnglishCenterManagemenent.GUI.Courses
                     !float.TryParse(gradeSchemeRoundingText, out gradeSchemeRounding))
                 {
                     ShowErrorMessageBox("Invalid input, please input only floating numbers !");
+                }
+                else if (Int32.Parse(gradeSchemeHighestGradeText) < 0 || Int32.Parse(gradeSchemeLowestGradeText) < 0 ||
+                        Int32.Parse(gradeSchemeRoundingText) < 0)
+                {
+                    ShowErrorMessageBox("Grade can't be lower than 0 !");
+                }
+                else if (Int32.Parse(gradeSchemeRoundingText) == 0)
+                {
+                    ShowErrorMessageBox("Rounding must be greater than 0 !");
                 }
                 else if (gradeSchemeHighestGrade <= gradeSchemeLowestGrade + gradeSchemeRounding)
                 {
@@ -114,5 +133,6 @@ namespace EnglishCenterManagemenent.GUI.Courses
             return MessageBox.Show(message, "INFO",
                 MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
         }
+
     }
 }

@@ -30,6 +30,12 @@ namespace EnglishCenterManagemenent.GUI
 
         private void UserControlCourses_Load(object sender, EventArgs e)
         {
+            if (Global.userRole == "teacher" || Global.userRole == "receptionist")
+            {
+                buttonAdd.Enabled = false;
+                buttonUpdate.Enabled = false;
+                buttonDelete.Enabled = false;
+            }
             FillDataGridView();
         }
 
@@ -146,5 +152,7 @@ namespace EnglishCenterManagemenent.GUI
                 });
             }
         }
+
+        
     }
 }

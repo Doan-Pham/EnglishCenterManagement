@@ -55,7 +55,15 @@ namespace EnglishCenterManagemenent.GUI
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             if (dataGridView.SelectedRows.Count == 0) return;
+
             Course currentCourse = dataGridView.CurrentRow.Tag as Course;
+            if (CourseDAO.GetCourseNumberOfClasses(currentCourse.CourseID) > 0)
+            {
+                ShowErrorMessageBox("Can't delete course because there are classes in this course. " +
+    "Delete all the course first or move them to other courses.");
+                return;
+            }
+
             DialogResult dialog = ShowAskingMessageBox
                 ("Are you sure you want to delete this course: " +
                 currentCourse.Name + "?");

@@ -52,15 +52,15 @@ namespace EnglishCenterManagemenent.GUI
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             if (dataGridView.SelectedRows.Count == 0) return;
-           
+            Class currentClass = dataGridView.CurrentRow.Tag as Class;
             DialogResult dialog = ShowAskingMessageBox
                 ("Are you sure you want to delete this class: " +
-                classList.ElementAt(dataGridView.CurrentCell.RowIndex).Name + "?");
+                currentClass.Name + "?");
 
             if (dialog == DialogResult.OK)
             {
-                ClassDAO.DeleteClassTeachers(classList.ElementAt(dataGridView.CurrentCell.RowIndex).ClassID);
-                ClassDAO.DeleteClass(classList.ElementAt(dataGridView.CurrentCell.RowIndex));
+                ClassDAO.DeleteClassTeachers(currentClass.ClassID);
+                ClassDAO.DeleteClass(currentClass);
                 ShowInfoMessageBox("Class deleted !");
                 FillDataGridView();
             }
@@ -70,7 +70,7 @@ namespace EnglishCenterManagemenent.GUI
         {
             if (dataGridView.SelectedRows.Count == 0) return;
             FormClassInfoInput formClassInfoInput = new FormClassInfoInput(
-                classList.ElementAt(dataGridView.CurrentCell.RowIndex));
+               dataGridView.CurrentRow.Tag as Class);
 
             formClassInfoInput.ShowDialog();
             FillDataGridView();
@@ -106,6 +106,7 @@ namespace EnglishCenterManagemenent.GUI
                     ClassDAO.GetNumberOfStudentsInClass(classVar.ClassID),
 
                 });
+                dataGridView.Rows[dataGridView.Rows.Count - 1].Tag = classVar;
             }
         }
 
@@ -161,6 +162,8 @@ namespace EnglishCenterManagemenent.GUI
                     ClassDAO.GetNumberOfStudentsInClass(classVar.ClassID),
 
                 });
+
+                dataGridView.Rows[dataGridView.Rows.Count - 1].Tag = classVar;
             }
         }
 

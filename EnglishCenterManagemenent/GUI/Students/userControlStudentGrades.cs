@@ -81,6 +81,8 @@ namespace EnglishCenterManagemenent.GUI
                     studentTestsResult[8],
                     studentTestsResult[9],
                 });
+
+                dataGridView.Rows[dataGridView.Rows.Count - 1].Tag = student;
             }
         }
 
@@ -139,8 +141,9 @@ namespace EnglishCenterManagemenent.GUI
             }
             else
             {
+                Student currentStudent = dataGridView.CurrentRow.Tag as Student;
                 TestResultDAO.InsertOrUpdateTestResult(
-                    studentList[e.RowIndex].StudentID,
+                    currentStudent.StudentID,
                     testList[e.ColumnIndex - 2].TestID,
                     grade);
             }

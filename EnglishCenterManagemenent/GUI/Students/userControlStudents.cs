@@ -65,7 +65,7 @@ namespace EnglishCenterManagemenent.GUI
         {
             if (dataGridView.SelectedRows.Count == 0) return;
             FormStudentInfoInput formStudentInfoInput = new FormStudentInfoInput(
-                studentList.ElementAt(dataGridView.CurrentCell.RowIndex));
+                dataGridView.CurrentRow.Tag as Student);
 
             formStudentInfoInput.ShowDialog();
             FillDataGridView();
@@ -112,6 +112,7 @@ namespace EnglishCenterManagemenent.GUI
                     student.Phone,
                     student.AverageGrade,
                 });
+                dataGridView.Rows[dataGridView.Rows.Count - 1].Tag = student;
             }
         }
 

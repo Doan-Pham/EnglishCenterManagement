@@ -55,13 +55,14 @@ namespace EnglishCenterManagemenent.GUI
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             if (dataGridView.SelectedRows.Count == 0) return;
+            Course currentCourse = dataGridView.CurrentRow.Tag as Course;
             DialogResult dialog = ShowAskingMessageBox
-                ("Are you sure you want to delete this course: " + 
-                courseList.ElementAt(dataGridView.CurrentCell.RowIndex).Name + "?");
+                ("Are you sure you want to delete this course: " +
+                currentCourse.Name + "?");
 
             if (dialog == DialogResult.OK)
             {
-                CourseDAO.DeleteCourse(courseList.ElementAt(dataGridView.CurrentCell.RowIndex));
+                CourseDAO.DeleteCourse(currentCourse);
                 ShowInfoMessageBox("Course deleted !");
                 FillDataGridView();
             }
@@ -72,7 +73,7 @@ namespace EnglishCenterManagemenent.GUI
         {
             if (dataGridView.SelectedRows.Count == 0) return;
             FormCourseInfoInput formCourseInfoInput = new FormCourseInfoInput(
-                courseList.ElementAt(dataGridView.CurrentCell.RowIndex));
+                dataGridView.CurrentRow.Tag as Course);
 
             formCourseInfoInput.ShowDialog();
             FillDataGridView();
@@ -97,6 +98,8 @@ namespace EnglishCenterManagemenent.GUI
                     course.Tuition,
                     course.StandardGrade,
                 });
+                dataGridView.Rows[dataGridView.Rows.Count - 1].Tag = course;
+
             }
         }
 
@@ -150,6 +153,7 @@ namespace EnglishCenterManagemenent.GUI
                     course.Tuition,
                     course.StandardGrade,
                 });
+                dataGridView.Rows[dataGridView.Rows.Count - 1].Tag = course;
             }
         }
 

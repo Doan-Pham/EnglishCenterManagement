@@ -63,7 +63,22 @@ namespace EnglishCenterManagemenent.DAO
 
             return students;
         }
+        public static List<Student> GetFilteredStudentOfOneClass(string info, int classId)
+        {
+            List<Student> students = new List<Student>();
 
+            DataTable data = DataProvider.Instance.ExecuteQuery(
+                "SELECT * FROM dbo.STUDENT " +
+                "WHERE (FirstName LIKE N'%" + info + "%' OR LastName LIKE N'%" + info + "%' " +
+                "OR Address LIKE N'%" + info + "%' OR DateOfBirth LIKE '%" + info + "%' " +
+                "OR Phone LIKE '%" + info + "%' OR AverageGrade LIKE '%" + info + "%' ) " +
+                "AND ClassID = @ClassID", 
+                new object[] {classId});
+            foreach (DataRow row in data.Rows)
+                students.Add(new Student(row));
+
+            return students;
+        }
         public static void AddStudent(Student newStudent)
         {
             DataProvider.Instance.ExecuteScalar(

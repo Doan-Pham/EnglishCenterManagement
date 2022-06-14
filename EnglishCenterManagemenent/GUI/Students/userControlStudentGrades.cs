@@ -14,7 +14,11 @@ namespace EnglishCenterManagemenent.GUI
 {
     public partial class UserControlStudentGrades : UserControl
     {
+        public FormMain formMainInstance { get; set; }
         int studentsClassId = -1;
+
+        private const string TEXTBOX_SEARCH_PLACEHOLDER = "What are you looking for ?";
+
         private List<Student> studentList = new List<Student>();
         private List<Test> testList = new List<Test>();
 
@@ -37,6 +41,7 @@ namespace EnglishCenterManagemenent.GUI
             dataGridView.Columns.Add("Column" + columnIndex++, "Class");
             dataGridView.Columns.Add("Column" + columnIndex++, "Student");
 
+            testList.Clear();
             testList = ClassDAO.GetClassAllTests(studentsClassId);
             foreach (Test test in testList)
             {
@@ -147,6 +152,100 @@ namespace EnglishCenterManagemenent.GUI
                     testList[e.ColumnIndex - 2].TestID,
                     grade);
             }
+        }
+
+
+        #region textBosSearch-related methods
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            // If we don't check this, the placeholer text becomes part of the filtering, which
+            // is not wanted
+            if (textBoxSearch.Text == TEXTBOX_SEARCH_PLACEHOLDER) return;
+            if (textBoxSearch.Text.Trim() == "")
+            {
+                FillDataGridView();
+                return;
+            }
+            if (studentsClassId < 0) return;
+            dataGridView.Columns.Clear();
+            int columnIndex = 1;
+            dataGridView.Columns.Add("Column" + columnIndex++, "Class");
+            dataGridView.Columns.Add("Column" + columnIndex++, "Student");
+
+            testList.Clear();
+            testList = ClassDAO.GetClassAllTests(studentsClassId);
+            foreach (Test test in testList)
+            {
+                dataGridView.Columns.Add("Column" + columnIndex++, test.Name);
+            }
+
+            dataGridView.Rows.Clear();
+            studentList.Clear();
+            studentList = StudentDAO.GetFilteredStudentOfOneClass(textBoxSearch.Text, studentsClassId);
+
+            foreach (Student student in studentList)
+            {
+                List<string> studentTestsResult = new List<string>();
+
+                foreach (Test test in testList)
+                {
+                    float grade = StudentDAO.GetStudentTestResultByTestId(student.StudentID, test.TestID);
+                    if (grade > 0) studentTestsResult.Add(grade.ToString("0.0"));
+                }
+
+                // Some placeholder string in case a student doesn't have the result for a specific
+                // test yet
+                string[] placeholderGrade = new string[10];
+                placeholderGrade = Enumerable.Repeat(string.Empty, placeholderGrade.Length).ToArray();
+                studentTestsResult.AddRange(placeholderGrade);
+
+                // Add all these test results make sure no test result is left out
+                // TODO: Find some way to not hardcode this and add test result based on the 
+                // actual number of tests
+                dataGridView.Rows.Add(new object[]
+                {
+                    StudentDAO.GetStudentClass(student.StudentID),
+                    student.LastName + " " + student.FirstName,
+                    studentTestsResult[0],
+                    studentTestsResult[1],
+                    studentTestsResult[2],
+                    studentTestsResult[3],
+                    studentTestsResult[4],
+                    studentTestsResult[5],
+                    studentTestsResult[6],
+                    studentTestsResult[7],
+                    studentTestsResult[8],
+                    studentTestsResult[9],
+                });
+
+                dataGridView.Rows[dataGridView.Rows.Count - 1].Tag = student;
+            }
+
+
+
+        }
+    
+
+        // Fill the textBoxSearch with placeholder text when user clears the textBox and stop
+        // focusing on it
+        private void textBoxSearch_Enter(object sender, EventArgs e)
+        {
+            if (textBoxSearch.Text == TEXTBOX_SEARCH_PLACEHOLDER)
+                textBoxSearch.Text = "";
+        }
+
+        private void textBoxSearch_Leave(object sender, EventArgs e)
+        {
+            if (textBoxSearch.Text == "")
+                textBoxSearch.Text = TEXTBOX_SEARCH_PLACEHOLDER;
+        }
+        #endregion
+
+        private void buttonFinish_Click(object sender, EventArgs e)
+        {
+            formMainInstance.userControlStudents.SetStudentsClass(studentsClassId);
+            formMainInstance.userControlStudentGrades.SendToBack();
         }
     }
 }

@@ -81,6 +81,7 @@ namespace EnglishCenterManagemenent.GUI
         private void buttonGrading_Click(object sender, EventArgs e)
         {
             formMainInstance.userControlStudentGrades.SetClass(studentsClassId);
+            formMainInstance.userControlStudentGrades.formMainInstance = formMainInstance;
             formMainInstance.userControlStudentGrades.BringToFront();
             formMainInstance.userControlStudentGrades.Focus();
             formMainInstance.labelCurrentUserControl.Text = "Students Grades";

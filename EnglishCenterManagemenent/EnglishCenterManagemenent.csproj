@@ -328,5 +328,9 @@
   <ItemGroup>
     <None Include="Resources\ic_student_24px_white.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\logo_book.png" />
+    <Content Include="assets\UI_main.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

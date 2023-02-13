@@ -120,5 +120,23 @@ namespace EnglishCenterManagemenent.DAO
                 "SELECT COUNT(*) FROM EMPLOYEE " +
                 "WHERE RoleID = (SELECT RoleID FROM ROLE WHERE Name = 'teacher')");
         }
+
+        public static int GetEmployeeIdByUserName(string username)
+        {
+            int employeeId = -1;
+            DataTable data = DataProvider.Instance.ExecuteQuery(
+                "SELECT EmployeeID " +
+                "FROM EMPLOYEE, USERS " +
+                "WHERE USERS.Username = @Username " +
+                "AND EMPLOYEE.UserID = USERS.UserID ",
+                new object[] { username });
+
+            if (data.Rows.Count > 0)
+            {
+                DataRow row = data.Rows[0];
+                employeeId = (int)row["EmployeeID"];
+            }
+            return employeeId;
+        }
     }
 }

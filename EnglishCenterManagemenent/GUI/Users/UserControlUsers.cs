@@ -34,13 +34,14 @@ namespace EnglishCenterManagemenent.GUI
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             if (dataGridView.SelectedRows.Count == 0) return;
+            DTO.Users currentUser = dataGridView.CurrentRow.Tag as DTO.Users;
             DialogResult dialog = ShowAskingMessageBox
                 ("Are you sure you want to delete this user: " +
-                userList.ElementAt(dataGridView.CurrentCell.RowIndex).Username + "?");
+                currentUser.Username + "?");
 
             if (dialog == DialogResult.OK)
             {
-                UsersDAO.DeleteUser(userList.ElementAt(dataGridView.CurrentCell.RowIndex));
+                UsersDAO.DeleteUser(currentUser);
                 ShowInfoMessageBox("User deleted !");
                 FillDataGridView();
             }
@@ -50,7 +51,7 @@ namespace EnglishCenterManagemenent.GUI
         {
             if (dataGridView.SelectedRows.Count == 0) return;
             FormUserInfoInput formUserInfoInput = new FormUserInfoInput(
-                userList.ElementAt(dataGridView.CurrentCell.RowIndex));
+               dataGridView.CurrentRow.Tag as DTO.Users);
 
             formUserInfoInput.ShowDialog();
             FillDataGridView();
@@ -73,6 +74,8 @@ namespace EnglishCenterManagemenent.GUI
                     user.Username,
                     user.Password
                 });
+
+                dataGridView.Rows[dataGridView.Rows.Count - 1].Tag = user;
             }
         }
 
@@ -82,6 +85,11 @@ namespace EnglishCenterManagemenent.GUI
             // If we don't check this, the placeholer text becomes part of the filtering, which
             // is not wanted
             if (textBoxSearch.Text == TEXTBOX_SEARCH_PLACEHOLDER) return;
+            if (textBoxSearch.Text.Trim() == "")
+            {
+                FillDataGridView();
+                return;
+            }
 
             dataGridView.Rows.Clear();
             userList.Clear();
@@ -94,6 +102,7 @@ namespace EnglishCenterManagemenent.GUI
                     user.Username,
                     user.Password,
                 });
+                dataGridView.Rows[dataGridView.Rows.Count - 1].Tag = user;
             }
         }
 

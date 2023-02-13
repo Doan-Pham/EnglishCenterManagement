@@ -129,5 +129,13 @@ namespace EnglishCenterManagemenent.DAO
             return (int)DataProvider.Instance.ExecuteScalar(
                 "SELECT COUNT(*) FROM COURSE");
         }
+
+        public static int GetCourseNumberOfClasses(int courseId)
+        {
+            return (int)DataProvider.Instance.ExecuteScalar(
+                "SELECT COUNT(*) FROM CLASS, COURSE " +
+                "WHERE COURSE.CourseID = @CourseID AND CLASS.CourseID = COURSE.CourseID", 
+                new object[] {courseId});
+        }
     }
 }

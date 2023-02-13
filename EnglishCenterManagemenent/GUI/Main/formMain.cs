@@ -18,23 +18,42 @@ namespace EnglishCenterManagemenent
             InitializeComponent();
             labelCurrentUser.Text = username;
             selectedPanel.StateCommon.Color1 = Color.Orange;
+            Global.userName = username;
+            Global.password = password;
             Global.userRole = UsersDAO.GetUserRoleName(username, password);
+            userControlDashboard.formMainInstance = this;
         }
 
         // Check role of user
 
         private void FormMain_Load(object sender, EventArgs e)
         {
+            buttonDashboard.Show();
+            buttonUser.Show();
+            buttonCourse.Show();
+            buttonClass.Show();
+            buttonEmployee.Show();
+            buttonStudent.Show();
+
             if (Global.userRole == "teacher")
             {
-                buttonUser.Enabled = false;
-                //buttonCourse.Enabled = false;
-                buttonEmployee.Enabled = false;
-                
+                buttonDashboard.Hide();
+                buttonUser.Hide();
+                buttonCourse.Hide();
+                buttonEmployee.Hide();
+                buttonStudent.Hide();
+                buttonClass.PerformClick();
             }
+
             else if (Global.userRole == "receptionist")
             {
-                buttonUser.Enabled = false;
+                userControlStudents.BringToFront();
+                buttonDashboard.Hide();
+                buttonUser.Hide();
+                buttonCourse.Hide();
+                buttonClass.Hide();
+                buttonEmployee.Hide();
+                buttonStudent.PerformClick();
             }
         }
 
@@ -46,6 +65,8 @@ namespace EnglishCenterManagemenent
             labelCurrentUserControl.Text = "Dashboard";
             selectedPanel.Height = buttonDashboard.Height;
             selectedPanel.Top = buttonDashboard.Top;
+            userControlDashboard.formMainInstance = this;
+            userControlDashboard.Focus();
         }
 
         private void buttonUser_Click(object sender, EventArgs e)

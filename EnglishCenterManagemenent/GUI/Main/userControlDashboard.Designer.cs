@@ -341,6 +341,7 @@ namespace EnglishCenterManagemenent.GUI
             this.buttonCourses.TabIndex = 11;
             this.buttonCourses.Values.ExtraText = "COURSES";
             this.buttonCourses.Values.Text = "10";
+            this.buttonCourses.Click += new System.EventHandler(this.buttonCourses_Click);
             // 
             // buttonTeachers
             // 
@@ -384,6 +385,7 @@ namespace EnglishCenterManagemenent.GUI
             this.buttonTeachers.TabIndex = 11;
             this.buttonTeachers.Values.ExtraText = "TEACHERS";
             this.buttonTeachers.Values.Text = "1000";
+            this.buttonTeachers.Click += new System.EventHandler(this.buttonTeachers_Click);
             // 
             // buttonStudents
             // 
@@ -426,6 +428,7 @@ namespace EnglishCenterManagemenent.GUI
             this.buttonStudents.TabIndex = 11;
             this.buttonStudents.Values.ExtraText = "STUDENTS";
             this.buttonStudents.Values.Text = "10000";
+            this.buttonStudents.Click += new System.EventHandler(this.buttonStudents_Click);
             // 
             // buttonClasses
             // 
@@ -472,10 +475,11 @@ namespace EnglishCenterManagemenent.GUI
             this.buttonClasses.TabIndex = 11;
             this.buttonClasses.Values.ExtraText = "CLASSES";
             this.buttonClasses.Values.Text = "100";
+            this.buttonClasses.Click += new System.EventHandler(this.buttonClasses_Click);
             // 
             // UserControlDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 39F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.buttonTeachers);
@@ -489,6 +493,7 @@ namespace EnglishCenterManagemenent.GUI
             this.Size = new System.Drawing.Size(1110, 788);
             this.Load += new System.EventHandler(this.UserControlDashboard_Load);
             this.Click += new System.EventHandler(this.UserControlDashboard_Click);
+            this.Enter += new System.EventHandler(this.UserControlDashboard_Enter);
             this.ResumeLayout(false);
 
         }

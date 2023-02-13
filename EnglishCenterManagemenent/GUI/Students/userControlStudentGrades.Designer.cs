@@ -31,7 +31,7 @@ namespace EnglishCenterManagemenent.GUI
         {
             this.components = new System.ComponentModel.Container();
             this.kryptonPaletteGeneral = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
-            this.buttonSave = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.buttonFinish = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.buttonCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.dataGridView = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -270,20 +270,21 @@ namespace EnglishCenterManagemenent.GUI
             this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.ShortText.TextH = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             this.kryptonPaletteGeneral.LabelStyles.LabelCustom1.StateNormal.ShortText.TextV = ComponentFactory.Krypton.Toolkit.PaletteRelativeAlign.Center;
             // 
-            // buttonSave
+            // buttonFinish
             // 
-            this.buttonSave.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom2;
-            this.buttonSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonSave.Location = new System.Drawing.Point(751, 696);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(199)))), ((int)(((byte)(139)))));
-            this.buttonSave.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(199)))), ((int)(((byte)(139)))));
-            this.buttonSave.Palette = this.kryptonPaletteGeneral;
-            this.buttonSave.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.buttonSave.Size = new System.Drawing.Size(137, 67);
-            this.buttonSave.TabIndex = 3;
-            this.buttonSave.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_save_24px_white;
-            this.buttonSave.Values.Text = "Save";
+            this.buttonFinish.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.Custom2;
+            this.buttonFinish.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonFinish.Location = new System.Drawing.Point(775, 696);
+            this.buttonFinish.Name = "buttonFinish";
+            this.buttonFinish.OverrideDefault.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(199)))), ((int)(((byte)(139)))));
+            this.buttonFinish.OverrideDefault.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(199)))), ((int)(((byte)(139)))));
+            this.buttonFinish.Palette = this.kryptonPaletteGeneral;
+            this.buttonFinish.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.buttonFinish.Size = new System.Drawing.Size(137, 67);
+            this.buttonFinish.TabIndex = 3;
+            this.buttonFinish.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_save_24px_white;
+            this.buttonFinish.Values.Text = "Finish";
+            this.buttonFinish.Click += new System.EventHandler(this.buttonFinish_Click);
             // 
             // buttonCancel
             // 
@@ -303,6 +304,7 @@ namespace EnglishCenterManagemenent.GUI
             this.buttonCancel.TabIndex = 3;
             this.buttonCancel.Values.Image = global::EnglishCenterManagemenent.Properties.Resources.ic_cancel_24px_white;
             this.buttonCancel.Values.Text = "Cancel";
+            this.buttonCancel.Visible = false;
             // 
             // dataGridView
             // 
@@ -383,7 +385,10 @@ namespace EnglishCenterManagemenent.GUI
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
             this.textBoxSearch.StateCommon.Content.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
             this.textBoxSearch.TabIndex = 0;
-            this.textBoxSearch.Text = "Nhập tên, lớp";
+            this.textBoxSearch.Text = "What are you looking for ?";
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
+            this.textBoxSearch.Enter += new System.EventHandler(this.textBoxSearch_Enter);
+            this.textBoxSearch.Leave += new System.EventHandler(this.textBoxSearch_Leave);
             // 
             // UserControlStudentGrades
             // 
@@ -393,7 +398,7 @@ namespace EnglishCenterManagemenent.GUI
             this.Controls.Add(this.panelSearchIcon);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.buttonCancel);
-            this.Controls.Add(this.buttonSave);
+            this.Controls.Add(this.buttonFinish);
             this.Controls.Add(this.textBoxSearch);
             this.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -409,7 +414,7 @@ namespace EnglishCenterManagemenent.GUI
 
         #endregion
         private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPaletteGeneral;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton buttonSave;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton buttonFinish;
         private ComponentFactory.Krypton.Toolkit.KryptonButton buttonCancel;
         private ComponentFactory.Krypton.Toolkit.KryptonDataGridView dataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

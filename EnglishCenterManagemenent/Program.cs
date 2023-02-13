@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EnglishCenterManagemenent.GUI;
 using EnglishCenterManagemenent.GUI.Classes;
+using EnglishCenterManagemenent.GUI.Courses;
 
 namespace EnglishCenterManagemenent
 {
@@ -21,6 +22,8 @@ namespace EnglishCenterManagemenent
             Application.Run(new FormLogin());
             //Application.Run(new FormMain());
             //Application.Run(new FormClassInfoInput());
+            //Application.Run(new FormCourseGradeScheme());
+            //Application.Run(new FormCourseInfoInput());
         }
     }
 }

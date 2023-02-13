@@ -19,6 +19,7 @@
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
   <a href="#credits">Credits</a> •
+  <a href="#authors">Authors</a> •
 </p>
 
 ![screenshot](assets/UI_main.PNG)
@@ -49,4 +50,8 @@ This software uses the following resources and packages:
 - UI Components: [Krypton](https://github.com/ComponentFactory/Krypton)
 - Icons: [FontAwesome](https://fontawesome.com/icons)
 
+## Authors
 
+  - [**Pham Truong Hai Doan**](https://github.com/Doan-Pham) - *Teamd Leader, UI Designer, Main Contributor*
+
+  - [**Nguyen Phan Quoc Thien**](https://github.com/npq-thien) - *Contributor*

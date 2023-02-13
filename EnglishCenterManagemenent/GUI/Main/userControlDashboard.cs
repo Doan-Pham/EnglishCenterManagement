@@ -13,6 +13,7 @@ namespace EnglishCenterManagemenent.GUI
 {
     public partial class UserControlDashboard : UserControl
     {
+        public FormMain formMainInstance { get; set; }
         public UserControlDashboard()
         {
             InitializeComponent();
@@ -37,5 +38,29 @@ namespace EnglishCenterManagemenent.GUI
             buttonTeachers.Text = EmployeeDAO.GetNumberOfTeachers().ToString();
         }
 
+        private void UserControlDashboard_Enter(object sender, EventArgs e)
+        {
+            FillDataButtons();
+        }
+
+        private void buttonCourses_Click(object sender, EventArgs e)
+        {
+            formMainInstance.buttonCourse.PerformClick();
+        }
+
+        private void buttonClasses_Click(object sender, EventArgs e)
+        {
+            formMainInstance.buttonClass.PerformClick();
+        }
+
+        private void buttonTeachers_Click(object sender, EventArgs e)
+        {
+            formMainInstance.buttonEmployee.PerformClick();
+        }
+
+        private void buttonStudents_Click(object sender, EventArgs e)
+        {
+            formMainInstance.buttonStudent.PerformClick();
+        }
     }
 }

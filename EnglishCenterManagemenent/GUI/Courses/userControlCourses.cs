@@ -55,13 +55,22 @@ namespace EnglishCenterManagemenent.GUI
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             if (dataGridView.SelectedRows.Count == 0) return;
+
+            Course currentCourse = dataGridView.CurrentRow.Tag as Course;
+            if (CourseDAO.GetCourseNumberOfClasses(currentCourse.CourseID) > 0)
+            {
+                ShowErrorMessageBox("Can't delete course because there are classes in this course. " +
+    "Delete all the course first or move them to other courses.");
+                return;
+            }
+
             DialogResult dialog = ShowAskingMessageBox
-                ("Are you sure you want to delete this course: " + 
-                courseList.ElementAt(dataGridView.CurrentCell.RowIndex).Name + "?");
+                ("Are you sure you want to delete this course: " +
+                currentCourse.Name + "?");
 
             if (dialog == DialogResult.OK)
             {
-                CourseDAO.DeleteCourse(courseList.ElementAt(dataGridView.CurrentCell.RowIndex));
+                CourseDAO.DeleteCourse(currentCourse);
                 ShowInfoMessageBox("Course deleted !");
                 FillDataGridView();
             }
@@ -72,7 +81,7 @@ namespace EnglishCenterManagemenent.GUI
         {
             if (dataGridView.SelectedRows.Count == 0) return;
             FormCourseInfoInput formCourseInfoInput = new FormCourseInfoInput(
-                courseList.ElementAt(dataGridView.CurrentCell.RowIndex));
+                dataGridView.CurrentRow.Tag as Course);
 
             formCourseInfoInput.ShowDialog();
             FillDataGridView();
@@ -97,6 +106,8 @@ namespace EnglishCenterManagemenent.GUI
                     course.Tuition,
                     course.StandardGrade,
                 });
+                dataGridView.Rows[dataGridView.Rows.Count - 1].Tag = course;
+
             }
         }
 
@@ -136,7 +147,13 @@ namespace EnglishCenterManagemenent.GUI
             // If we don't check this, the placeholer text becomes part of the filtering, which
             // is not wanted
             if (textBoxSearch.Text == TEXTBOX_SEARCH_PLACEHOLDER) return;
-            
+
+            if (textBoxSearch.Text.Trim() == "")
+            {
+                FillDataGridView();
+                return;
+            }
+
             dataGridView.Rows.Clear();
             courseList.Clear();
             foreach (Course course in CourseDAO.GetFilteredCourse(textBoxSearch.Text))
@@ -150,6 +167,7 @@ namespace EnglishCenterManagemenent.GUI
                     course.Tuition,
                     course.StandardGrade,
                 });
+                dataGridView.Rows[dataGridView.Rows.Count - 1].Tag = course;
             }
         }
 

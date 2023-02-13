@@ -22,7 +22,7 @@ namespace EnglishCenterManagemenent.DAO
         }
         private DataProvider() { }
 
-        private string connectionSTR = "Data Source=DESKTOP-LQPNQJL;Initial Catalog=MANAGEMENT;Integrated Security=True";
+        private string connectionSTR = @"Data Source=LAPTOP-MFVT6MG4\MSSQLSERVER01;Initial Catalog=MANAGEMENT;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {

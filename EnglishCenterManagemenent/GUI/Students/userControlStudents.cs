@@ -65,7 +65,7 @@ namespace EnglishCenterManagemenent.GUI
         {
             if (dataGridView.SelectedRows.Count == 0) return;
             FormStudentInfoInput formStudentInfoInput = new FormStudentInfoInput(
-                studentList.ElementAt(dataGridView.CurrentCell.RowIndex));
+                dataGridView.CurrentRow.Tag as Student);
 
             formStudentInfoInput.ShowDialog();
             FillDataGridView();
@@ -81,6 +81,7 @@ namespace EnglishCenterManagemenent.GUI
         private void buttonGrading_Click(object sender, EventArgs e)
         {
             formMainInstance.userControlStudentGrades.SetClass(studentsClassId);
+            formMainInstance.userControlStudentGrades.formMainInstance = formMainInstance;
             formMainInstance.userControlStudentGrades.BringToFront();
             formMainInstance.userControlStudentGrades.Focus();
             formMainInstance.labelCurrentUserControl.Text = "Students Grades";
@@ -94,14 +95,23 @@ namespace EnglishCenterManagemenent.GUI
         {
             // If we don't check this, the placeholer text becomes part of the filtering, which
             // is not wanted
-            if (textBoxSearch.Text == TEXTBOX_SEARCH_PLACEHOLDER || 
-                textBoxSearch.Text.Trim() == "") return;
+            if (textBoxSearch.Text == TEXTBOX_SEARCH_PLACEHOLDER) return;
+            if (textBoxSearch.Text.Trim() == "")
+            {
+                FillDataGridView();
+                return;
+            }
 
             dataGridView.Rows.Clear();
             studentList.Clear();
-            foreach (Student student in StudentDAO.GetFilteredStudent(textBoxSearch.Text))
+
+            if (studentsClassId == -1) 
+                studentList = StudentDAO.GetFilteredStudent(textBoxSearch.Text);
+            else
+                studentList = StudentDAO.GetFilteredStudentOfOneClass(textBoxSearch.Text, studentsClassId);
+
+            foreach (Student student in studentList)
             {
-                studentList.Add(student);
                 dataGridView.Rows.Add(new object[]
                 {
                     StudentDAO.GetStudentClass(student.StudentID),
@@ -112,6 +122,7 @@ namespace EnglishCenterManagemenent.GUI
                     student.Phone,
                     student.AverageGrade,
                 });
+                dataGridView.Rows[dataGridView.Rows.Count - 1].Tag = student;
             }
         }
 

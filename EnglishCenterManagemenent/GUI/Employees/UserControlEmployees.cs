@@ -48,24 +48,25 @@ namespace EnglishCenterManagemenent.GUI
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             if (dataGridView.SelectedRows.Count == 0) return;
+
+           Employee currentEmployee = dataGridView.CurrentRow.Tag as Employee;
             DialogResult dialog = ShowAskingMessageBox
                 ("Are you sure you want to delete this employee: " +
-                employeeList.ElementAt(dataGridView.CurrentCell.RowIndex).FirstName + "?");
+                currentEmployee.FirstName + "?");
 
             if (dialog == DialogResult.OK)
             {
-                EmployeeDAO.DeleteEmployee(employeeList.ElementAt(dataGridView.CurrentCell.RowIndex));
+                EmployeeDAO.DeleteEmployee(currentEmployee);
                 ShowInfoMessageBox("Employee deleted !");
                 FillDataGridView();
             }
-
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
             if (dataGridView.SelectedRows.Count == 0) return;
             FormEmployeeInfoInput formEmployeeInfoInput = new FormEmployeeInfoInput(
-                employeeList.ElementAt(dataGridView.CurrentCell.RowIndex));
+               dataGridView.CurrentRow.Tag as Employee);
 
             formEmployeeInfoInput.ShowDialog();
             FillDataGridView();
@@ -90,6 +91,7 @@ namespace EnglishCenterManagemenent.GUI
                     employee.Phone,
                     employee.Email,
                 });
+                dataGridView.Rows[dataGridView.Rows.Count - 1].Tag = employee;
             }
         }
 
@@ -100,6 +102,12 @@ namespace EnglishCenterManagemenent.GUI
             // If we don't check this, the placeholer text becomes part of the filtering, which
             // is not wanted
             if (textBoxSearch.Text == TEXTBOX_SEARCH_PLACEHOLDER) return;
+
+            if (textBoxSearch.Text.Trim() == "")
+            {
+                FillDataGridView();
+                return;
+            }
 
             dataGridView.Rows.Clear();
             employeeList.Clear();
@@ -116,6 +124,7 @@ namespace EnglishCenterManagemenent.GUI
                     employee.Phone,
                     employee.Email,
                 });
+                dataGridView.Rows[dataGridView.Rows.Count - 1].Tag = employee;
             }
         }
         // Remove placeholder text from textBoxSearch when user clicks on it to type

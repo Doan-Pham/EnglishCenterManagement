@@ -115,6 +115,25 @@ namespace EnglishCenterManagemenent.DAO
 
             return classList;
         }
+
+        public static List<Class> GetFilteredClassOfOneTeacher(string info, int teacherId)
+        {
+            List<Class> classList = new List<Class>();
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(
+                "SELECT * FROM dbo.CLASS, dbo.CLASS_TEACHER_SCHEDULE " +
+                "WHERE (Name LIKE N'%" + info + "%' OR StartDate LIKE '%" + info + "%' " +
+                "OR EndDate LIKE '%" + info + "%' OR NumberOfStudents LIKE '%" + info + "%' ) " +
+                "AND CLASS.ClassID = CLASS_TEACHER_SCHEDULE.ClassID " +
+                "AND CLASS_TEACHER_SCHEDULE.EmployeeID = @EmployeeID", 
+                new object[] {teacherId});
+            foreach (DataRow row in data.Rows)
+                classList.Add(new Class(row));
+
+            return classList;
+        }
+
+
         public static void UpdateClass(Class updatedClass)
         {
             DataProvider.Instance.ExecuteNonQuery(
@@ -153,6 +172,22 @@ namespace EnglishCenterManagemenent.DAO
             List<Class> classList = new List<Class>();
 
             DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM dbo.CLASS");
+            foreach (DataRow row in data.Rows)
+                classList.Add(new Class(row));
+
+            return classList;
+        }
+
+        public static List<Class> GetAllClassByTeacherId(int teacherId)
+        {
+            List<Class> classList = new List<Class>();
+
+            DataTable data = DataProvider.Instance.ExecuteQuery(
+                "SELECT * FROM dbo.CLASS, dbo.CLASS_TEACHER_SCHEDULE " +
+                "WHERE CLASS.ClassID = CLASS_TEACHER_SCHEDULE.ClassID " +
+                "AND CLASS_TEACHER_SCHEDULE.EmployeeID = @EmployeeID ", 
+                new object[] {teacherId});
+
             foreach (DataRow row in data.Rows)
                 classList.Add(new Class(row));
 

@@ -52,6 +52,6 @@ This software uses the following resources and packages:
 
 ## Authors
 
-  - [**Pham Truong Hai Doan**](https://github.com/Doan-Pham) - *Team Leader, UI Designer, Main Contributor*
+  - [**Pham Truong Hai Doan**](https://github.com/Doan-Pham) - *Team Leader*
 
   - [**Nguyen Phan Quoc Thien**](https://github.com/npq-thien) - *Contributor*
